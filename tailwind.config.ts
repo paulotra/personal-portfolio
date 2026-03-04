@@ -12,6 +12,27 @@ export default {
         sans: ['Inter', ...fontFamily.sans],
         'gochi-hand': ['"Gochi Hand"', ...fontFamily.serif],
       },
+      fontSize: {
+        '5xl':     '3.75rem',  // 60px
+        '4xl':     '3rem',     // 48px
+        '3xl':     '1.75rem',  // 28px
+        '2xl':     '1.5rem',   // 24px
+        'xl':      '1.25rem',  // 20px
+        'lg':      '1.125rem', // 18px
+        'default': '1rem',     // 16px
+        'sm':      '0.875rem', // 14px
+        'xs':      '0.75rem',  // 12px
+        '2xs':     '0.625rem', // 10px
+      },
+      lineHeight: {
+        'heading': '1.2',
+      },
+      letterSpacing: {
+        '1': '0.0625rem',
+      },
+      spacing: {
+        '4.5': '1.125rem', // 18px
+      },
       colors: {
         neutral: {
           100:  '#ffffff',

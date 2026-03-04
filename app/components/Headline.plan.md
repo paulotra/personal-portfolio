@@ -12,5 +12,7 @@ Build a `Headline.vue` component based on the [Figma design](https://www.figma.c
 
 **Notes**
 - Create this into 1 component and element will based on the varient passed
+- Make sure there's no hard coded code, text sizes should be applied or added in tailwind config
 - Use Tailwind CSS for all colors and styling
 - Add a Storybook story to document and test all variants and sizes
+

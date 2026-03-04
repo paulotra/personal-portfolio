@@ -14,15 +14,15 @@ withDefaults(defineProps<{
 
 const sizeClasses: Record<Size, string> = {
   sm:      'px-4 py-2 text-sm gap-2',
-  default: 'px-5 py-3 text-base gap-2',
+  default: 'px-5 py-3 text-default gap-2',
   lg:      'px-6 py-4 text-lg gap-2',
   xl:      'px-8 py-5 text-xl gap-2',
 }
 
 const iconSizeClasses: Record<Size, string> = {
   sm:      'size-3',
-  default: 'size-[14px]',
-  lg:      'size-[18px]',
+  default: 'size-3.5',
+  lg:      'size-4.5',
   xl:      'size-5',
 }
 
