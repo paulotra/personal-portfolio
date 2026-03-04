@@ -28,9 +28,9 @@ const iconSizeClasses: Record<Size, string> = {
 
 const variantClasses: Record<Variant, string> = {
   primary:   'bg-primary-100 border border-primary-300 text-primary-500 rounded-lg',
-  secondary: 'bg-secondary-500 text-white rounded-md',
-  outline:   'bg-white border border-primary-200 text-primary-500 rounded-md',
-  disabled:  'bg-neutral-300 text-neutral-600 rounded-md cursor-not-allowed',
+  secondary: 'bg-secondary-500 text-white rounded',
+  outline:   'bg-white border border-primary-200 text-primary-500 rounded',
+  disabled:  'bg-neutral-300 text-neutral-600 rounded cursor-not-allowed',
 }
 </script>
 

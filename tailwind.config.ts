@@ -33,6 +33,13 @@ export default {
       spacing: {
         '4.5': '1.125rem', // 18px
       },
+      borderRadius: {
+        'xs':     '0.125rem', // 2px
+        'sm':     '0.25rem',  // 4px
+        'DEFAULT':'0.375rem', // 6px  → rounded
+        '3xl':    '1.25rem',  // 20px
+        '4xl':    '1.5rem',   // 24px
+      },
       colors: {
         neutral: {
           100:  '#ffffff',
