@@ -53,6 +53,7 @@
       <HomeCapabilities class="mt-[120px]" />
       <HomeRecentWorks class="mt-[320px]" />
       <HomeExperiencesAndEducation class="mt-[200px]" />
+      <HomeTestimonials class="mt-[200px]" />
     </Content>
 
     <!-- Footer CTA Section -->
