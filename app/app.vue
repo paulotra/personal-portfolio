@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Button>Primary</Button>
+    <Badge>Primary</Badge>
     <NuxtRouteAnnouncer />
     <NuxtWelcome />
   </div>

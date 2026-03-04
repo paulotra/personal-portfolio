@@ -19,7 +19,8 @@
       "mcp__claude_ai_Figma__get_metadata",
       "Bash(python3 -c \":*)",
       "Bash(npm run dev 2>&1)",
-      "Bash(npm run storybook 2>&1)"
+      "Bash(npm run storybook 2>&1)",
+      "WebFetch(domain:www.figma.com)"
     ]
   }
 }
