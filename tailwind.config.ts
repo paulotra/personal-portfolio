@@ -39,11 +39,12 @@ export default {
         'DEFAULT':'0.375rem', // 6px  → rounded
         '3xl':    '1.25rem',  // 20px
         '4xl':    '1.5rem',   // 24px
+        '5xl':    '5rem',     // 80px
       },
       colors: {
         neutral: {
-          100:  '#ffffff',
-          200:  '#f5f5f5',
+          100:  '#f5f5f5',
+          200:  '#f9f9f9',
           300:  '#e6e6e6',
           400:  '#d6d6d6',
           500:  '#a5a5a5',

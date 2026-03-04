@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-white">
+  <div class="bg-neutral-100">
     <!-- Hero Section -->
-    <section class="bg-neutral-100 relative min-h-[944px]">
+    <section class="bg-neutral-100 z-10 relative min-h-[944px]">
       <div class="max-w-[1360px] mx-auto px-6">
         <!-- Navbar -->
         <nav class="flex items-center justify-between pt-[60px]">
@@ -38,7 +38,7 @@
         </div>
 
         <!-- Location -->
-        <div class="flex flex-col gap-3 absolute bottom-[150px]">
+        <div class="flex flex-col gap-3 absolute bottom-[60px]">
           <div class="bg-neutral-400 h-[2px] w-[166px]" />
           <p class="text-xs font-medium text-neutral-600 tracking-[1.2px] uppercase leading-7">
             Butuan City 8600<br />
@@ -47,6 +47,13 @@
         </div>
       </div>
     </section>
+
+    <!-- Content -->
+    <Content class="relative z-20">
+      <HomeCapabilities class="mt-[120px]" />
+      <HomeRecentWorks class="mt-[320px]" />
+      <HomeExperiencesAndEducation class="mt-[200px]" />
+    </Content>
 
     <!-- Footer CTA Section -->
     <section class="relative bg-white">
