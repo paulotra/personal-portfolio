@@ -163,10 +163,13 @@ async function typewriter() {
 }
 
 // Blinking cursor
-const cursorInterval = setInterval(() => {
-  cursorVisible.value = !cursorVisible.value
-}, 530)
+let cursorInterval: ReturnType<typeof setInterval>
 
-onMounted(() => typewriter())
+onMounted(() => {
+  cursorInterval = setInterval(() => {
+    cursorVisible.value = !cursorVisible.value
+  }, 530)
+  typewriter()
+})
 onUnmounted(() => clearInterval(cursorInterval))
 </script>
