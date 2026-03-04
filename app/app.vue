@@ -1,7 +1,5 @@
 <template>
   <div>
-    <Headline>Primary</Headline>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <router-view />
   </div>
 </template>
