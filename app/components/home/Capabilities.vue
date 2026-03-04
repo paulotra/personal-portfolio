@@ -23,10 +23,10 @@
     </div>
 
     <!-- Capability Cards -->
-    <div class="flex gap-10 items-center">
+    <div class="grid grid-cols-3 gap-10">
 
       <!-- Branding (bordered, with corner decorations) -->
-      <div class="relative bg-white border border-primary-500 flex flex-col gap-4 h-[311px] w-[428px] px-6 py-8 shrink-0">
+      <div class="relative bg-white border border-primary-500 flex flex-col gap-4 h-[311px] px-6 py-8 shrink-0">
         <!-- Corner decorations -->
         <img src="/images/capabilities/corner-tl.svg" alt="" aria-hidden="true" class="absolute -top-[20.5px] -left-[20.5px] size-5" />
         <img src="/images/capabilities/corner-tr.svg" alt="" aria-hidden="true" class="absolute -top-[20.5px] -right-[20.5px] size-5 rotate-90" />
@@ -47,7 +47,7 @@
       </div>
 
       <!-- UI & UX Design -->
-      <div class="bg-white flex flex-col gap-4 h-[311px] w-[428px] px-6 py-8 shrink-0">
+      <div class="bg-white flex flex-col gap-4 h-[311px] px-6 py-8 shrink-0">
         <div class="flex flex-col gap-4">
           <h3 class="font-sans font-bold text-3xl leading-10 uppercase text-black">UI &amp; UX Design</h3>
           <p class="font-sans font-normal text-sm leading-6 text-black">
@@ -64,7 +64,7 @@
       </div>
 
       <!-- FE Development -->
-      <div class="bg-white flex flex-col gap-4 h-[311px] w-[428px] px-6 py-8 shrink-0">
+      <div class="bg-white flex flex-col gap-4 h-[311px] px-6 py-8 shrink-0">
         <div class="flex flex-col gap-4">
           <h3 class="font-sans font-bold text-3xl leading-10 uppercase text-black">FE Development</h3>
           <p class="font-sans font-normal text-sm leading-6 text-black">

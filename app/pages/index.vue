@@ -61,7 +61,7 @@
       <div class="bg-neutral-100 relative">
         <div class="absolute -top-10 left-0 w-full h-[84px] bg-neutral-100 rounded-[80px]" />
 
-        <div class="max-w-[1360px] mx-auto px-6 py-[100px]">
+        <div class="max-w-[1362px] mx-auto py-[100px]">
           <div class="flex gap-8 items-start">
             <!-- Left: CTA + Contacts -->
             <div class="flex flex-col gap-6 flex-1">
@@ -124,10 +124,10 @@
 </template>
 
 <script setup lang="ts">
-const words = ['Designer', 'FE Developer']
+const words = ['Brand Designer', 'UI/UX Designer', 'FE Developer']
 const typeSpeed = 80
 const deleteSpeed = 50
-const pauseDuration = 5000
+const pauseDuration = 2000
 
 const displayedText = ref('')
 const cursorVisible = ref(true)
