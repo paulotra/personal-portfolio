@@ -50,8 +50,8 @@
 
     <!-- Content -->
     <Content class="relative z-20">
-      <HomeCapabilities class="mt-[120px]" />
-      <HomeRecentWorks class="mt-[320px]" />
+      <HomeCapabilities class="mt-[135px]" />
+      <HomeRecentWorks class="mt-[344.5px]" />
       <HomeExperiencesAndEducation class="mt-[200px]" />
       <HomeTestimonials class="mt-[200px]" />
     </Content>
