@@ -2,6 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes laser-run {
+  0% {
+    background-position: 0 -100%;
+  }
+  100% {
+    background-position: 0 200%;
+  }
+}
+
+@keyframes laser-run-up {
+  0% {
+    background-position: 0 200%;
+  }
+  100% {
+    background-position: 0 -100%;
+  }
+}
+
+.laser-stroke {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 20%,
+    #0c8ce9 50%,
+    transparent 80%,
+    transparent 100%
+  );
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  animation: laser-run 2.5s linear infinite;
+  opacity: 0.6;
+  filter: drop-shadow(0 0 3px #0c8ce9)
+    drop-shadow(0 0 6px rgba(12, 140, 233, 0.24));
+}
+
+.laser-stroke-up {
+  animation-name: laser-run-up;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
 }
