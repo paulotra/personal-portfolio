@@ -1,20 +1,33 @@
 <template>
   <div class="bg-neutral-100">
+    <!-- Navbar -->
+    <header
+      class="sticky top-0 z-50 w-full animate-slideDown transition-shadow duration-300"
+      :class="scrolled ? 'bg-white shadow-soft-y' : 'bg-transparent'"
+    >
+      <nav
+        class="flex items-center justify-between mx-auto px-6 transition-all duration-300"
+        :class="scrolled ? 'py-4 max-w-full' : 'py-5 max-w-[1360px]'"
+      >
+        <img
+          src="/images/pt-logo.svg" alt="PT Logo"
+          class="transition-all duration-300"
+          :class="scrolled ? 'h-[22px] w-[24px]' : 'h-[28px] w-[31px]'"
+        />
+        <div class="flex items-center gap-10">
+          <a href="#services" class="transition-all duration-300 text-neutral-800" :class="scrolled ? 'text-base' : 'text-lg'">Services</a>
+          <a href="#experience" class="transition-all duration-300 text-neutral-800" :class="scrolled ? 'text-base' : 'text-lg'">Experience</a>
+          <a href="#education" class="transition-all duration-300 text-neutral-800" :class="scrolled ? 'text-base' : 'text-lg'">Education</a>
+          <a href="#works" class="transition-all duration-300 text-neutral-800" :class="scrolled ? 'text-base' : 'text-lg'">Works</a>
+          <a href="#testimonials" class="transition-all duration-300 text-neutral-800" :class="scrolled ? 'text-base' : 'text-lg'">Testimonials</a>
+          <Button variant="primary" :show-icon="false" :size="scrolled ? 'default' : 'lg'">Work With Me</Button>
+        </div>
+      </nav>
+    </header>
+
     <!-- Hero Section -->
     <section class="bg-neutral-100 z-10 relative min-h-[944px]">
       <div class="max-w-[1360px] mx-auto px-6">
-        <!-- Navbar -->
-        <nav class="flex items-center justify-between pt-[60px] animate-slideDown">
-          <img src="/images/pt-logo.svg" alt="PT Logo" class="h-[28px] w-[31px]" />
-          <div class="flex items-center gap-10">
-            <a href="#services" class="text-lg text-neutral-800">Services</a>
-            <a href="#experience" class="text-lg text-neutral-800">Experience</a>
-            <a href="#education" class="text-lg text-neutral-800">Education</a>
-            <a href="#works" class="text-lg text-neutral-800">Works</a>
-            <a href="#testimonials" class="text-lg text-neutral-800">Testimonials</a>
-            <Button variant="primary" :show-icon="false">Work With Me</Button>
-          </div>
-        </nav>
 
         <!-- Hero Content -->
         <div class="flex flex-col gap-3 pt-[260px] max-w-[662px]">
@@ -162,14 +175,20 @@ async function typewriter() {
   }
 }
 
+// Sticky nav
+const scrolled = ref(false)
+
 // Blinking cursor
 let cursorInterval: ReturnType<typeof setInterval>
 
 onMounted(() => {
+  const onScroll = () => { scrolled.value = window.scrollY > 10 }
+  window.addEventListener('scroll', onScroll, { passive: true })
   cursorInterval = setInterval(() => {
     cursorVisible.value = !cursorVisible.value
   }, 530)
   typewriter()
+  onUnmounted(() => window.removeEventListener('scroll', onScroll))
 })
 onUnmounted(() => clearInterval(cursorInterval))
 </script>

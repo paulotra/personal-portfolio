@@ -38,7 +38,7 @@ const variantClasses: Record<Variant, string> = {
   <button
     :disabled="variant === 'disabled'"
     :class="[
-      'inline-flex items-center justify-center font-sans',
+      'inline-flex items-center justify-center font-sans transition-all duration-300',
       sizeClasses[size],
       variantClasses[variant],
     ]"
