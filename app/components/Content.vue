@@ -1,6 +1,6 @@
 <template>
-  <section class="vertical-bg w-full bg-white rounded-5xl pb-10 pt-20 px-8 overflow-hidden">
-    <div class="dotted-bg relative">
+  <section class="vertical-bg w-full bg-white rounded-5xl pb-10 pt-12 px-8 overflow-hidden shadow-soft-y">
+    <div class="relative dotted-bg">
       <div class="max-w-[1365px] mx-auto py-[100px]">
         <slot />
       </div>
@@ -12,8 +12,8 @@
 .dotted-bg {
   background-image: url('/images/dotted.svg');
   background-size: auto;
-  background-repeat: repeat-y;
-  background-position: center top;
+  background-repeat: repeat;
+  background-position: 21px center;
 }
 
 .vertical-bg::before {

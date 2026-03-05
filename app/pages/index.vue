@@ -18,9 +18,9 @@
 
         <!-- Hero Content -->
         <div class="flex flex-col gap-3 pt-[220px] max-w-[662px]">
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2 relative">
             <!-- Hi Guys! -->
-            <div class="-rotate-6 inline-block">
+            <div class="-rotate-6 inline-block absolute -top-10 left-0">
               <span class="font-['Gochi_Hand'] text-[50px] leading-10 text-neutral-700 whitespace-nowrap">
                 Hi Guys!
               </span>
@@ -28,7 +28,7 @@
             <!-- Headline -->
             <h1 class="font-sans font-black text-[60px] leading-heading uppercase text-black w-[676px] min-h-[144px]">
               I'm paulo Trajano, <br>A <span class="text-primary-500">{{ displayedText }}</span> 
-              <span class="inline-block w-[1px] h-[0.9em] bg-black ml-[1px] align-middle" :class="cursorVisible ? 'opacity-100' : 'opacity-0'" />
+              <span class="inline-block w-[1px] h-[0.9em] bg-primary-500 ml-[1px] align-middle relative -top-1" :class="cursorVisible ? 'opacity-75' : 'opacity-0'" />
             </h1>
           </div>
           <!-- Subtitle -->

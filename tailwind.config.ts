@@ -33,6 +33,9 @@ export default {
       spacing: {
         '4.5': '1.125rem', // 18px
       },
+      boxShadow: {
+        'soft-y': '0 -16px 32px rgba(165,165,165,0.10), 0 16px 32px rgba(165,165,165,0.10)',
+      },
       borderRadius: {
         'xs':     '0.125rem', // 2px
         'sm':     '0.25rem',  // 4px
