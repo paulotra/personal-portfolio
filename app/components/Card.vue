@@ -2,6 +2,12 @@
   <div
     class="group relative border border-transparent hover:border-primary-500 transition-colors hover:bg-white"
   >
+    <div
+      class="absolute bg-neutral-300 w-screen h-[1px] top-0 left-[-100%]"
+    ></div>
+    <div
+      class="absolute bg-neutral-300 w-screen h-[1px] bottom-0 left-[-100%]"
+    ></div>
     <!-- Corner decorations -->
     <img
       src="/images/corner-tl.svg"
