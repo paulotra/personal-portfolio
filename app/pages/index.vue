@@ -53,7 +53,7 @@
       <HomeCapabilities class="mt-[135px]" />
       <HomeRecentWorks class="mt-[344.5px]" />
       <HomeExperiencesAndEducation class="mt-[260px]" />
-      <HomeTestimonials class="mt-[200px]" />
+      <HomeTestimonials class="mt-[320px]" />
     </Content>
 
     <!-- Footer CTA Section -->
@@ -61,11 +61,11 @@
       <div class="bg-neutral-100 relative">
         <div class="absolute -top-10 left-0 w-full h-[84px] bg-neutral-100 rounded-[80px]" />
 
-        <div class="max-w-[1362px] mx-auto py-[100px]">
-          <div class="flex gap-8 items-start">
+        <div class="max-w-[1362px] mx-auto pt-[100px] pb-[60px]">
+          <div class="flex gap-10 items-start">
             <!-- Left: CTA + Contacts -->
             <div class="flex flex-col gap-6 flex-1">
-              <div class="flex flex-col gap-5">
+              <div class="flex flex-col gap-1">
                 <h2 class="font-sans font-black text-[60px] leading-heading uppercase text-black">
                   Let's build something great <span class="text-primary-500">together</span>
                 </h2>
@@ -86,7 +86,7 @@
             </div>
 
             <!-- Right: Links -->
-            <div class="flex flex-col gap-10 w-[316px]">
+            <div class="flex flex-col gap-10 w-1/3">
               <!-- Portfolios -->
               <div class="flex flex-col gap-3">
                 <p class="text-sm font-bold text-neutral-800 tracking-[0.84px] uppercase leading-7">PORTFOLIOS</p>
@@ -114,7 +114,7 @@
     <!-- Copyright Bar -->
     <div class="bg-black relative">
       <div class="absolute -top-10 left-0 w-full h-[84px] bg-neutral-100 rounded-[80px]" />
-      <div class="max-w-[1360px] mx-auto px-6 pb-5 pt-[62px]">
+      <div class="max-w-[1360px] mx-auto pb-5 pt-[62px]">
         <p class="text-sm text-white font-normal leading-7">
           © 2026 Paulo Trajano - Designer & Frontend Developer
         </p>

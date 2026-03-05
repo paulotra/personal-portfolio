@@ -31,7 +31,7 @@
     </div>
 
     <!-- Timeline body -->
-    <div class="relative flex items-center justify-between w-full">
+    <div ref="timelineBodyRef" class="relative flex items-center justify-between w-full">
 
       <!-- Background glow -->
       <div class="absolute left-1/2 -translate-x-1/2 -top-10 w-[804px] h-[750px] pointer-events-none">
@@ -77,15 +77,20 @@
         <div class="relative flex flex-col gap-[100px] items-center w-[35px] shrink-0">
           <!-- Gray background line -->
           <div class="absolute left-[13px] top-0 w-[6px] h-[698px] bg-neutral-300" />
-          <!-- Blue progress line (2015–2016) -->
-          <div class="absolute left-[13px] top-0 w-[6px] h-[147px] bg-primary-500" />
+          <!-- Blue progress line (scroll-driven) -->
+          <div class="absolute left-[13px] top-0 w-[6px] bg-primary-500" :style="{ height: blueLineHeight + 'px' }" />
 
           <!-- Year labels -->
-          <div v-for="year in years" :key="year" class="bg-white flex items-center justify-center py-2 relative z-10 w-full">
+          <div
+            v-for="(year, i) in years"
+            :key="year"
+            :ref="(el) => setYearRef(el, i)"
+            class="bg-white flex items-center justify-center py-2 relative z-10 w-full"
+          >
             <span
               :class="[
-                'font-sans font-bold text-sm text-center tracking-[0.84px] whitespace-nowrap',
-                ['2015', '2016'].includes(year) ? 'text-primary-500' : 'text-black',
+                'font-sans font-bold text-sm text-center tracking-[0.84px] whitespace-nowrap transition-colors duration-300',
+                i < activeYearCount ? 'text-primary-500' : 'text-black',
               ]"
             >{{ year }}</span>
           </div>
@@ -154,4 +159,44 @@
 const tabs = ['Experiences', 'Education'] as const
 const activeTab = ref<'Experiences' | 'Education'>('Experiences')
 const years = ['2015', '2016', '2017', '2018', '2026', 'NOW']
+
+const timelineBodyRef = ref<HTMLElement | null>(null)
+const yearItemRefs: HTMLElement[] = []
+const blueLineHeight = ref(0)
+const activeYearCount = ref(0)
+
+const GREY_LINE_HEIGHT = 698
+
+function setYearRef(el: unknown, i: number) {
+  if (el instanceof HTMLElement) yearItemRefs[i] = el
+}
+
+function updateProgress() {
+  if (!timelineBodyRef.value) return
+  const rect = timelineBodyRef.value.getBoundingClientRect()
+  const wh = window.innerHeight
+
+  // Progress: 0 when section top enters at 85% of viewport, 1 when fully consumed
+  const progress = Math.max(0, Math.min(1, (wh * 0.6 - rect.top) / rect.height))
+  blueLineHeight.value = progress * GREY_LINE_HEIGHT
+
+  // Count years whose center is covered by the blue line
+  if (blueLineHeight.value >= GREY_LINE_HEIGHT) {
+    activeYearCount.value = years.length
+  } else {
+    activeYearCount.value = yearItemRefs.filter((el) => {
+      if (!el) return false
+      return el.offsetTop + el.offsetHeight / 2 <= blueLineHeight.value
+    }).length
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', updateProgress, { passive: true })
+  updateProgress()
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', updateProgress)
+})
 </script>

@@ -2,21 +2,17 @@
   <div class="relative flex flex-col gap-12 items-center">
 
     <!-- Decorative: glow (behind card, right side) -->
-    <div class="absolute right-[260px] top-[130px] w-[246px] h-[230px] -rotate-[23.35deg] pointer-events-none">
+    <div class="absolute right-[160px] bottom-[-100px] w-[246px] h-[230px] -rotate-[20.35deg] pointer-events-none">
       <img src="/images/testimonials/glow.svg" alt="" aria-hidden="true" class="absolute inset-[-70%_-65%] w-[240%] h-[240%] max-w-none" />
-    </div>
-
-    <!-- Decorative: guitar (right side) -->
-    <div class="absolute right-[-60px] top-[20px] rotate-[11.69deg] pointer-events-none">
-      <img src="/images/testimonials/guitar.png" alt="" aria-hidden="true" class="w-[370px] object-cover" />
-    </div>
-
-    <!-- Decorative: "Built on Trust / Backed by Results" -->
-    <div class="absolute right-[30px] top-[289px] -rotate-[11.14deg] pointer-events-none">
-      <p class="font-['Gochi_Hand'] text-[30px] leading-normal text-primary-500 text-center whitespace-nowrap">
+      <p class="font-['Gochi_Hand'] text-[30px] leading-normal text-primary-500 text-center whitespace-nowrap relative z-10">
         Built on Trust<br />Backed by Results
       </p>
     </div>
+
+    <!-- Decorative: guitar (right side) -->
+    <!-- <div class="absolute right-[-60px] top-[20px] rotate-[11.69deg] pointer-events-none">
+      <img src="/images/testimonials/guitar.png" alt="" aria-hidden="true" class="w-[370px] object-cover" />
+    </div> -->
 
     <!-- Header + Card + Dots -->
     <div class="flex flex-col gap-12 items-center w-full">

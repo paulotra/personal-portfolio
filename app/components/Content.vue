@@ -1,7 +1,7 @@
 <template>
   <section class="vertical-bg w-full bg-white rounded-5xl pb-10 pt-12 px-8 overflow-hidden shadow-soft-y]">
     <div class="relative dotted-bg">
-      <div class="max-w-[1365px] mx-auto py-[100px]">
+      <div class="max-w-[1365px] mx-auto pt-[100px] pb-[200px]">
         <slot />
       </div>
     </div>
