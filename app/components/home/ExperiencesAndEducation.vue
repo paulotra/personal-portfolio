@@ -2,12 +2,12 @@
   <div class="relative flex flex-col items-center gap-[61px]">
 
     <!-- Decorative: skateboard (top-right) -->
-    <div class="absolute -top-[249px] right-[-60px] rotate-[7.9deg] pointer-events-none">
+    <div class="absolute -top-[260px] right-[-50px] rotate-[7.9deg] pointer-events-none">
       <img src="/images/experience/skateboard.png" alt="" aria-hidden="true" class="w-[315px] object-cover" />
     </div>
 
     <!-- Decorative: "what i've been through" (top-right) -->
-    <div class="absolute top-0 right-[40px] rotate-[26.2deg] pointer-events-none">
+    <div class="absolute top-[0] right-[-72px] rotate-[20.2deg] pointer-events-none">
       <p class="font-['Gochi_Hand'] text-[34px] leading-normal text-primary-500 text-center whitespace-nowrap">
         what i've<br />been through
       </p>
@@ -43,13 +43,13 @@
         src="/images/experience/timeline-lines.svg"
         alt=""
         aria-hidden="true"
-        class="absolute left-[450px] top-[16px] w-[639px] h-[666px] pointer-events-none z-0"
+        class="absolute left-[450px] top-[21px] w-[639px] h-[666px] pointer-events-none z-0"
       />
 
       <!-- LEFT column: right-aligned entries, gap-130 -->
-      <div class="flex flex-col gap-[130px] items-end text-right w-[432px] shrink-0 relative z-10">
+      <div class="flex flex-col gap-[130px] items-end text-right w-[432px] shrink-0 relative z-10 -mt-3">
         <!-- RallyHR -->
-        <div class="flex flex-col gap-5 h-[136px] items-end w-full">
+        <div class="flex flex-col gap-5 h-auto items-end w-full">
           <div class="flex flex-col gap-1 items-end w-full">
             <p class="font-sans font-normal text-default leading-6 whitespace-nowrap text-black">RallyHR</p>
             <p class="font-sans font-bold text-3xl leading-10 text-black w-full">Front End Lead</p>
@@ -59,7 +59,7 @@
           </p>
         </div>
         <!-- ProphetX -->
-        <div class="flex flex-col gap-5 h-[136px] items-end w-full">
+        <div class="flex flex-col gap-5 h-auto items-end w-full">
           <div class="flex flex-col gap-1 items-end w-full">
             <p class="font-sans font-normal text-default leading-6 whitespace-nowrap text-black">ProphetX</p>
             <p class="font-sans font-bold text-3xl leading-10 text-black w-full">Front End Lead + Engr Manager</p>
@@ -92,10 +92,10 @@
         </div>
 
         <!-- RIGHT text column: gap-159 between Mango and the sub-group -->
-        <div class="flex flex-col gap-[159px] w-[548px] shrink-0">
+        <div class="flex flex-col gap-[159px] w-[548px] shrink-0  -mt-3">
 
           <!-- Mango Interactive -->
-          <div class="flex flex-col gap-5 h-[136px] items-start w-[430px]">
+          <div class="flex flex-col gap-5 h-auto items-start w-[430px]">
             <div class="flex flex-col gap-1 items-start w-full">
               <p class="font-sans font-normal text-default leading-6 whitespace-nowrap text-black">Mango Interactive</p>
               <p class="font-sans font-bold text-3xl leading-10 text-black w-full">Front End Developer</p>
@@ -134,16 +134,16 @@
         </div>
       </div>
 
-      <!-- Decorative: keyboard (bottom-left) -->
-      <div class="absolute -left-[190px] bottom-[-60px] rotate-[7.18deg] pointer-events-none">
-        <img src="/images/experience/keyboard.png" alt="" aria-hidden="true" class="w-[428px] object-cover" />
-      </div>
-
       <!-- Decorative: "don't just learn, experience!" (bottom-left) -->
-      <div class="absolute left-[120px] bottom-[20px] -rotate-[15.86deg] pointer-events-none">
+      <div class="absolute left-[100px] bottom-[-100px] -rotate-[15.86deg] pointer-events-none">
         <p class="font-['Gochi_Hand'] text-[30px] leading-normal text-primary-500 text-center whitespace-nowrap">
           don't just learn,<br />experience!
         </p>
+      </div>
+
+      <!-- Decorative: keyboard (bottom-left) -->
+      <div class="absolute -left-[290px] bottom-[-150px] rotate-[7.18deg] pointer-events-none">
+        <img src="/images/experience/keyboard.png" alt="" aria-hidden="true" class="w-[428px] object-cover" />
       </div>
 
     </div>
