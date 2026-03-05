@@ -4,7 +4,7 @@
     <section class="bg-neutral-100 z-10 relative min-h-[944px]">
       <div class="max-w-[1360px] mx-auto px-6">
         <!-- Navbar -->
-        <nav class="flex items-center justify-between pt-[60px]">
+        <nav class="flex items-center justify-between pt-[60px] animate-slideDown">
           <img src="/images/pt-logo.svg" alt="PT Logo" class="h-[28px] w-[31px]" />
           <div class="flex items-center gap-10">
             <a href="#services" class="text-lg text-neutral-800">Services</a>
@@ -17,8 +17,8 @@
         </nav>
 
         <!-- Hero Content -->
-        <div class="flex flex-col gap-3 pt-[220px] max-w-[662px]">
-          <div class="flex flex-col gap-2 relative">
+        <div class="flex flex-col gap-3 pt-[260px] max-w-[662px]">
+          <div class="flex flex-col gap-2 relative animate-slideRight [animation-delay:240ms]">
             <!-- Hi Guys! -->
             <div class="-rotate-6 inline-block absolute -top-10 left-0">
               <span class="font-['Gochi_Hand'] text-[50px] leading-10 text-neutral-700 whitespace-nowrap">
@@ -32,13 +32,13 @@
             </h1>
           </div>
           <!-- Subtitle -->
-          <p class="text-xl text-black font-normal leading-[34px]">
+          <p class="text-xl text-black font-normal leading-[34px] animate-slideRight [animation-delay:480ms]">
             Specialized in web design, branding, and frontend development.
           </p>
         </div>
 
         <!-- Location -->
-        <div class="flex flex-col gap-3 absolute bottom-[60px]">
+        <div class="flex flex-col gap-3 absolute bottom-[60px] animate-slideRight [animation-delay:720ms]">
           <div class="bg-neutral-400 h-[2px] w-[166px]" />
           <p class="text-xs font-medium text-neutral-600 tracking-[1.2px] uppercase leading-7">
             Butuan City 8600<br />
@@ -124,10 +124,10 @@
 </template>
 
 <script setup lang="ts">
-const words = ['Brand Designer', 'UI/UX Designer', 'FE Developer']
+const words = ['Brand Designer', 'UI UX Designer', 'FE Developer']
 const typeSpeed = 80
 const deleteSpeed = 50
-const pauseDuration = 2000
+const pauseDuration = 1000
 
 const displayedText = ref('')
 const cursorVisible = ref(true)

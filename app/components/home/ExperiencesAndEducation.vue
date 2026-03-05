@@ -1,20 +1,20 @@
 <template>
-  <div class="relative flex flex-col items-center gap-[61px]">
+  <div ref="sectionRef" class="relative flex flex-col items-center gap-[61px]">
 
     <!-- Decorative: skateboard (top-right) -->
-    <div class="absolute -top-[260px] right-[-50px] rotate-[7.9deg] pointer-events-none">
+    <div :class="visible ? 'animate-slideLeft [animation-delay:880ms]' : 'opacity-0'" class="absolute -top-[260px] right-[-50px] rotate-[7.9deg] pointer-events-none">
       <img src="/images/experience/skateboard.png" alt="" aria-hidden="true" class="w-[315px] object-cover" />
     </div>
 
     <!-- Decorative: "what i've been through" (top-right) -->
-    <div class="absolute top-[0] right-[-72px] rotate-[20.2deg] pointer-events-none">
+    <div :class="visible ? 'animate-slideLeft [animation-delay:800ms]' : 'opacity-0'" class="absolute top-[0] right-[-72px] rotate-[20.2deg] pointer-events-none">
       <p class="font-['Gochi_Hand'] text-[34px] leading-normal text-primary-500 text-center whitespace-nowrap">
         what i've<br />been through
       </p>
     </div>
 
     <!-- Tab Switcher -->
-    <div class="relative bg-white border border-neutral-400 flex gap-5 items-start p-6 rounded-2xl z-10 shadow-[inset_3px_3px_7px_0px_rgba(136,150,163,0.12),inset_-3px_-3px_7px_0px_white]">
+    <div :class="visible ? 'animate-slideDown' : 'opacity-0'" class="relative bg-white border border-neutral-400 flex gap-5 items-start p-6 rounded-2xl z-10 shadow-[inset_3px_3px_7px_0px_rgba(136,150,163,0.12),inset_-3px_-3px_7px_0px_white]">
       <button
         v-for="tab in tabs"
         :key="tab"
@@ -34,7 +34,7 @@
     <div ref="timelineBodyRef" class="relative flex items-center justify-between w-full">
 
       <!-- Background glow -->
-      <div class="absolute left-1/2 -translate-x-1/2 -top-10 w-[804px] h-[750px] pointer-events-none">
+      <div :class="visible ? 'animate-slideDown [animation-delay:80ms]' : 'opacity-0'" class="absolute left-1/2 -translate-x-1/2 -top-10 w-[804px] h-[750px] pointer-events-none">
         <img src="/images/experience/glow.svg" alt="" aria-hidden="true" class="absolute inset-[-21.33%_-19.9%] w-[140%] h-[140%] max-w-none" />
       </div>
 
@@ -43,13 +43,14 @@
         src="/images/experience/timeline-lines.svg"
         alt=""
         aria-hidden="true"
+        :class="visible ? 'animate-slideDown [animation-delay:80ms]' : 'opacity-0'"
         class="absolute left-[450px] top-[21px] w-[639px] h-[666px] pointer-events-none z-0"
       />
 
       <!-- LEFT column: right-aligned entries, gap-130 -->
       <div class="flex flex-col gap-[130px] items-end text-right w-[432px] shrink-0 relative z-10 -mt-3">
         <!-- RallyHR -->
-        <div class="flex flex-col gap-5 h-auto items-end w-full">
+        <div class="experience opacity-0 flex flex-col gap-5 h-auto items-start w-[430px]" :class="{ 'animate-slideLeft': isYearReached(2) }">
           <div class="flex flex-col gap-1 items-end w-full">
             <p class="font-sans font-normal text-default leading-6 whitespace-nowrap text-black">RallyHR</p>
             <p class="font-sans font-bold text-3xl leading-10 text-black w-full">Front End Lead</p>
@@ -59,7 +60,7 @@
           </p>
         </div>
         <!-- ProphetX -->
-        <div class="flex flex-col gap-5 h-auto items-end w-full">
+        <div class="experience opacity-0 flex flex-col gap-5 h-auto items-start w-[430px]" :class="{ 'animate-slideLeft': isYearReached(4) }">
           <div class="flex flex-col gap-1 items-end w-full">
             <p class="font-sans font-normal text-default leading-6 whitespace-nowrap text-black">ProphetX</p>
             <p class="font-sans font-bold text-3xl leading-10 text-black w-full">Front End Lead + Engr Manager</p>
@@ -98,9 +99,8 @@
 
         <!-- RIGHT text column: gap-159 between Mango and the sub-group -->
         <div class="flex flex-col gap-[159px] w-[548px] shrink-0  -mt-3">
-
           <!-- Mango Interactive -->
-          <div class="flex flex-col gap-5 h-auto items-start w-[430px]">
+          <div class="experience opacity-0 flex flex-col gap-5 h-auto items-start w-[430px]" :class="{ 'animate-slideLeft': isYearReached(1) }">
             <div class="flex flex-col gap-1 items-start w-full">
               <p class="font-sans font-normal text-default leading-6 whitespace-nowrap text-black">Mango Interactive</p>
               <p class="font-sans font-bold text-3xl leading-10 text-black w-full">Front End Developer</p>
@@ -111,10 +111,10 @@
           </div>
 
           <!-- Sub-group: Aversafe + Freelance, gap-46 -->
-          <div class="flex flex-col gap-[46px] items-start w-full">
+          <div class="flex-col gap-[46px] items-start w-full">
 
             <!-- Aversafe -->
-            <div class="flex flex-col gap-5 items-start w-[228px]">
+            <div class="experience opacity-0 flex flex-col gap-5 h-auto items-start w-[228px]" :class="{ 'animate-slideLeft': isYearReached(3) }">
               <div class="flex flex-col gap-1 items-start w-full">
                 <p class="font-sans font-normal text-default leading-6 whitespace-nowrap text-black">Aversafe</p>
                 <p class="font-sans font-bold text-3xl leading-10 text-black w-full">Front End Lead</p>
@@ -125,7 +125,7 @@
             </div>
 
             <!-- Freelance (shifted right with pl-299) -->
-            <div class="flex flex-col gap-5 items-start w-full pl-[299px]">
+            <div class="experience opacity-0 flex flex-col gap-5 h-auto w-full pl-[299px]" :class="{ 'animate-slideLeft': isYearReached(3) }">
               <div class="flex flex-col gap-1 items-start w-full">
                 <p class="font-sans font-normal text-default leading-6 whitespace-nowrap text-black">Freelance</p>
                 <p class="font-sans font-bold text-3xl leading-10 text-black whitespace-nowrap">Brand + UI Design</p>
@@ -140,22 +140,27 @@
       </div>
 
       <!-- Decorative: "don't just learn, experience!" (bottom-left) -->
-      <div class="absolute left-[100px] bottom-[-100px] -rotate-[15.86deg] pointer-events-none">
+      <div :class="visible ? 'animate-slideDown [animation-delay:960ms]' : 'opacity-0'" class="absolute left-[100px] bottom-[-100px] -rotate-[15.86deg] pointer-events-none">
         <p class="font-['Gochi_Hand'] text-[30px] leading-normal text-primary-500 text-center whitespace-nowrap">
           don't just learn,<br />experience!
         </p>
       </div>
 
       <!-- Decorative: keyboard (bottom-left) -->
-      <div class="absolute -left-[290px] bottom-[-150px] rotate-[7.18deg] pointer-events-none">
+      <div :class="visible ? 'animate-slideDown [animation-delay:960ms]' : 'opacity-0'" class="absolute -left-[290px] bottom-[-150px] rotate-[7.18deg] pointer-events-none">
         <img src="/images/experience/keyboard.png" alt="" aria-hidden="true" class="w-[428px] object-cover" />
       </div>
 
     </div>
   </div>
-</template>
+</template>=
 
 <script setup lang="ts">
+import { useInView } from '~/composables/useInView'
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const { sectionRef, visible } = useInView()
+
 const tabs = ['Experiences', 'Education'] as const
 const activeTab = ref<'Experiences' | 'Education'>('Experiences')
 const years = ['2015', '2016', '2017', '2018', '2026', 'NOW']
@@ -166,6 +171,15 @@ const blueLineHeight = ref(0)
 const activeYearCount = ref(0)
 
 const GREY_LINE_HEIGHT = 698
+
+function isYearReached(yearIndex: number, offset = 0) {
+  void blueLineHeight.value // reactive trigger — re-evaluates on every scroll
+  const el = yearItemRefs[yearIndex]
+  if (!el) return false
+  // Trigger when the year dot's center scrolls to 75% down the viewport
+  const rect = el.getBoundingClientRect()
+  return rect.top + rect.height / 2 <= window.innerHeight * 0.75 + offset
+}
 
 function setYearRef(el: unknown, i: number) {
   if (el instanceof HTMLElement) yearItemRefs[i] = el
@@ -200,3 +214,4 @@ onUnmounted(() => {
   window.removeEventListener('scroll', updateProgress)
 })
 </script>
+

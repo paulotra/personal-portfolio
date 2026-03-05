@@ -33,6 +33,30 @@ export default {
       spacing: {
         '4.5': '1.125rem', // 18px
       },
+      keyframes: {
+        slideDown: {
+          '0%': { opacity: '0', translate: '0 -20px' },
+          '100%': { opacity: '1', translate: '0 0' },
+        },
+        slideRight: {
+          '0%': { opacity: '0', translate: '-20px 0' },
+          '100%': { opacity: '1', translate: '0 0' },
+        },
+        slideLeft: {
+          '0%': { opacity: '0', translate: '20px 0' },
+          '100%': { opacity: '1', translate: '0 0' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', translate: '0 -20px' },
+          '100%': { opacity: '1', translate: '0 0' },
+        },
+      },
+      animation: {
+        slideDown: 'slideDown 240ms ease-in both',
+        slideRight: 'slideRight 240ms ease-in both',
+        slideLeft: 'slideLeft 240ms ease-in both',
+        slideUp: 'slideUp 240ms ease-in both',
+      },
       boxShadow: {
         'soft-y': '0 -16px 32px rgba(165,165,165,0.10), 0 16px 32px rgba(165,165,165,0.10)',
       },
