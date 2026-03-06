@@ -37,7 +37,7 @@
           <div
             v-for="(t, i) in doubled"
             :key="`r1-${i}`"
-            class="bg-white border border-neutral-400 flex flex-col gap-5 items-start px-10 py-8 w-[546px] shrink-0"
+            class="bg-white border border-neutral-400 flex flex-col gap-5 items-start px-10 py-8 w-[400px] lg:w-[546px] shrink-0"
           >
             <div class="flex flex-col gap-4 w-full">
               <img
@@ -79,7 +79,7 @@
           <div
             v-for="(t, i) in doubled"
             :key="`r2-${i}`"
-            class="bg-white border border-neutral-400 flex flex-col gap-5 items-start px-10 py-8 w-[546px] shrink-0"
+            class="bg-white border border-neutral-400 flex flex-col gap-5 items-start px-10 py-8 w-[400px] lg:w-[546px] shrink-0"
           >
             <div class="flex flex-col gap-4 w-full">
               <img

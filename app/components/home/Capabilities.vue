@@ -1,7 +1,7 @@
 <template>
-  <div ref="sectionRef" class="relative flex flex-col gap-[60px]">
+  <div ref="sectionRef" class="relative flex flex-col gap-[60px] text-center">
     <!-- Header -->
-    <div class="flex gap-10 items-start">
+    <div class="flex gap-10 flex-col lg:flex-row lg:items-start">
       <!-- Left: Title + subtitle -->
       <div class="relative flex flex-col gap-4 flex-1">
         <!-- Craft & Code label -->
@@ -43,16 +43,16 @@
     </div>
 
     <!-- Capability Cards -->
-    <div class="grid grid-cols-3 gap-10">
+    <div class="grid lg:grid-cols-3 gap-10">
       <!-- Branding -->
       <Card
-        class="transition-none"
+        class="max-w-[600px] mx-auto lg:mx-0 w-full transition-none"
         :class="
           visible ? 'animate-slideDown [animation-delay:160ms]' : 'opacity-0'
         "
       >
-        <div class="flex flex-col gap-6 h-[312px] px-6 py-8">
-          <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-6 lg:h-[312px] px-6 py-8 items-center lg:items-start">
+          <div class="flex flex-col gap-4 text-center lg:text-left">
             <h3
               class="font-sans font-bold text-3xl leading-10 uppercase text-black"
             >
@@ -63,7 +63,7 @@
               confidently.
             </p>
           </div>
-          <div class="flex gap-5 items-center">
+          <div class="flex gap-5 items-center justify-center lg:justify-start">
             <img
               src="/images/capabilities/illustrator.png"
               alt="Adobe Illustrator"
@@ -85,12 +85,13 @@
 
       <!-- UI & UX Design -->
       <Card
+        class="max-w-[600px] mx-auto lg:mx-0 w-full"
         :class="
           visible ? 'animate-slideDown [animation-delay:240ms]' : 'opacity-0'
         "
       >
-        <div class="flex flex-col gap-6 h-[312px] px-6 py-8">
-          <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-6 lg:h-[312px] px-6 py-8 items-center lg:items-start">
+          <div class="flex flex-col gap-4 text-center lg:text-left">
             <h3
               class="font-sans font-bold text-3xl leading-10 uppercase text-black"
             >
@@ -100,7 +101,7 @@
               Designing intuitive experiences for web and<br />mobile.
             </p>
           </div>
-          <div class="flex gap-5 items-center flex-wrap">
+          <div class="flex gap-5 items-center flex-wrap justify-center lg:justify-start">
             <img
               src="/images/capabilities/figma.png"
               alt="Figma"
@@ -132,12 +133,13 @@
 
       <!-- FE Development -->
       <Card
+        class="max-w-[600px] mx-auto lg:mx-0 w-full"
         :class="
           visible ? 'animate-slideDown [animation-delay:320ms]' : 'opacity-0'
         "
       >
-        <div class="flex flex-col gap-6 h-[312px] px-6 py-8">
-          <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-6 lg:h-[312px] px-6 py-8 items-center lg:items-start">
+          <div class="flex flex-col gap-4 text-center lg:text-left">
             <h3
               class="font-sans font-bold text-3xl leading-10 uppercase text-black"
             >
@@ -147,7 +149,7 @@
               Turning design into fast, scalable, production-ready applications.
             </p>
           </div>
-          <div class="flex flex-wrap gap-5 items-center">
+          <div class="flex flex-wrap gap-5 items-center justify-center lg:justify-start">
             <img
               src="/images/capabilities/vscode.png"
               alt="VS Code"

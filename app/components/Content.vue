@@ -4,7 +4,7 @@
   >
     <div class="relative dotted-bg">
       <div
-        class="max-w-[1365px] mx-auto absolute top-[-50px] bottom-[-50px] left-0 right-0"
+        class="hidden [@media(min-width:1420px)]:block max-w-[1365px] mx-auto absolute top-[-50px] bottom-[-50px] left-0 right-0"
       >
         <LaserStroke class="left-0" :pause="3000" />
         <LaserStroke
@@ -55,10 +55,15 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/vertical-lines.svg");
-  background-size: auto;
   background-repeat: repeat-y;
   background-position: center top;
   pointer-events: none;
+}
+
+@media (min-width: 1365px) {
+  .vertical-bg::before {
+    background-image: url("/images/vertical-lines.svg");
+    background-size: auto;
+  }
 }
 </style>

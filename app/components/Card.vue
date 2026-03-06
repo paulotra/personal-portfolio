@@ -1,12 +1,12 @@
 <template>
   <div
-    class="group relative border border-transparent hover:border-primary-500 transition-colors hover:bg-white"
+    class="group relative border border-neutral-300 [@media(min-width:1420px)]:border-transparent hover:border-primary-500 transition-colors hover:bg-white"
   >
     <div
-      class="absolute bg-neutral-300 w-screen h-[1px] top-0 left-[-100%]"
+      class="hidden [@media(min-width:1420px)]:block absolute bg-neutral-300 w-screen h-[1px] top-0 left-[-100%]"
     ></div>
     <div
-      class="absolute bg-neutral-300 w-screen h-[1px] bottom-0 left-[-100%]"
+      class="hidden [@media(min-width:1420px)]:block absolute bg-neutral-300 w-screen h-[1px] bottom-0 left-[-100%]"
     ></div>
     <!-- Corner decorations -->
     <img

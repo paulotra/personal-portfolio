@@ -77,12 +77,116 @@
         :class="
           visible ? 'animate-slideDown [animation-delay:80ms]' : 'opacity-0'
         "
-        class="absolute left-[450px] top-[21px] w-[639px] h-[666px] pointer-events-none z-0"
+        class="hidden [@media(min-width:1420px)]:block absolute left-[450px] top-[21px] w-[639px] h-[666px] pointer-events-none z-0"
       />
+
+      <div
+        class="[@media(min-width:1420px)]:hidden m-auto reltaive z-100 gap-6 flex flex-col max-w-[720px]"
+      >
+        <Card class="flex flex-col gap-5 h-auto items-center p-10">
+          <div class="flex flex-col gap-1 w-full">
+            <p
+              class="font-sans font-normal text-default leading-6 whitespace-nowrap text-black flex justify-between items-center w-full"
+            >
+              Mango Interactive <i class="text-neutral-600">2015 - 2016</i>
+            </p>
+            <p
+              class="font-sans font-bold text-3xl leading-10 text-black w-full text-primary-500"
+            >
+              Front End Lead
+            </p>
+          </div>
+          <p
+            class="font-sans font-normal text-default leading-6 text-black w-full"
+          >
+            Started my frontend career building ecommerce websites.
+          </p>
+        </Card>
+        <Card class="flex flex-col gap-5 h-auto items-center p-10">
+          <div class="flex flex-col gap-1 w-full">
+            <p
+              class="font-sans font-normal text-default leading-6 whitespace-nowrap text-black flex justify-between items-center w-full"
+            >
+              RallyHR <i class="text-neutral-600">2016 - 2017</i>
+            </p>
+            <p
+              class="font-sans font-bold text-3xl leading-10 text-black w-full text-primary-500"
+            >
+              Front End Lead
+            </p>
+          </div>
+          <p
+            class="font-sans font-normal text-default leading-6 text-black w-full"
+          >
+            Early-stage startup focused on HR services and help companies manage
+            hiring.
+          </p>
+        </Card>
+        <Card class="flex flex-col gap-5 h-auto items-center p-10">
+          <div class="flex flex-col gap-1 w-full">
+            <p
+              class="font-sans font-normal text-default leading-6 whitespace-nowrap text-black flex justify-between items-center w-full"
+            >
+              Aversafe <i class="text-neutral-600">2017 - 2018</i>
+            </p>
+            <p
+              class="font-sans font-bold text-3xl leading-10 text-black w-full text-primary-500"
+            >
+              Front End Lead
+            </p>
+          </div>
+          <p
+            class="font-sans font-normal text-default leading-6 text-black w-full"
+          >
+            Startup where I helped build a platform for generating digital
+            certificates.
+          </p>
+        </Card>
+        <Card class="flex flex-col gap-5 h-auto items-center p-10">
+          <div class="flex flex-col gap-1 w-full">
+            <p
+              class="font-sans font-normal text-default leading-6 whitespace-nowrap text-black flex justify-between items-center w-full"
+            >
+              ProphetX <i class="text-neutral-600">2018 - 2026</i>
+            </p>
+            <p
+              class="font-sans font-bold text-3xl leading-10 text-black w-full text-primary-500"
+            >
+              Front End Lead + Engr Manager
+            </p>
+          </div>
+          <p
+            class="font-sans font-normal text-default leading-6 text-black w-full"
+          >
+            Employee #0. Built the brand, product design, and frontend from the
+            ground up.
+          </p>
+        </Card>
+        <Card class="flex flex-col gap-5 h-auto items-center p-10">
+          <div class="flex flex-col gap-1 w-full">
+            <p
+              class="font-sans font-normal text-default leading-6 whitespace-nowrap text-black flex justify-between items-center w-full"
+            >
+              Freelancing <i class="text-neutral-600">2017 - PRESENT</i>
+            </p>
+            <p
+              class="font-sans font-bold text-3xl leading-10 text-black w-full text-primary-500"
+            >
+              Brand + UI Design
+            </p>
+          </div>
+          <p
+            class="font-sans font-normal text-default leading-6 text-black w-full"
+          >
+            Alongside development, worked on various branding and design
+            projects.
+          </p>
+        </Card>
+      </div>
 
       <!-- LEFT column: right-aligned entries, gap-130 -->
       <div
-        class="flex flex-col gap-[130px] items-end text-right w-[432px] shrink-0 relative z-10"
+        class="hidden [@media(min-width:1420px)]:flex flex-col gap-[130px] items-end text-right w-[432px] shrink-0 relative z-10"
       >
         <!-- RallyHR -->
         <div
@@ -135,7 +239,9 @@
       </div>
 
       <!-- CENTER group: year column + right text column -->
-      <div class="flex items-center gap-[114px] relative z-10">
+      <div
+        class="hidden [@media(min-width:1420px)]:flex items-center gap-[114px] relative z-10"
+      >
         <!-- Year column with vertical line -->
         <div
           :class="{ 'animate-slideDown [animation-delay:800ms]': visible }"
@@ -344,3 +450,11 @@ onUnmounted(() => {
   window.removeEventListener("scroll", updateProgress);
 });
 </script>
+
+<style>
+@media (max-width: 1420px) {
+  .experience {
+    display: none;
+  }
+}
+</style>

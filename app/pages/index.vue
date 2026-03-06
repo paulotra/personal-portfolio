@@ -1,6 +1,6 @@
 <template>
   <div class="bg-neutral-100">
-    <div class="min-h-[1045px]">
+    <div class="lg:min-h-[1045px]">
       <!-- Navbar -->
       <Navigation :scrolled="true" class="max-w-[1360px]" />
       <Navigation
@@ -9,10 +9,14 @@
       />
 
       <!-- Hero Section -->
-      <section class="bg-neutral-100 z-10 relative min-h-[944px]">
+      <section
+        class="bg-neutral-100 z-10 relative lg:min-h-[944px] min-h-[520px]"
+      >
         <div class="max-w-[1360px] mx-auto px-6">
           <!-- Hero Content -->
-          <div class="flex flex-col gap-3 pt-[260px] max-w-[662px]">
+          <div
+            class="flex flex-col gap-3 pt-[120px] lg:pt-[260px] lg:max-w-[662px]"
+          >
             <div
               class="flex flex-col gap-2 relative animate-slideRight [animation-delay:240ms]"
             >
@@ -62,8 +66,14 @@
 
     <!-- Content -->
     <Content ref="contentRef" class="relative z-20">
-      <HomeCapabilities id="services" class="mt-[135px] scroll-mt-[240px]" />
-      <HomeRecentWorks id="works" class="mt-[344.5px] scroll-mt-[120px]" />
+      <HomeCapabilities
+        id="services"
+        class="mt-[60px] lg:mt-[135px] scroll-mt-[240px]"
+      />
+      <HomeRecentWorks
+        id="works"
+        class="mt-[240px] lg:mt-[344.5px] scroll-mt-[120px]"
+      />
       <HomeExperiencesAndEducation
         id="experience"
         class="mt-[260px] scroll-mt-[120px]"
@@ -82,9 +92,9 @@
         />
 
         <div class="max-w-[1362px] mx-auto pt-[100px] pb-[60px]">
-          <div class="flex gap-10 items-start">
+          <div class="lg:flex gap-10 items-start px-8 lg:px-0">
             <!-- Left: CTA + Contacts -->
-            <div class="flex flex-col gap-6 flex-1">
+            <div class="flex flex-col gap-6 flex-1 mb-10 lg:mb-0">
               <div class="flex flex-col gap-1">
                 <h2
                   class="font-sans font-black text-[60px] leading-heading uppercase text-black"
@@ -96,7 +106,7 @@
                   Open to full-time, part-time roles and product collaborations.
                 </p>
               </div>
-              <div class="flex gap-6">
+              <div class="flex gap-10">
                 <div class="flex flex-col gap-1 flex-1">
                   <p
                     class="text-sm font-bold text-neutral-800 tracking-[0.84px] uppercase leading-7"
@@ -136,9 +146,9 @@
             </div>
 
             <!-- Right: Links -->
-            <div class="flex flex-col gap-10 w-1/3">
+            <div class="flex lg:flex-col gap-10 lg:w-1/3">
               <!-- Portfolios -->
-              <div class="flex flex-col gap-3">
+              <div class="flex-1 flex flex-col gap-3">
                 <p
                   class="text-sm font-bold text-neutral-800 tracking-[0.84px] uppercase leading-7"
                 >
@@ -163,7 +173,7 @@
                 </div>
               </div>
               <!-- Socials -->
-              <div class="flex flex-col gap-3">
+              <div class="flex-1 flex flex-col gap-3">
                 <p
                   class="text-sm font-bold text-neutral-800 tracking-[0.84px] uppercase leading-7"
                 >
@@ -199,7 +209,9 @@
         class="absolute -top-10 left-0 w-full h-[84px] bg-neutral-100 rounded-[80px]"
       />
       <div class="max-w-[1360px] mx-auto pb-5 pt-[62px]">
-        <p class="text-sm text-white font-normal leading-7">
+        <p
+          class="text-sm text-white font-normal leading-7 text-center lg:text-left"
+        >
           © 2026 Paulo Trajano - Designer & Frontend Developer
         </p>
       </div>
