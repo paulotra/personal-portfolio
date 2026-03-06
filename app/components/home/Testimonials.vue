@@ -52,10 +52,17 @@
             </div>
             <div class="flex gap-5 items-center w-full">
               <img
+                v-if="t.avatar"
                 :src="t.avatar"
                 :alt="t.name"
                 class="size-[60px] rounded-full object-cover shrink-0"
               />
+              <div
+                v-else
+                class="size-[60px] rounded-full bg-primary-500 shrink-0 flex items-center justify-center"
+              >
+                <span class="font-sans font-bold text-sm text-white">{{ initials(t.name) }}</span>
+              </div>
               <div class="flex flex-col gap-0.5">
                 <p
                   class="font-sans font-medium text-lg leading-6 text-black whitespace-nowrap"
@@ -94,10 +101,17 @@
             </div>
             <div class="flex gap-5 items-center w-full">
               <img
+                v-if="t.avatar"
                 :src="t.avatar"
                 :alt="t.name"
                 class="size-[60px] rounded-full object-cover shrink-0"
               />
+              <div
+                v-else
+                class="size-[60px] rounded-full bg-primary-500 shrink-0 flex items-center justify-center"
+              >
+                <span class="font-sans font-bold text-sm text-white">{{ initials(t.name) }}</span>
+              </div>
               <div class="flex flex-col gap-0.5">
                 <p
                   class="font-sans font-medium text-lg leading-6 text-black whitespace-nowrap"
@@ -134,17 +148,17 @@ const testimonials = [
   },
   {
     quote:
-      "Paulo doesn’t make things pretty. He makes them work. Our clients open our apps and immediately know what to do. That’s not a coincidence.",
-    name: "Job Wiegant",
-    role: "CEO of RocketFlow",
-    avatar: "/images/people/job.jpeg",
-  },
-  {
-    quote:
       "Paulo was instrumental in getting our platform set up properly from the very beginning. He is highly skilled and delivers exceptional work on time. Having him handle the technical heavy lifting allowed us to focus on business operations and growth. ",
     name: "Zach La Motta",
     role: "Founder & Managing Partner at LFF Industrial ",
     avatar: null,
+  },
+  {
+    quote:
+      "Paulo doesn’t make things pretty. He makes them work. Our clients open our apps and immediately know what to do. That’s not a coincidence.",
+    name: "Job Wiegant",
+    role: "CEO of RocketFlow",
+    avatar: "/images/people/job.jpeg",
   },
   {
     quote:
@@ -154,6 +168,11 @@ const testimonials = [
     avatar: "/images/people/jake.jpeg",
   },
 ];
+
+function initials(name: string) {
+  const parts = name.trim().split(/\s+/);
+  return ((parts[0]?.[0] ?? "") + (parts[1]?.[0] ?? "")).toUpperCase();
+}
 
 const valid = testimonials.filter((t) => t.name && t.quote);
 const odd = valid.filter((_, i) => i % 2 === 0);
