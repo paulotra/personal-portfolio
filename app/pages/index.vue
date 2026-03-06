@@ -1,6 +1,6 @@
 <template>
   <div class="bg-neutral-100">
-    <div class="lg:min-h-[1045px]">
+    <div class="lg:min-h-[883px]">
       <!-- Navbar -->
       <Navigation :scrolled="true" class="max-w-[1360px] top-[20px] relative" />
       <Navigation
@@ -10,7 +10,7 @@
 
       <!-- Hero Section -->
       <section
-        class="bg-neutral-100 z-10 relative lg:min-h-[944px] min-h-[520px]"
+        class="bg-neutral-100 z-10 relative lg:min-h-[800px] min-h-[520px]"
       >
         <div class="max-w-[1360px] mx-auto px-6">
           <!-- Hero Content -->
