@@ -85,7 +85,7 @@ export const works = [
     projectUrl: "#",
   },
   {
-    title: "Anchor Capital",
+    title: "LFF Industrial",
     image: "/images/projects/anchor-capital.svg",
     imageClass: "max-h-[100px]",
     badges: [

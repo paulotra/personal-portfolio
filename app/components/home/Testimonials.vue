@@ -52,10 +52,19 @@
             </div>
             <div class="flex gap-5 items-center w-full">
               <img
+                v-if="t.avatar"
                 :src="t.avatar"
                 :alt="t.name"
                 class="size-[60px] rounded-full object-cover shrink-0"
               />
+              <div
+                v-else
+                class="size-[60px] rounded-full bg-primary-500 shrink-0 flex items-center justify-center"
+              >
+                <span class="font-sans font-bold text-sm text-white">{{
+                  initials(t.name)
+                }}</span>
+              </div>
               <div class="flex flex-col gap-0.5">
                 <p
                   class="font-sans font-medium text-lg leading-6 text-black whitespace-nowrap"
@@ -94,10 +103,19 @@
             </div>
             <div class="flex gap-5 items-center w-full">
               <img
+                v-if="t.avatar"
                 :src="t.avatar"
                 :alt="t.name"
                 class="size-[60px] rounded-full object-cover shrink-0"
               />
+              <div
+                v-else
+                class="size-[60px] rounded-full bg-primary-500 shrink-0 flex items-center justify-center"
+              >
+                <span class="font-sans font-bold text-sm text-white">{{
+                  initials(t.name)
+                }}</span>
+              </div>
               <div class="flex flex-col gap-0.5">
                 <p
                   class="font-sans font-medium text-lg leading-6 text-black whitespace-nowrap"
@@ -126,102 +144,32 @@ const { sectionRef, visible } = useInView();
 
 const testimonials = [
   {
-    quote: "Patient, understanding to work with, Paulo is able to translate ideation into excellent design and perfect execution.",
+    quote:
+      "Patient, understanding to work with, Paulo is able to translate ideation into excellent design and perfect execution.",
     name: "Daniël Klabbers",
     role: "Co-founder of Floxum",
     avatar: "/images/people/daniel-klabbers.png",
   },
   {
-    quote: "Incredibly detail-oriented and proactive. Paulo always delivered beyond expectations.",
+    quote:
+      "Incredibly detail-oriented and proactive. Paulo always delivered beyond expectations.",
     name: "Lena de Vries",
     role: "Founder of Vloer Offerte",
     avatar: "/images/testimonials/avatar-job.svg",
   },
   {
-    quote: "Paulo doesn’t make things pretty. He makes them work. Our clients open our apps and immediately know what to do. That’s not a coincidence.",
-    name: "Job Wiegant",
-    role: "CEO of RocketFlow",
-    avatar: "/images/people/job.jpeg",
-  },
-  {
-    quote: "Paulo transformed our brand identity and built the product from the ground up. Highly recommend.",
-    name: "Alex Fontaine",
-    role: "CEO of Cloudmazing",
-    avatar: "/images/testimonials/avatar-job.svg",
-  },
-  {
-    quote: "Paulo has a rare combination of design sense and engineering skill. He elevated our entire frontend.",
-    name: "Marco Visser",
-    role: "CTO of Aversafe",
-    avatar: "/images/testimonials/avatar-job.svg",
-  },
-  {
-    quote: "The attention to both design and code quality is something I rarely see. Paulo is the real deal.",
-    name: "Thomas Bruin",
-    role: "Founder of 123declaratie",
-    avatar: "/images/testimonials/avatar-job.svg",
-  },
-  {
-    quote: "Working with Paulo felt effortless. He understood our vision instantly and delivered a product that exceeded what we imagined.",
-    name: "Sophie van den Berg",
-    role: "Product Lead at ProphetX",
-    avatar: "/images/testimonials/avatar-job.svg",
-  },
-  {
-    quote: "Paulo took ownership from day one. Clean code, sharp design, zero hand-holding required.",
-    name: "Nina Cortez",
-    role: "CTO of Anchor Capital",
-    avatar: "/images/testimonials/avatar-job.svg",
-  },
-  {
-    quote: "Paulo brought structure and clarity to a messy design process. The end result was a product our whole team is proud of.",
-    name: "Ravi Mehta",
-    role: "Co-founder of Tenancy",
-    avatar: "/images/testimonials/avatar-job.svg",
-  },
-  {
-    quote: "Our users love the new interface. Paulo nailed the balance between aesthetics and usability.",
-    name: "David Huang",
-    role: "Head of Product at Extiverse",
-    avatar: "/images/testimonials/avatar-job.svg",
-  },
-  {
-    quote: "He doesn’t just deliver designs — he delivers solutions. Every pixel Paulo ships has a reason behind it.",
-    name: "Kevin Hartman",
-    role: "Founder of Blomstra",
-    avatar: "/images/testimonials/avatar-job.svg",
-  },
-  {
-    quote: "Paulo was fast, communicative, and sharp. He caught problems before they became problems.",
-    name: "Yuki Tanaka",
-    role: "Lead Designer at Ocam",
-    avatar: "/images/testimonials/avatar-job.svg",
-  },
-  {
-    quote: "The rebrand Paulo delivered gave us the credibility boost we needed to close enterprise deals.",
-    name: "Lars Henriksen",
-    role: "CEO of Well Played",
-    avatar: "/images/testimonials/avatar-job.svg",
-  },
-  {
-    quote: "Collaboration with Paulo is seamless. He reads between the lines and ships exactly what you envisioned.",
-    name: "Fatima Osei",
-    role: "CPO of Tickets",
-    avatar: "/images/testimonials/avatar-job.svg",
-  },
-  {
-    quote: "Paulo elevated our product from a prototype to something we’re genuinely proud to show investors.",
-    name: "Ben Strickland",
-    role: "Co-founder of Int Dashboard",
-    avatar: "/images/testimonials/avatar-job.svg",
-  },
-  {
-    quote: "Top-tier craft across both design and code. Paulo is the kind of developer every startup needs.",
-    name: "Mia Johansson",
-    role: "Head of Engineering at Coach Talk",
-    avatar: "/images/testimonials/avatar-job.svg",
+    quote:
+      "Paulo was instrumental in getting our platform set up properly from the very beginning. He is highly skilled and delivers exceptional work on time. Having him handle the technical heavy lifting allowed us to focus on business operations and growth. ",
+    name: "Zach La Motta",
+    role: "Founder & Managing Partner at LFF Industrial ",
+    avatar: null,
   },
 ];
+
+function initials(name: string) {
+  const parts = name.trim().split(/\s+/);
+  return (parts[0]![0]! + parts[parts.length - 1]![0]!).toUpperCase();
+}
 
 const odd = testimonials.filter((_, i) => i % 2 === 0);
 const even = testimonials.filter((_, i) => i % 2 === 1);
