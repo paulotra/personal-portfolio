@@ -49,7 +49,7 @@
           class="text-xs font-medium text-neutral-600 tracking-[1.2px] uppercase leading-7"
         >
           Butuan City 8600<br />
-          UTC+8 — Philippines
+          UTC+8 - Philippines
         </p>
       </div>
     </div>
