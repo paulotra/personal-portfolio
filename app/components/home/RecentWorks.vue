@@ -14,7 +14,7 @@
         :class="
           visible ? 'animate-slideDown [animation-delay:800ms]' : 'opacity-0'
         "
-        class="absolute right-[360px] -top-[180px] lg:-top-[132px] rotate-[15deg] pointer-events-none"
+        class="absolute lg:right-[360px] -top-[180px] lg:-top-[132px] rotate-[15deg] pointer-events-none"
       >
         <p
           class="font-['Gochi_Hand'] text-[34px] leading-normal text-primary-500 text-center whitespace-pre"

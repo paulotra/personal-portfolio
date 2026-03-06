@@ -9,7 +9,7 @@
           :class="
             visible ? 'animate-slideDown [animation-delay:800ms]' : 'opacity-0'
           "
-          class="absolute -top-8 left-[360px] rotate-[4.62deg] pointer-events-none"
+          class="absolute -top-8 lg:left-[360px] rotate-[4.62deg] pointer-events-none"
         >
           <span
             class="font-['Gochi_Hand'] text-[36px] leading-10 text-primary-500 whitespace-nowrap"
@@ -18,7 +18,7 @@
         </div>
         <div :class="visible ? 'animate-slideDown' : 'opacity-0'">
           <h2
-            class="font-sans font-black text-4xl uppercase text-black whitespace-nowrap leading-[1.4]"
+            class="font-sans font-black text-4xl uppercase text-black leading-[1.4]"
           >
             CORE CAPABILITIES
           </h2>
@@ -51,7 +51,9 @@
           visible ? 'animate-slideDown [animation-delay:160ms]' : 'opacity-0'
         "
       >
-        <div class="flex flex-col gap-6 lg:h-[312px] px-6 py-8 items-center lg:items-start">
+        <div
+          class="flex flex-col gap-6 lg:h-[312px] px-6 py-8 items-center lg:items-start"
+        >
           <div class="flex flex-col gap-4 text-center lg:text-left">
             <h3
               class="font-sans font-bold text-3xl leading-10 uppercase text-black"
@@ -90,7 +92,9 @@
           visible ? 'animate-slideDown [animation-delay:240ms]' : 'opacity-0'
         "
       >
-        <div class="flex flex-col gap-6 lg:h-[312px] px-6 py-8 items-center lg:items-start">
+        <div
+          class="flex flex-col gap-6 lg:h-[312px] px-6 py-8 items-center lg:items-start"
+        >
           <div class="flex flex-col gap-4 text-center lg:text-left">
             <h3
               class="font-sans font-bold text-3xl leading-10 uppercase text-black"
@@ -101,7 +105,9 @@
               Designing intuitive experiences for web and<br />mobile.
             </p>
           </div>
-          <div class="flex gap-5 items-center flex-wrap justify-center lg:justify-start">
+          <div
+            class="flex gap-5 items-center flex-wrap justify-center lg:justify-start"
+          >
             <img
               src="/images/capabilities/figma.png"
               alt="Figma"
@@ -138,7 +144,9 @@
           visible ? 'animate-slideDown [animation-delay:320ms]' : 'opacity-0'
         "
       >
-        <div class="flex flex-col gap-6 lg:h-[312px] px-6 py-8 items-center lg:items-start">
+        <div
+          class="flex flex-col gap-6 lg:h-[312px] px-6 py-8 items-center lg:items-start"
+        >
           <div class="flex flex-col gap-4 text-center lg:text-left">
             <h3
               class="font-sans font-bold text-3xl leading-10 uppercase text-black"
@@ -149,7 +157,9 @@
               Turning design into fast, scalable, production-ready applications.
             </p>
           </div>
-          <div class="flex flex-wrap gap-5 items-center justify-center lg:justify-start">
+          <div
+            class="flex flex-wrap gap-5 items-center justify-center lg:justify-start"
+          >
             <img
               src="/images/capabilities/vscode.png"
               alt="VS Code"
@@ -220,7 +230,7 @@
       :class="
         visible ? 'animate-slideLeft [animation-delay:880ms]' : 'opacity-0'
       "
-      class="absolute -top-[159px] right-[-60px] rotate-[15.01deg] pointer-events-none"
+      class="absolute -top-[159px] right-0 lg:right-[-60px] rotate-[15.01deg] pointer-events-none"
     >
       <img
         src="/images/capabilities/camera.png"
@@ -235,7 +245,7 @@
       :class="
         visible ? 'animate-slideRight [animation-delay:960ms]' : 'opacity-0'
       "
-      class="absolute top-[394px] -left-[109px] rotate-[14.21deg] pointer-events-none"
+      class="absolute top-[1114px] lg:top-[394px] -left-[109px] rotate-[14.21deg] pointer-events-none"
     >
       <img
         src="/images/capabilities/sneaker.png"

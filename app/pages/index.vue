@@ -29,8 +29,8 @@
                 </span>
               </div>
               <!-- Headline -->
-              <h1
-                class="font-sans font-black text-[60px] leading-heading uppercase text-black w-[676px] min-h-[144px]"
+              <Headline
+                class="font-sans font-black leading-heading uppercase text-black max-w-[676px] lg:min-h-[144px] min-h-[252px]"
               >
                 I'm paulo Trajano, <br />A
                 <span class="text-primary-500">{{ displayedText }}</span>
@@ -38,7 +38,7 @@
                   class="inline-block w-[1px] h-[0.9em] bg-primary-500 ml-[1px] align-middle relative -top-1"
                   :class="cursorVisible ? 'opacity-75' : 'opacity-0'"
                 />
-              </h1>
+              </Headline>
             </div>
             <!-- Subtitle -->
             <p
@@ -50,14 +50,14 @@
 
           <!-- Location -->
           <div
-            class="flex flex-col gap-3 absolute bottom-[60px] animate-slideRight [animation-delay:720ms]"
+            class="flex flex-col gap-3 lg:absolute py-12 lg:bottom-[60px] animate-slideRight [animation-delay:720ms]"
           >
             <div class="bg-neutral-400 h-[2px] w-[166px]" />
             <p
               class="text-xs font-medium text-neutral-600 tracking-[1.2px] uppercase leading-7"
             >
               Butuan City 8600<br />
-              Philippines
+              UTC+8 — Philippines
             </p>
           </div>
         </div>

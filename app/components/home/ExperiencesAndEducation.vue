@@ -5,7 +5,7 @@
       :class="
         visible ? 'animate-slideLeft [animation-delay:880ms]' : 'opacity-0'
       "
-      class="absolute -top-[260px] right-[-50px] rotate-[7.9deg] pointer-events-none"
+      class="absolute -top-[340px] lg:-top-[260px] right-[30px] lg:right-[-50px] rotate-[7.9deg] pointer-events-none"
     >
       <img
         src="/images/experience/skateboard.png"
@@ -20,7 +20,7 @@
       :class="
         visible ? 'animate-slideLeft [animation-delay:800ms]' : 'opacity-0'
       "
-      class="absolute top-[0] right-[-72px] rotate-[20.2deg] pointer-events-none"
+      class="absolute top-[-130px] lg:top-[0] right-[-32px] lg:right-[-72px] rotate-[20.2deg] pointer-events-none"
     >
       <p
         class="font-['Gochi_Hand'] text-[34px] leading-normal text-primary-500 text-center whitespace-nowrap"
@@ -39,7 +39,7 @@
         :key="tab"
         @click="activeTab = tab"
         :class="[
-          'px-8 py-5 rounded w-[200px] font-sans font-medium text-xl leading-5 whitespace-nowrap transition-colors',
+          'px-8 py-5 rounded max-w-[200px] font-sans font-medium text-xl leading-5 whitespace-nowrap transition-colors',
           activeTab === tab
             ? 'bg-primary-100 border border-primary-300 text-primary-500'
             : 'bg-neutral-200 border border-neutral-400 text-neutral-600',
