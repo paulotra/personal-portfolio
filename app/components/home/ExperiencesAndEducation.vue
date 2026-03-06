@@ -104,7 +104,8 @@
           <p
             class="font-sans font-normal text-default leading-6 text-black w-full"
           >
-            Turning design into fast, scalable, production-ready applications.
+            Early-stage startup focused on HR services and help companies manage
+            hiring.
           </p>
         </div>
         <!-- ProphetX -->
@@ -127,7 +128,8 @@
           <p
             class="font-sans font-normal text-default leading-6 text-black w-full"
           >
-            Turning design into fast, scalable, production-ready applications.
+            Employee #0. Built the brand, product design, and frontend from the
+            ground up.
           </p>
         </div>
       </div>
@@ -188,7 +190,7 @@
             <p
               class="font-sans font-normal text-default leading-6 text-black w-full"
             >
-              Turning design into fast, scalable, production-ready applications.
+              Started my frontend career building ecommerce websites.
             </p>
           </div>
 
@@ -214,8 +216,8 @@
               <p
                 class="font-sans font-normal text-default leading-6 text-black w-full"
               >
-                Turning design into fast, scalable, production-ready
-                applications.
+                Startup where I helped build a platform for generating digital
+                certificates.
               </p>
             </div>
 
@@ -239,8 +241,8 @@
               <p
                 class="font-sans font-normal text-default leading-6 text-black w-full"
               >
-                Turning design into fast, scalable, production-ready
-                applications.
+                Alongside development, worked on various branding and design
+                projects.
               </p>
             </div>
           </div>

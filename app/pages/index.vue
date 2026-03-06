@@ -106,19 +106,30 @@
                   <p
                     class="text-default text-neutral-800 font-normal leading-7"
                   >
-                    trajanopaulo@gmail.com
+                    <LinkButton
+                      href="mailto:trajanopaulo@gmail.com"
+                      class="text-default text-neutral-800 font-normal leading-7"
+                    >
+                      trajanopaulo@gmail.com
+                    </LinkButton>
                   </p>
                 </div>
                 <div class="flex flex-col gap-1 flex-1">
                   <p
                     class="text-sm font-bold text-neutral-800 tracking-[0.84px] uppercase leading-7"
                   >
-                    LINKEDIN
+                    CONTACT
                   </p>
                   <p
                     class="text-default text-neutral-800 font-normal leading-7"
                   >
-                    trajanopaulo@gmail.com
+                    <LinkButton
+                      href="https://www.linkedin.com/in/paulo-trajano-53aa56109/"
+                      target="_blank"
+                      class="text-default text-neutral-800 font-normal leading-7"
+                    >
+                      LinkedIn Profile
+                    </LinkButton>
                   </p>
                 </div>
               </div>
@@ -135,16 +146,20 @@
                 </p>
                 <div class="bg-neutral-400 h-[2px] w-full" />
                 <div class="flex flex-col gap-2">
-                  <p
+                  <LinkButton
+                    href="https://www.behance.net/paulotrajano1"
+                    target="_blank"
                     class="text-default text-neutral-800 font-normal leading-7"
                   >
                     Behance
-                  </p>
-                  <p
+                  </LinkButton>
+                  <LinkButton
+                    href="https://dribbble.com/paulotra"
+                    target="_blank"
                     class="text-default text-neutral-800 font-normal leading-7"
                   >
                     Dribbble
-                  </p>
+                  </LinkButton>
                 </div>
               </div>
               <!-- Socials -->
@@ -156,16 +171,20 @@
                 </p>
                 <div class="bg-neutral-400 h-[2px] w-full" />
                 <div class="flex flex-col gap-2">
-                  <p
+                  <LinkButton
+                    href="https://www.instagram.com/paulo_tra/"
+                    target="_blank"
                     class="text-default text-neutral-800 font-normal leading-7"
                   >
                     Instagram
-                  </p>
-                  <p
+                  </LinkButton>
+                  <LinkButton
+                    href="https://www.facebook.com/paulotra/"
+                    target="_blank"
                     class="text-default text-neutral-800 font-normal leading-7"
                   >
                     Facebook
-                  </p>
+                  </LinkButton>
                 </div>
               </div>
             </div>

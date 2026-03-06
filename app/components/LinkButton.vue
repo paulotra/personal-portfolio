@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" class="link-hover relative" :class="{ active: isActive }">
+  <a :href="href" class="link-hover relative group w-fit" :class="{ active: isActive }">
     <slot />
   </a>
 </template>

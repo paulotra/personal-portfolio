@@ -22,7 +22,9 @@
           <Button variant="secondary" :show-icon="false"
             >See All Projects</Button
           >
-          <Button variant="primary" :show-icon="false">Work With Me</Button>
+          <a href="mailto:trajanopaulo@gmail.com">
+            <Button variant="primary" :show-icon="false">Work With Me</Button>
+          </a>
         </div>
       </div>
     </nav>
