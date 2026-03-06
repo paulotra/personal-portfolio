@@ -39,7 +39,7 @@
         :key="tab"
         @click="activeTab = tab"
         :class="[
-          'px-8 py-5 rounded max-w-[200px] font-sans font-medium text-xl leading-5 whitespace-nowrap transition-colors',
+          'px-8 py-5 rounded lg:w-[200px] font-sans font-medium text-xl leading-5 whitespace-nowrap transition-colors',
           activeTab === tab
             ? 'bg-primary-100 border border-primary-300 text-primary-500'
             : 'bg-neutral-200 border border-neutral-400 text-neutral-600',

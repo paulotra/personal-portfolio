@@ -1,5 +1,5 @@
 <template>
-  <div>
-    <router-view />
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

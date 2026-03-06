@@ -26,13 +26,12 @@
       </div>
 
       <!-- Visit all projects -->
-      <a
-        href="#"
+      <NuxtLink
+        to="/projects"
         :class="visible ? 'animate-slideDown' : 'opacity-0'"
-        class="lg:flex items-center gap-3 cursor-pointer hidden"
+        class="lg:flex items-center gap-3 cursor-pointer hidden text-neutral-700 hover:text-primary-500"
       >
-        <span
-          class="font-['Gochi_Hand'] text-3xl leading-10 text-neutral-700 whitespace-nowrap"
+        <span class="font-['Gochi_Hand'] text-3xl leading-10 whitespace-nowrap"
           >Visit all projects</span
         >
         <img
@@ -41,13 +40,13 @@
           aria-hidden="true"
           class="h-[27px] w-[53px] object-cover"
         />
-      </a>
+      </NuxtLink>
     </div>
 
     <!-- Cards Grid -->
     <div class="grid lg:grid-cols-3 gap-x-10 gap-y-[2.26rem]">
       <WorkCard
-        v-for="(work, i) in works"
+        v-for="(work, i) in works.slice(0, 3)"
         :key="work.title"
         v-bind="work"
         class="max-w-[600px] mx-auto lg:mx-0 w-full"
@@ -64,75 +63,5 @@ import { useInView } from "~/composables/useInView";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { sectionRef, visible } = useInView(0.3);
 
-const works = [
-  {
-    title: "Rocket Flow",
-    image: "/images/projects/rocketflow.svg",
-    imageClass: "max-h-16",
-    badges: [
-      { variant: "brand", label: "Logo" },
-      { variant: "ui", label: "UI + UX" },
-      { variant: "dev", label: "FE Development" },
-    ],
-    siteUrl: "#",
-    projectUrl: "#",
-  },
-  {
-    title: "ProphetX",
-    image: "/images/projects/prophetx.svg",
-    imageClass: "max-h-16",
-    badges: [
-      { variant: "brand", label: "Logo" },
-      { variant: "ui", label: "UI + UX" },
-      { variant: "dev", label: "FE Development" },
-    ],
-    siteUrl: "#",
-    projectUrl: "#",
-  },
-  {
-    title: "Coach Talk",
-    image: "/images/projects/coachtalk.svg",
-    imageClass: "max-h-[140px]",
-    badges: [
-      { variant: "brand", label: "Logo" },
-      { variant: "ui", label: "UI + UX" },
-    ],
-    siteUrl: "#",
-    projectUrl: "#",
-  },
-  {
-    title: "Vloer Offerte",
-    image: "/images/projects/vloer.svg",
-    imageClass: "max-h-16",
-    badges: [
-      { variant: "brand", label: "Logo" },
-      { variant: "ui", label: "UI + UX" },
-    ],
-    siteUrl: "#",
-    projectUrl: "#",
-  },
-  {
-    title: "Cloudmazing",
-    image: "/images/projects/cloudmazing.svg",
-    imageClass: "max-h-[100px]",
-    badges: [
-      { variant: "brand", label: "Logo" },
-      { variant: "ui", label: "UI + UX" },
-      { variant: "dev", label: "FE Development" },
-    ],
-    siteUrl: "#",
-    projectUrl: "#",
-  },
-  {
-    title: "123declaratie",
-    image: "/images/projects/123.svg",
-    imageClass: "max-h-16",
-    badges: [
-      { variant: "brand", label: "Logo" },
-      { variant: "ui", label: "UI + UX" },
-    ],
-    siteUrl: "#",
-    projectUrl: "#",
-  },
-];
+import { works } from "~/data/works";
 </script>

@@ -129,7 +129,7 @@ const testimonials = [
     quote:
       "Patient, understanding to work with, Paulo is able to translate ideation into excellent design and perfect execution.",
     name: "Daniël Klabbers",
-    role: "Co-founder of Floxum & Flarum",
+    role: "Co-founder of Floxum",
     avatar: "/images/people/daniel-klabbers.png",
   },
   {

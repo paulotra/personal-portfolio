@@ -1,0 +1,126 @@
+export const works = [
+  {
+    title: "Rocket Flow",
+    image: "/images/projects/rocketflow.svg",
+    imageClass: "max-h-16",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "ProphetX",
+    image: "/images/projects/prophetx.svg",
+    imageClass: "max-h-16",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Coach Talk",
+    image: "/images/projects/coachtalk.svg",
+    imageClass: "max-h-[140px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Vloer Offerte",
+    image: "/images/projects/vloer.svg",
+    imageClass: "max-h-16",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Cloudmazing",
+    image: "/images/projects/cloudmazing.svg",
+    imageClass: "max-h-[100px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "123declaratie",
+    image: "/images/projects/123.svg",
+    imageClass: "max-h-16",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Tenancy",
+    image: "/images/projects/tenancy.svg",
+    imageClass: "max-h-16",
+    badges: [
+      { variant: "brand", label: "Logo" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Elated",
+    image: "/images/projects/elated.svg",
+    imageClass: "max-h-16",
+    badges: [
+      { variant: "brand", label: "Logo" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Anchor Capital",
+    image: "/images/projects/anchor-capital.svg",
+    imageClass: "max-h-[100px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Int Dashboard",
+    image: "/images/projects/int-dashboard.svg",
+    imageClass: "max-h-[60px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Ocam",
+    image: "/images/projects/ocam.svg",
+    imageClass: "max-h-[100px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+];

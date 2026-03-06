@@ -4,16 +4,34 @@
     :class="scrolled ? 'translate-y-0' : '-translate-y-full'"
   >
     <nav class="flex items-center justify-between mx-auto px-6 py-4 max-w-full">
-      <img src="/images/pt-logo.svg" alt="PT Logo" class="h-[22px] w-[24px]" />
+      <NuxtLink to="/">
+        <img
+          src="/images/pt-logo.svg"
+          alt="PT Logo"
+          class="h-[22px] w-[24px]"
+        />
+      </NuxtLink>
 
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-10">
-        <LinkButton href="#services" class="text-base text-neutral-800">Services</LinkButton>
-        <LinkButton href="#works" class="text-base text-neutral-800">Recent Works</LinkButton>
-        <LinkButton href="#experience" class="text-base text-neutral-800">Experience</LinkButton>
-        <LinkButton href="#testimonials" class="text-base text-neutral-800">Testimonials</LinkButton>
+        <LinkButton href="#services" class="text-base text-neutral-800"
+          >Services</LinkButton
+        >
+        <LinkButton href="#works" class="text-base text-neutral-800"
+          >Recent Works</LinkButton
+        >
+        <LinkButton href="#experience" class="text-base text-neutral-800"
+          >Experience</LinkButton
+        >
+        <LinkButton href="#testimonials" class="text-base text-neutral-800"
+          >Testimonials</LinkButton
+        >
         <div class="flex gap-4">
-          <Button variant="secondary" :show-icon="false">See All Projects</Button>
+          <NuxtLink to="/projects">
+            <Button variant="secondary" :show-icon="false" class="w-full"
+              >See All Projects</Button
+            >
+          </NuxtLink>
           <a href="mailto:trajanopaulo@gmail.com">
             <Button variant="primary" :show-icon="false">Work With Me</Button>
           </a>
@@ -46,14 +64,40 @@
       v-show="menuOpen"
       class="md:hidden flex flex-col gap-5 px-6 pb-6 border-t border-neutral-200"
     >
-      <LinkButton href="#services" class="text-base text-neutral-800" @click="menuOpen = false">Services</LinkButton>
-      <LinkButton href="#works" class="text-base text-neutral-800" @click="menuOpen = false">Recent Works</LinkButton>
-      <LinkButton href="#experience" class="text-base text-neutral-800" @click="menuOpen = false">Experience</LinkButton>
-      <LinkButton href="#testimonials" class="text-base text-neutral-800" @click="menuOpen = false">Testimonials</LinkButton>
+      <LinkButton
+        href="#services"
+        class="text-base text-neutral-800"
+        @click="menuOpen = false"
+        >Services</LinkButton
+      >
+      <LinkButton
+        href="#works"
+        class="text-base text-neutral-800"
+        @click="menuOpen = false"
+        >Recent Works</LinkButton
+      >
+      <LinkButton
+        href="#experience"
+        class="text-base text-neutral-800"
+        @click="menuOpen = false"
+        >Experience</LinkButton
+      >
+      <LinkButton
+        href="#testimonials"
+        class="text-base text-neutral-800"
+        @click="menuOpen = false"
+        >Testimonials</LinkButton
+      >
       <div class="flex flex-col gap-3 pt-2">
-        <Button variant="secondary" :show-icon="false" class="w-full">See All Projects</Button>
+        <NuxtLink to="/projects">
+          <Button variant="secondary" :show-icon="false" class="w-full"
+            >See All Projects</Button
+          >
+        </NuxtLink>
         <a href="mailto:trajanopaulo@gmail.com" class="w-full">
-          <Button variant="primary" :show-icon="false" class="w-full">Work With Me</Button>
+          <Button variant="primary" :show-icon="false" class="w-full"
+            >Work With Me</Button
+          >
         </a>
       </div>
     </div>
