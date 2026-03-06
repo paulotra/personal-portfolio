@@ -52,19 +52,10 @@
             </div>
             <div class="flex gap-5 items-center w-full">
               <img
-                v-if="t.avatar"
                 :src="t.avatar"
                 :alt="t.name"
                 class="size-[60px] rounded-full object-cover shrink-0"
               />
-              <div
-                v-else
-                class="size-[60px] rounded-full bg-primary-500 shrink-0 flex items-center justify-center"
-              >
-                <span class="font-sans font-bold text-sm text-white">{{
-                  initials(t.name)
-                }}</span>
-              </div>
               <div class="flex flex-col gap-0.5">
                 <p
                   class="font-sans font-medium text-lg leading-6 text-black whitespace-nowrap"
@@ -103,19 +94,10 @@
             </div>
             <div class="flex gap-5 items-center w-full">
               <img
-                v-if="t.avatar"
                 :src="t.avatar"
                 :alt="t.name"
                 class="size-[60px] rounded-full object-cover shrink-0"
               />
-              <div
-                v-else
-                class="size-[60px] rounded-full bg-primary-500 shrink-0 flex items-center justify-center"
-              >
-                <span class="font-sans font-bold text-sm text-white">{{
-                  initials(t.name)
-                }}</span>
-              </div>
               <div class="flex flex-col gap-0.5">
                 <p
                   class="font-sans font-medium text-lg leading-6 text-black whitespace-nowrap"
@@ -152,10 +134,10 @@ const testimonials = [
   },
   {
     quote:
-      "Paulo transformed our brand identity and built the product from the ground up. Highly recommend.",
-    name: "Alex Fontaine",
-    role: "CEO of Cloudmazing",
-    avatar: "/images/testimonials/avatar-job.svg",
+      "Paulo doesn’t make things pretty. He makes them work. Our clients open our apps and immediately know what to do. That’s not a coincidence.",
+    name: "Job Wiegant",
+    role: "CEO of RocketFlow",
+    avatar: "/images/people/job.jpeg",
   },
   {
     quote:
@@ -164,15 +146,18 @@ const testimonials = [
     role: "Founder & Managing Partner at LFF Industrial ",
     avatar: null,
   },
+  {
+    quote:
+      "I worked with Paulo while we were developing the early versions of our platform. He contributed strong design thinking and was effective at turning product concepts into usable prototypes and early engineering builds. His combination of product design instincts and hands-on technical capability helped us move quickly during the early stages of development.",
+    name: "Jake Benzaquen",
+    role: "Co-founder of ProphetX",
+    avatar: "/images/people/jake.jpeg",
+  },
 ];
 
-function initials(name: string) {
-  const parts = name.trim().split(/\s+/);
-  return (parts[0]![0]! + parts[parts.length - 1]![0]!).toUpperCase();
-}
-
-const odd = testimonials.filter((_, i) => i % 2 === 0);
-const even = testimonials.filter((_, i) => i % 2 === 1);
+const valid = testimonials.filter((t) => t.name && t.quote);
+const odd = valid.filter((_, i) => i % 2 === 0);
+const even = valid.filter((_, i) => i % 2 === 1);
 
 const row1 = [...odd, ...odd];
 const row2 = [...even, ...even];
