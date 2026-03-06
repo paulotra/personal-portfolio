@@ -64,7 +64,7 @@ onMounted(() => {
   document.body.style.setProperty("cursor", "none", "important");
 
   const style = document.createElement("style");
-  style.textContent = "*, *::before, *::after { cursor: none !important; }";
+  style.textContent = "*, *::before, *::after { cursor: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E\") 0 0, none !important; }";
   document.head.appendChild(style);
 
   const onMove = (e: MouseEvent) => {

@@ -1,11 +1,13 @@
 <template>
   <div class="bg-neutral-100">
     <!-- Navbar -->
-    <Navigation :scrolled="true" class="max-w-[1360px] relative top-[12px]" />
-    <Navigation
-      :scrolled="scrolled"
-      class="fixed bg-white top-0 shadow-soft-y"
-    />
+    <template v-if="route.path !== '/projects'">
+      <Navigation :scrolled="true" class="max-w-[1360px] relative top-[12px]" />
+      <Navigation
+        :scrolled="scrolled"
+        class="fixed bg-white top-0 shadow-soft-y"
+      />
+    </template>
     <slot />
 
     <!-- Footer CTA Section -->
@@ -144,6 +146,7 @@
 </template>
 
 <script setup lang="ts">
+const route = useRoute();
 const scrolled = ref(false);
 
 onMounted(() => {
