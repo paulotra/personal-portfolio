@@ -8,7 +8,7 @@ export const works = [
       { variant: "ui", label: "UI + UX" },
       { variant: "dev", label: "FE Development" },
     ],
-    siteUrl: "#",
+    siteUrl: "https://www.rocketflow.nl/",
     projectUrl: "#",
   },
   {
@@ -20,7 +20,7 @@ export const works = [
       { variant: "ui", label: "UI + UX" },
       { variant: "dev", label: "FE Development" },
     ],
-    siteUrl: "#",
+    siteUrl: "https://www.prophetx.co/",
     projectUrl: "#",
   },
   {
@@ -31,7 +31,7 @@ export const works = [
       { variant: "brand", label: "Logo" },
       { variant: "ui", label: "UI + UX" },
     ],
-    siteUrl: "#",
+    siteUrl: "https://cloudmazing.coach-talk.nl/login",
     projectUrl: "#",
   },
   {
@@ -42,7 +42,7 @@ export const works = [
       { variant: "brand", label: "Logo" },
       { variant: "ui", label: "UI + UX" },
     ],
-    siteUrl: "#",
+    siteUrl: "https://vloer-offerte.nl/",
     projectUrl: "#",
   },
   {
@@ -54,7 +54,7 @@ export const works = [
       { variant: "ui", label: "UI + UX" },
       { variant: "dev", label: "FE Development" },
     ],
-    siteUrl: "#",
+    siteUrl: null,
     projectUrl: "#",
   },
   {
@@ -65,27 +65,23 @@ export const works = [
       { variant: "brand", label: "Logo" },
       { variant: "ui", label: "UI + UX" },
     ],
-    siteUrl: "#",
+    siteUrl: "https://123declaratie.nl/",
     projectUrl: "#",
   },
   {
     title: "Tenancy",
     image: "/images/projects/tenancy.svg",
     imageClass: "max-h-16",
-    badges: [
-      { variant: "brand", label: "Logo" },
-    ],
-    siteUrl: "#",
+    badges: [{ variant: "brand", label: "Logo" }],
+    siteUrl: "https://tenancy.dev/",
     projectUrl: "#",
   },
   {
     title: "Elated",
     image: "/images/projects/elated.svg",
     imageClass: "max-h-16",
-    badges: [
-      { variant: "brand", label: "Logo" },
-    ],
-    siteUrl: "#",
+    badges: [{ variant: "brand", label: "Logo" }],
+    siteUrl: null,
     projectUrl: "#",
   },
   {
@@ -97,7 +93,7 @@ export const works = [
       { variant: "ui", label: "UI + UX" },
       { variant: "dev", label: "FE Development" },
     ],
-    siteUrl: "#",
+    siteUrl: "https://lffindustrial.com/",
     projectUrl: "#",
   },
   {
@@ -108,7 +104,7 @@ export const works = [
       { variant: "brand", label: "Logo" },
       { variant: "ui", label: "UI + UX" },
     ],
-    siteUrl: "#",
+    siteUrl: null,
     projectUrl: "#",
   },
   {
@@ -120,7 +116,7 @@ export const works = [
       { variant: "ui", label: "UI + UX" },
       { variant: "dev", label: "FE Development" },
     ],
-    siteUrl: "#",
+    siteUrl: null,
     projectUrl: "#",
   },
 ];

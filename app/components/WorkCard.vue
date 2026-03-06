@@ -27,7 +27,11 @@
             >
           </div>
           <div class="flex items-center gap-6">
-            <LinkButton :href="siteUrl" class="flex items-center gap-2 leading">
+            <LinkButton
+              v-if="siteUrl"
+              :href="siteUrl"
+              class="flex items-center gap-2 leading"
+            >
               <Headline
                 variant="h6"
                 class="!text-neutral-600 relative top-[1px]"
@@ -35,8 +39,12 @@
               >
               <Icon name="arrow-diagonal" size="sm" class="text-primary-500" />
             </LinkButton>
-            <div class="w-px h-[19px] bg-neutral-400" />
+            <div
+              v-if="siteUrl && projectUrl"
+              class="w-px h-[19px] bg-neutral-400"
+            />
             <LinkButton
+              v-if="projectUrl"
               :href="projectUrl"
               class="flex items-center gap-2 leading"
             >
