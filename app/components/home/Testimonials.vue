@@ -1,14 +1,14 @@
 <template>
   <div
     ref="sectionRef"
-    class="relative flex flex-col gap-12 items-center -mx-20"
+    class="relative flex flex-col gap-12 items-center lg:-mx-20"
   >
     <!-- Title -->
     <div
       :class="
         visible ? 'animate-slideDown [animation-delay:400ms]' : 'opacity-0'
       "
-      class="absolute right-[200px] top-[-80px] w-[246px] h-[230px] rotate-[23.35deg] pointer-events-none"
+      class="absolute lg:right-[200px] right-[-40px] lg:top-[-80px] top-[-90px] w-[246px] h-[230px] rotate-[23.35deg] pointer-events-none"
     >
       <p
         class="font-['Gochi_Hand'] text-[30px] leading-normal text-primary-500 text-center whitespace-nowrap relative z-10"
@@ -19,7 +19,7 @@
 
     <h2
       :class="visible ? 'animate-slideDown' : 'opacity-0'"
-      class="font-sans font-black text-4xl leading-normal uppercase text-black whitespace-nowrap"
+      class="font-sans font-black text-4xl leading-normal uppercase text-black text-center lg:text-left"
     >
       What My Clients Say
     </h2>

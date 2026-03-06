@@ -2,7 +2,7 @@
   <div class="bg-neutral-100">
     <div class="lg:min-h-[1045px]">
       <!-- Navbar -->
-      <Navigation :scrolled="true" class="max-w-[1360px]" />
+      <Navigation :scrolled="true" class="max-w-[1360px] top-[20px] relative" />
       <Navigation
         :scrolled="scrolled"
         class="fixed bg-white top-0 shadow-soft-y"
@@ -96,12 +96,12 @@
             <!-- Left: CTA + Contacts -->
             <div class="flex flex-col gap-6 flex-1 mb-10 lg:mb-0">
               <div class="flex flex-col gap-1">
-                <h2
-                  class="font-sans font-black text-[60px] leading-heading uppercase text-black"
+                <Headline
+                  class="font-sans font-black leading-heading uppercase text-black"
                 >
                   Let's build something great
                   <span class="text-primary-500">together</span>
-                </h2>
+                </Headline>
                 <p class="text-2xl text-neutral-800 font-normal leading-10">
                   Open to full-time, part-time roles and product collaborations.
                 </p>
@@ -220,6 +220,8 @@
 </template>
 
 <script setup lang="ts">
+import Headline from "~/components/Headline.vue";
+
 const words = ["Brand Designer", "UI UX Designer", "FE Developer"];
 const typeSpeed = 80;
 const deleteSpeed = 50;
