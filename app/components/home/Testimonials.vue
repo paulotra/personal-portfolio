@@ -61,7 +61,9 @@
                 v-else
                 class="size-[60px] rounded-full bg-primary-500 shrink-0 flex items-center justify-center"
               >
-                <span class="font-sans font-bold text-sm text-white">{{ initials(t.name) }}</span>
+                <span class="font-sans font-bold text-sm text-white">{{
+                  initials(t.name)
+                }}</span>
               </div>
               <div class="flex flex-col gap-0.5">
                 <p
@@ -110,7 +112,9 @@
                 v-else
                 class="size-[60px] rounded-full bg-primary-500 shrink-0 flex items-center justify-center"
               >
-                <span class="font-sans font-bold text-sm text-white">{{ initials(t.name) }}</span>
+                <span class="font-sans font-bold text-sm text-white">{{
+                  initials(t.name)
+                }}</span>
               </div>
               <div class="flex flex-col gap-0.5">
                 <p
