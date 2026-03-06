@@ -1,7 +1,4 @@
 <template>
-  <!-- Navbar -->
-  <Navigation :scrolled="true" class="max-w-[1360px] relative top-[12px]" />
-  <Navigation :scrolled="scrolled" class="fixed bg-white top-0 shadow-soft-y" />
   <!-- Hero Section -->
   <section class="bg-neutral-100 z-10 relative lg:min-h-[800px] min-h-[520px]">
     <div class="max-w-[1360px] mx-auto px-6">

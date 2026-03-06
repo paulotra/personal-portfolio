@@ -1,5 +1,11 @@
 <template>
   <div class="bg-neutral-100">
+    <!-- Navbar -->
+    <Navigation :scrolled="true" class="max-w-[1360px] relative top-[12px]" />
+    <Navigation
+      :scrolled="scrolled"
+      class="fixed bg-white top-0 shadow-soft-y"
+    />
     <slot />
 
     <!-- Footer CTA Section -->
@@ -148,3 +154,4 @@ onMounted(() => {
   onUnmounted(() => window.removeEventListener("scroll", onScroll));
 });
 </script>
+
