@@ -152,9 +152,9 @@ const testimonials = [
   },
   {
     quote:
-      "Incredibly detail-oriented and proactive. Paulo always delivered beyond expectations.",
-    name: "Lena de Vries",
-    role: "Founder of Vloer Offerte",
+      "Paulo transformed our brand identity and built the product from the ground up. Highly recommend.",
+    name: "Alex Fontaine",
+    role: "CEO of Cloudmazing",
     avatar: "/images/testimonials/avatar-job.svg",
   },
   {
