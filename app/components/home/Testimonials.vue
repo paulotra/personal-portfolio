@@ -127,10 +127,10 @@ const { sectionRef, visible } = useInView();
 const testimonials = [
   {
     quote:
-      "Paulo brings clarity to complex projects. He doesn't just build features — he improves the entire product experience.",
-    name: "Job Weigant",
-    role: "CEO of Rocket Flow",
-    avatar: "/images/testimonials/avatar-job.svg",
+      "Patient, understanding to work with, Paulo is able to translate ideation into excellent design and perfect execution.",
+    name: "Daniël Klabbers",
+    role: "Co-founder of Floxum & Flarum",
+    avatar: "/images/people/daniel-klabbers.png",
   },
   {
     quote:
