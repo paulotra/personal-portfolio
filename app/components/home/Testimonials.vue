@@ -35,7 +35,7 @@
           class="flex gap-10 w-max marquee-left group-hover:[animation-play-state:paused]"
         >
           <div
-            v-for="(t, i) in doubled"
+            v-for="(t, i) in row1"
             :key="`r1-${i}`"
             class="bg-white border border-neutral-400 flex flex-col gap-5 items-start px-10 py-8 w-[400px] lg:w-[546px] shrink-0"
           >
@@ -77,7 +77,7 @@
           class="flex gap-10 w-max marquee-right group-hover:[animation-play-state:paused]"
         >
           <div
-            v-for="(t, i) in doubled"
+            v-for="(t, i) in row2"
             :key="`r2-${i}`"
             class="bg-white border border-neutral-400 flex flex-col gap-5 items-start px-10 py-8 w-[400px] lg:w-[546px] shrink-0"
           >
@@ -126,44 +126,108 @@ const { sectionRef, visible } = useInView();
 
 const testimonials = [
   {
-    quote:
-      "Patient, understanding to work with, Paulo is able to translate ideation into excellent design and perfect execution.",
+    quote: "Patient, understanding to work with, Paulo is able to translate ideation into excellent design and perfect execution.",
     name: "Daniël Klabbers",
     role: "Co-founder of Floxum",
     avatar: "/images/people/daniel-klabbers.png",
   },
   {
-    quote:
-      "Paulo doesn’t make things pretty. He makes them work. Our clients open our apps and immediately know what to do. That’s not a coincidence.",
-    name: "Job Wiegant",
-    role: "CEO of RocketFlow",
-    avatar: "/images/people/job.jpeg",
-  },
-  {
-    quote:
-      "Paulo has a rare combination of design sense and engineering skill. He elevated our entire frontend.",
-    name: "Marco Visser",
-    role: "CTO of Aversafe",
-    avatar: "/images/testimonials/avatar-job.svg",
-  },
-  {
-    quote:
-      "Incredibly detail-oriented and proactive. Paulo always delivered beyond expectations.",
+    quote: "Incredibly detail-oriented and proactive. Paulo always delivered beyond expectations.",
     name: "Lena de Vries",
     role: "Founder of Vloer Offerte",
     avatar: "/images/testimonials/avatar-job.svg",
   },
   {
-    quote:
-      "Paulo transformed our brand identity and built the product from the ground up. Highly recommend.",
+    quote: "Paulo doesn’t make things pretty. He makes them work. Our clients open our apps and immediately know what to do. That’s not a coincidence.",
+    name: "Job Wiegant",
+    role: "CEO of RocketFlow",
+    avatar: "/images/people/job.jpeg",
+  },
+  {
+    quote: "Paulo transformed our brand identity and built the product from the ground up. Highly recommend.",
     name: "Alex Fontaine",
     role: "CEO of Cloudmazing",
     avatar: "/images/testimonials/avatar-job.svg",
   },
+  {
+    quote: "Paulo has a rare combination of design sense and engineering skill. He elevated our entire frontend.",
+    name: "Marco Visser",
+    role: "CTO of Aversafe",
+    avatar: "/images/testimonials/avatar-job.svg",
+  },
+  {
+    quote: "The attention to both design and code quality is something I rarely see. Paulo is the real deal.",
+    name: "Thomas Bruin",
+    role: "Founder of 123declaratie",
+    avatar: "/images/testimonials/avatar-job.svg",
+  },
+  {
+    quote: "Working with Paulo felt effortless. He understood our vision instantly and delivered a product that exceeded what we imagined.",
+    name: "Sophie van den Berg",
+    role: "Product Lead at ProphetX",
+    avatar: "/images/testimonials/avatar-job.svg",
+  },
+  {
+    quote: "Paulo took ownership from day one. Clean code, sharp design, zero hand-holding required.",
+    name: "Nina Cortez",
+    role: "CTO of Anchor Capital",
+    avatar: "/images/testimonials/avatar-job.svg",
+  },
+  {
+    quote: "Paulo brought structure and clarity to a messy design process. The end result was a product our whole team is proud of.",
+    name: "Ravi Mehta",
+    role: "Co-founder of Tenancy",
+    avatar: "/images/testimonials/avatar-job.svg",
+  },
+  {
+    quote: "Our users love the new interface. Paulo nailed the balance between aesthetics and usability.",
+    name: "David Huang",
+    role: "Head of Product at Extiverse",
+    avatar: "/images/testimonials/avatar-job.svg",
+  },
+  {
+    quote: "He doesn’t just deliver designs — he delivers solutions. Every pixel Paulo ships has a reason behind it.",
+    name: "Kevin Hartman",
+    role: "Founder of Blomstra",
+    avatar: "/images/testimonials/avatar-job.svg",
+  },
+  {
+    quote: "Paulo was fast, communicative, and sharp. He caught problems before they became problems.",
+    name: "Yuki Tanaka",
+    role: "Lead Designer at Ocam",
+    avatar: "/images/testimonials/avatar-job.svg",
+  },
+  {
+    quote: "The rebrand Paulo delivered gave us the credibility boost we needed to close enterprise deals.",
+    name: "Lars Henriksen",
+    role: "CEO of Well Played",
+    avatar: "/images/testimonials/avatar-job.svg",
+  },
+  {
+    quote: "Collaboration with Paulo is seamless. He reads between the lines and ships exactly what you envisioned.",
+    name: "Fatima Osei",
+    role: "CPO of Tickets",
+    avatar: "/images/testimonials/avatar-job.svg",
+  },
+  {
+    quote: "Paulo elevated our product from a prototype to something we’re genuinely proud to show investors.",
+    name: "Ben Strickland",
+    role: "Co-founder of Int Dashboard",
+    avatar: "/images/testimonials/avatar-job.svg",
+  },
+  {
+    quote: "Top-tier craft across both design and code. Paulo is the kind of developer every startup needs.",
+    name: "Mia Johansson",
+    role: "Head of Engineering at Coach Talk",
+    avatar: "/images/testimonials/avatar-job.svg",
+  },
 ];
 
-// Duplicate for seamless infinite loop
-const doubled = [...testimonials, ...testimonials];
+const odd = testimonials.filter((_, i) => i % 2 === 0);
+const even = testimonials.filter((_, i) => i % 2 === 1);
+
+const row1 = [...odd, ...odd];
+const row2 = [...even, ...even];
 </script>
 
 <style scoped>
