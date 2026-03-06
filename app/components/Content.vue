@@ -6,23 +6,34 @@
       <div
         class="max-w-[1365px] mx-auto absolute top-[-50px] bottom-[-50px] left-0 right-0"
       >
-        <LaserStroke class="left-0" />
+        <LaserStroke class="left-0" :pause="3000" />
         <LaserStroke
           class="left-[428px]"
           direction="up"
+          :pause="5000"
           style="animation-delay: 3s"
         />
-        <LaserStroke class="left-[468px]" style="animation-delay: 4s" />
+        <LaserStroke
+          class="left-[468px]"
+          style="animation-delay: 4s"
+          :pause="10000"
+        />
         <LaserStroke
           class="right-0"
           direction="up"
           style="animation-delay: 1s"
+          :pause="8000"
         />
-        <LaserStroke class="right-[428px]" style="animation-delay: 2s" />
+        <LaserStroke
+          class="right-[428px]"
+          style="animation-delay: 2s"
+          :pause="6000"
+        />
         <LaserStroke
           class="right-[468px]"
           direction="up"
           style="animation-delay: 5s"
+          :pause="4000"
         />
       </div>
       <div class="max-w-[1365px] mx-auto pt-[100px] pb-[200px]">

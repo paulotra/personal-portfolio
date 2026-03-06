@@ -1,114 +1,67 @@
 <template>
   <div class="bg-neutral-100">
-    <!-- Navbar -->
-    <header
-      class="sticky top-0 z-50 w-full animate-slideDown transition-shadow duration-300"
-      :class="scrolled ? 'bg-white shadow-soft-y' : 'bg-transparent'"
-    >
-      <nav
-        class="flex items-center justify-between mx-auto px-6 transition-all duration-300"
-        :class="scrolled ? 'py-4 max-w-full' : 'py-5 max-w-[1360px]'"
-      >
-        <img
-          src="/images/pt-logo.svg"
-          alt="PT Logo"
-          class="transition-all duration-300"
-          :class="scrolled ? 'h-[22px] w-[24px]' : 'h-[28px] w-[31px]'"
-        />
-        <div class="flex items-center gap-10">
-          <a
-            href="#services"
-            class="transition-all duration-300 text-neutral-800"
-            :class="scrolled ? 'text-base' : 'text-lg'"
-            >Services</a
-          >
-          <a
-            href="#works"
-            class="transition-all duration-300 text-neutral-800"
-            :class="scrolled ? 'text-base' : 'text-lg'"
-            >Works</a
-          >
-          <a
-            href="#experience"
-            class="transition-all duration-300 text-neutral-800"
-            :class="scrolled ? 'text-base' : 'text-lg'"
-            >Experience</a
-          >
-          <!-- <a
-            href="#experience"
-            class="transition-all duration-300 text-neutral-800"
-            :class="scrolled ? 'text-base' : 'text-lg'"
-            >Education</a
-          > -->
-          <a
-            href="#testimonials"
-            class="transition-all duration-300 text-neutral-800"
-            :class="scrolled ? 'text-base' : 'text-lg'"
-            >Testimonials</a
-          >
-          <Button
-            variant="primary"
-            :show-icon="false"
-            :size="scrolled ? 'default' : 'lg'"
-            >Work With Me</Button
-          >
-        </div>
-      </nav>
-    </header>
+    <div class="min-h-[1045px]">
+      <!-- Navbar -->
+      <Navigation :scrolled="true" class="max-w-[1360px]" />
+      <Navigation
+        :scrolled="scrolled"
+        class="fixed bg-white top-0 shadow-soft-y"
+      />
 
-    <!-- Hero Section -->
-    <section class="bg-neutral-100 z-10 relative min-h-[944px]">
-      <div class="max-w-[1360px] mx-auto px-6">
-        <!-- Hero Content -->
-        <div class="flex flex-col gap-3 pt-[260px] max-w-[662px]">
-          <div
-            class="flex flex-col gap-2 relative animate-slideRight [animation-delay:240ms]"
-          >
-            <!-- Hi Guys! -->
-            <div class="-rotate-6 inline-block absolute -top-10 left-0">
-              <span
-                class="font-['Gochi_Hand'] text-[50px] leading-10 text-neutral-700 whitespace-nowrap"
-              >
-                Hi Guys!
-              </span>
-            </div>
-            <!-- Headline -->
-            <h1
-              class="font-sans font-black text-[60px] leading-heading uppercase text-black w-[676px] min-h-[144px]"
+      <!-- Hero Section -->
+      <section class="bg-neutral-100 z-10 relative min-h-[944px]">
+        <div class="max-w-[1360px] mx-auto px-6">
+          <!-- Hero Content -->
+          <div class="flex flex-col gap-3 pt-[260px] max-w-[662px]">
+            <div
+              class="flex flex-col gap-2 relative animate-slideRight [animation-delay:240ms]"
             >
-              I'm paulo Trajano, <br />A
-              <span class="text-primary-500">{{ displayedText }}</span>
-              <span
-                class="inline-block w-[1px] h-[0.9em] bg-primary-500 ml-[1px] align-middle relative -top-1"
-                :class="cursorVisible ? 'opacity-75' : 'opacity-0'"
-              />
-            </h1>
+              <!-- Hi Guys! -->
+              <div class="-rotate-6 inline-block absolute -top-10 left-0">
+                <span
+                  class="font-['Gochi_Hand'] text-[50px] leading-10 text-neutral-700 whitespace-nowrap"
+                >
+                  Hi Guys!
+                </span>
+              </div>
+              <!-- Headline -->
+              <h1
+                class="font-sans font-black text-[60px] leading-heading uppercase text-black w-[676px] min-h-[144px]"
+              >
+                I'm paulo Trajano, <br />A
+                <span class="text-primary-500">{{ displayedText }}</span>
+                <span
+                  class="inline-block w-[1px] h-[0.9em] bg-primary-500 ml-[1px] align-middle relative -top-1"
+                  :class="cursorVisible ? 'opacity-75' : 'opacity-0'"
+                />
+              </h1>
+            </div>
+            <!-- Subtitle -->
+            <p
+              class="text-xl text-black font-normal leading-[34px] animate-slideRight [animation-delay:480ms]"
+            >
+              Specialized in web design, branding, and frontend development.
+            </p>
           </div>
-          <!-- Subtitle -->
-          <p
-            class="text-xl text-black font-normal leading-[34px] animate-slideRight [animation-delay:480ms]"
-          >
-            Specialized in web design, branding, and frontend development.
-          </p>
-        </div>
 
-        <!-- Location -->
-        <div
-          class="flex flex-col gap-3 absolute bottom-[60px] animate-slideRight [animation-delay:720ms]"
-        >
-          <div class="bg-neutral-400 h-[2px] w-[166px]" />
-          <p
-            class="text-xs font-medium text-neutral-600 tracking-[1.2px] uppercase leading-7"
+          <!-- Location -->
+          <div
+            class="flex flex-col gap-3 absolute bottom-[60px] animate-slideRight [animation-delay:720ms]"
           >
-            Butuan City 8600<br />
-            Philippines
-          </p>
+            <div class="bg-neutral-400 h-[2px] w-[166px]" />
+            <p
+              class="text-xs font-medium text-neutral-600 tracking-[1.2px] uppercase leading-7"
+            >
+              Butuan City 8600<br />
+              Philippines
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <!-- Content -->
-    <Content class="relative z-20">
+    <Content ref="contentRef" class="relative z-20">
       <HomeCapabilities id="services" class="mt-[135px] scroll-mt-[240px]" />
       <HomeRecentWorks id="works" class="mt-[344.5px] scroll-mt-[120px]" />
       <HomeExperiencesAndEducation
@@ -276,13 +229,16 @@ async function typewriter() {
 
 // Sticky nav
 const scrolled = ref(false);
+const contentRef = ref<{ $el: HTMLElement } | null>(null);
 
 // Blinking cursor
 let cursorInterval: ReturnType<typeof setInterval>;
 
 onMounted(() => {
+  const el = contentRef.value?.$el ?? null;
   const onScroll = () => {
-    scrolled.value = window.scrollY > 10;
+    if (!el) return;
+    scrolled.value = el.getBoundingClientRect().top <= 400;
   };
   window.addEventListener("scroll", onScroll, { passive: true });
   cursorInterval = setInterval(() => {
