@@ -50,6 +50,14 @@ html {
   font-size: 14px;
 }
 
+html,
+body,
+*,
+*::before,
+*::after {
+  cursor: none !important;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 14px;

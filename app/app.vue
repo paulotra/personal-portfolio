@@ -1,4 +1,5 @@
 <template>
+  <AppCursor />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>

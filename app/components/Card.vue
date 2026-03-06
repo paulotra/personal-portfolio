@@ -1,5 +1,6 @@
 <template>
   <div
+    data-cursor-hover
     class="group relative border border-neutral-300 [@media(min-width:1420px)]:border-transparent hover:border-primary-500 transition-colors hover:bg-white"
   >
     <div
