@@ -77,17 +77,18 @@ defineProps<{
 
 <style scoped>
 .project-img {
-  transform: scale(0.9) rotateY(180deg);
-  filter: grayscale(1) blur(4px);
+  transform: scale(0.9);
+  filter: grayscale(1);
   opacity: 0.6;
   transition:
     transform 0.4s ease,
     filter 0.4s ease,
     opacity 0.4s ease;
 }
+
 .group:hover .project-img {
-  transform: scale(1) rotateY(0deg);
-  filter: grayscale(0) blur(0px);
+  transform: scale(1);
+  filter: grayscale(0);
   opacity: 1;
 }
 </style>

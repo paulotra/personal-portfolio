@@ -134,10 +134,10 @@ const testimonials = [
   },
   {
     quote:
-      "Working with Paulo was seamless. His ability to translate design into pixel-perfect code is unmatched.",
-    name: "Sarah Mitchell",
-    role: "Product Manager at ProphetX",
-    avatar: "/images/testimonials/avatar-job.svg",
+      "Paulo doesn’t make things pretty. He makes them work. Our clients open our apps and immediately know what to do. That’s not a coincidence.",
+    name: "Job Wiegant",
+    role: "CEO of RocketFlow",
+    avatar: "/images/people/job.jpeg",
   },
   {
     quote:

@@ -48,7 +48,7 @@ export const works = [
   {
     title: "Cloudmazing",
     image: "/images/projects/cloudmazing.svg",
-    imageClass: "max-h-[100px]",
+    imageClass: "max-h-[140px]",
     badges: [
       { variant: "brand", label: "Logo" },
       { variant: "ui", label: "UI + UX" },
@@ -99,7 +99,7 @@ export const works = [
   {
     title: "Int Dashboard",
     image: "/images/projects/int-dashboard.svg",
-    imageClass: "max-h-[60px]",
+    imageClass: "max-h-[80px]",
     badges: [
       { variant: "brand", label: "Logo" },
       { variant: "ui", label: "UI + UX" },
@@ -110,13 +110,115 @@ export const works = [
   {
     title: "Ocam",
     image: "/images/projects/ocam.svg",
-    imageClass: "max-h-[100px]",
+    imageClass: "max-h-[90px]",
     badges: [
       { variant: "brand", label: "Logo" },
       { variant: "ui", label: "UI + UX" },
       { variant: "dev", label: "FE Development" },
     ],
     siteUrl: null,
+    projectUrl: "#",
+  },
+  {
+    title: "Arlon Antonius Portfolio",
+    image: "/images/projects/arlon.svg",
+    imageClass: "max-h-[130px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Blomstra",
+    image: "/images/projects/blomstra.svg",
+    imageClass: "max-h-[150px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Camp Diego Garcia",
+    image: "/images/projects/cdg.svg",
+    imageClass: "max-h-[160px]",
+    badges: [{ variant: "brand", label: "Logo" }],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Extiverse",
+    image: "/images/projects/extiverse.svg",
+    imageClass: "max-h-[70px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Hyn (Portfolio)",
+    image: "/images/projects/hyn.svg",
+    imageClass: "max-h-[120px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+    ],
+    siteUrl: "https://hyn.me",
+    projectUrl: "#",
+  },
+  {
+    title: "LMS",
+    image: "/images/projects/lms.svg",
+    imageClass: "max-h-[120px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Nak's Choice",
+    image: "/images/projects/naks.svg",
+    imageClass: "max-h-[70px]",
+    badges: [{ variant: "brand", label: "Logo" }],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Threat Note",
+    image: "/images/projects/threat-note.svg",
+    imageClass: "max-h-[70px]",
+    badges: [{ variant: "brand", label: "Logo" }],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Tickets",
+    image: "/images/projects/tickets.svg",
+    imageClass: "max-h-[90px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    siteUrl: "#",
+    projectUrl: "#",
+  },
+  {
+    title: "Well Played",
+    image: "/images/projects/wellplayed.svg",
+    imageClass: "h-[80px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+    ],
+    siteUrl: "#",
     projectUrl: "#",
   },
 ];
