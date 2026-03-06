@@ -1,5 +1,8 @@
 <template>
-  <div ref="sectionRef" class="relative flex flex-col gap-[60px] text-center">
+  <div
+    ref="sectionRef"
+    class="relative flex flex-col gap-[60px] text-center lg:text-left"
+  >
     <!-- Header -->
     <div class="flex gap-10 flex-col lg:flex-row lg:items-start">
       <!-- Left: Title + subtitle -->
