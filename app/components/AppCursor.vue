@@ -1,23 +1,10 @@
 <template>
-  <div class="pointer-events-none fixed inset-0 z-[9999]" :style="{ opacity: visible ? 1 : 0 }">
-    <!-- Glow trail -->
-    <svg class="absolute inset-0 w-full h-full overflow-visible">
-      <circle
-        v-for="(p, i) in trail"
-        :key="i"
-        :cx="p.x"
-        :cy="p.y"
-        :r="3 * (i / trail.length)"
-        :fill="`rgba(12,140,233,${(i / trail.length) * 0.7})`"
-        :style="{ filter: `blur(${2 - (i / trail.length) * 2}px)` }"
-      />
-    </svg>
-
+  <div
+    class="pointer-events-none fixed inset-0 z-[9999]"
+    :style="{ opacity: visible ? 1 : 0 }"
+  >
     <!-- Cursor arrow -->
-    <div
-      class="absolute"
-      :style="{ left: `${pos.x}px`, top: `${pos.y}px` }"
-    >
+    <div class="absolute" :style="{ left: `${pos.x}px`, top: `${pos.y}px` }">
       <svg
         width="18"
         height="20"
@@ -51,9 +38,7 @@ const TRAIL_LENGTH = 20;
 
 function isInteractive(el: Element | null): boolean {
   while (el) {
-    if (
-      el.matches('a, button, [data-cursor-hover]')
-    ) return true;
+    if (el.matches("a, button, [data-cursor-hover]")) return true;
     el = el.parentElement;
   }
   return false;
@@ -64,7 +49,8 @@ onMounted(() => {
   document.body.style.setProperty("cursor", "none", "important");
 
   const style = document.createElement("style");
-  style.textContent = "*, *::before, *::after { cursor: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E\") 0 0, none !important; }";
+  style.textContent =
+    "*, *::before, *::after { cursor: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E\") 0 0, none !important; }";
   document.head.appendChild(style);
 
   const onMove = (e: MouseEvent) => {
