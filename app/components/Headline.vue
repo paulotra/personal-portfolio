@@ -16,7 +16,7 @@ const classes: Record<Variant, string> = {
   h3: "text-3xl leading-heading text-black",
   h4: "text-2xl leading-heading text-black",
   h5: "text-sm  leading-heading text-neutral-700 tracking-1 uppercase",
-  h6: "text-xs  leading-heading text-neutral-700 tracking-1 uppercase",
+  h6: "text-xs  leading-heading tracking-1 uppercase",
 };
 </script>
 

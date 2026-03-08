@@ -148,7 +148,7 @@ const testimonials = [
       "Patient, understanding to work with, Paulo is able to translate ideation into excellent design and perfect execution.",
     name: "Daniël Klabbers",
     role: "Co-founder of Floxum",
-    avatar: "/images/people/daniel-klabbers.png",
+    avatar: "/images/people/daniel-klabbers.webp",
   },
   {
     quote:
@@ -162,21 +162,21 @@ const testimonials = [
       "Paulo doesn’t make things pretty. He makes them work. Our clients open our apps and immediately know what to do. That’s not a coincidence.",
     name: "Job Wiegant",
     role: "CEO of RocketFlow",
-    avatar: "/images/people/job.jpeg",
+    avatar: "/images/people/job.webp",
   },
   {
     quote:
       "I worked with Paulo while we were developing the early versions of our platform. He contributed strong design thinking and was effective at turning product concepts into usable prototypes and early engineering builds. His combination of product design instincts and hands-on technical capability helped us move quickly during the early stages of development.",
     name: "Jake Benzaquen",
     role: "Co-founder of ProphetX",
-    avatar: "/images/people/jake.jpeg",
+    avatar: "/images/people/jake.webp",
   },
   {
     quote:
       "He has an exceptional eye for vision and design. Over time I had to adjust to a new normal where every task he turned in exceeded my expectations.",
     name: "Brianna O’Keefe",
     role: "CEO of Songoda LLC",
-    avatar: "/images/people/bri.png",
+    avatar: "/images/people/bri.webp",
   },
 ];
 

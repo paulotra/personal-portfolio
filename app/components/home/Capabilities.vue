@@ -70,17 +70,17 @@
           </div>
           <div class="flex gap-5 items-center justify-center lg:justify-start">
             <img
-              src="/images/capabilities/illustrator.png"
+              src="/images/capabilities/illustrator.webp"
               alt="Adobe Illustrator"
               class="size-8 rounded object-contain"
             />
             <img
-              src="/images/capabilities/photoshop.png"
+              src="/images/capabilities/photoshop.webp"
               alt="Adobe Photoshop"
               class="size-8 rounded object-contain"
             />
             <img
-              src="/images/capabilities/figma.png"
+              src="/images/capabilities/figma.webp"
               alt="Figma"
               class="size-8 object-contain"
             />
@@ -112,27 +112,27 @@
             class="flex gap-5 items-center flex-wrap justify-center lg:justify-start"
           >
             <img
-              src="/images/capabilities/figma.png"
+              src="/images/capabilities/figma.webp"
               alt="Figma"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/sketch.png"
+              src="/images/capabilities/sketch.webp"
               alt="Sketch"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/framer.png"
+              src="/images/capabilities/framer.webp"
               alt="Framer"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/spline.png"
+              src="/images/capabilities/spline.webp"
               alt="Spline"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/storybook.png"
+              src="/images/capabilities/storybook.webp"
               alt="Storybook"
               class="size-8 object-contain"
             />
@@ -164,62 +164,62 @@
             class="flex flex-wrap gap-5 items-center justify-center lg:justify-start"
           >
             <img
-              src="/images/capabilities/vscode.png"
+              src="/images/capabilities/vscode.webp"
               alt="VS Code"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/github.png"
+              src="/images/capabilities/github.webp"
               alt="GitHub"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/chatgpt.png"
+              src="/images/capabilities/chatgpt.webp"
               alt="ChatGPT"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/vue.png"
+              src="/images/capabilities/vue.webp"
               alt="Vue"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/nuxt2.png"
+              src="/images/capabilities/nuxt2.webp"
               alt="Nuxt"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/html5.png"
+              src="/images/capabilities/html5.webp"
               alt="HTML5"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/css3.png"
+              src="/images/capabilities/css3.webp"
               alt="CSS3"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/javascript.png"
+              src="/images/capabilities/javascript.webp"
               alt="JavaScript"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/tailwind.png"
+              src="/images/capabilities/tailwind.webp"
               alt="Tailwind CSS"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/nuxt.png"
+              src="/images/capabilities/nuxt.webp"
               alt="Nuxt"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/sass.png"
+              src="/images/capabilities/sass.webp"
               alt="Sass"
               class="size-8 object-contain"
             />
             <img
-              src="/images/capabilities/cypress.png"
+              src="/images/capabilities/cypress.webp"
               alt="Cypress"
               class="size-8 object-contain"
             />
@@ -236,7 +236,7 @@
       class="absolute -top-[159px] right-0 lg:right-[-60px] rotate-[15.01deg] pointer-events-none"
     >
       <img
-        src="/images/capabilities/camera.png"
+        src="/images/capabilities/camera.webp"
         alt=""
         aria-hidden="true"
         class="w-[214px] h-[143px] object-cover"
@@ -251,7 +251,7 @@
       class="absolute top-[1114px] lg:top-[394px] -left-[109px] rotate-[14.21deg] pointer-events-none"
     >
       <img
-        src="/images/capabilities/sneaker.png"
+        src="/images/capabilities/sneaker.webp"
         alt=""
         aria-hidden="true"
         class="w-[306px] h-[204px] object-cover"

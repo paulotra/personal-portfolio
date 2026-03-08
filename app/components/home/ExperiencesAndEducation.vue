@@ -8,7 +8,7 @@
       class="absolute -top-[340px] lg:-top-[260px] right-[30px] lg:right-[-50px] rotate-[7.9deg] pointer-events-none"
     >
       <img
-        src="/images/experience/skateboard.png"
+        src="/images/experience/skateboard.webp"
         alt=""
         aria-hidden="true"
         class="w-[315px] object-cover"
@@ -377,7 +377,7 @@
         class="absolute -left-[290px] bottom-[-150px] rotate-[7.18deg] pointer-events-none"
       >
         <img
-          src="/images/experience/keyboard.png"
+          src="/images/experience/keyboard.webp"
           alt=""
           aria-hidden="true"
           class="w-[428px] object-cover"

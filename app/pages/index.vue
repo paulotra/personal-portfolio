@@ -1,13 +1,13 @@
 <template>
   <!-- Hero Section -->
   <section
-    class="bg-neutral-100 z-10 relative lg:min-h-[800px] min-h-[520px] flex flex-col"
+    class="bg-neutral-100 z-10 relative lg:min-h-[900px] min-h-[520px] flex flex-col overflow-hidden"
   >
     <div class="max-w-[1360px] mx-auto px-6 relative flex-1 w-full">
       <div class="hidden lg:block">
         <!-- Logo + Branding badge with animated tracking line (up then right) -->
         <div
-          class="absolute right-[40px] top-[72px] hidden lg:flex flex-row items-start"
+          class="absolute right-[40px] top-[142px] hidden lg:flex flex-row items-start"
         >
           <svg
             width="94"
@@ -43,7 +43,7 @@
 
         <!-- UI+UX badge with animated tracking line annotation -->
         <div
-          class="absolute right-[48px] top-[200px] hidden lg:flex flex-col items-end"
+          class="absolute right-[64px] top-[300px] hidden lg:flex flex-col items-end"
         >
           <svg
             width="120"
@@ -78,7 +78,7 @@
         </div>
         <!-- FE Development badge with animated tracking line (right to left then down to up) -->
         <div
-          class="absolute right-[430px] top-[260px] hidden lg:flex flex-col items-start"
+          class="absolute right-[394px] top-[300px] hidden lg:flex flex-col items-start"
         >
           <div class="tracking-badge-reveal-dev relative -left-[66px]">
             <Badge variant="dev">FE Development</Badge>
@@ -114,14 +114,15 @@
       </div>
 
       <img
-        src="/images/me.png"
-        class="absolute -bottom-[60px] -right-[420px] max-w-none hidden lg:block animate-slideUp"
-        width="1480px"
+        src="/images/me.webp"
+        class="absolute bottom-[0px] -right-[420px] max-w-none hidden lg:block animate-slideUp"
+        width="1460px"
         alt="Hero Image"
       />
+
       <!-- Hero Content -->
       <div
-        class="flex flex-col gap-3 pt-[160px] lg:pt-[200px] lg:max-w-[662px]"
+        class="flex flex-col gap-3 pt-[160px] lg:pt-[260px] lg:max-w-[662px]"
       >
         <div
           class="flex flex-col gap-2 relative animate-slideRight [animation-delay:240ms]"
@@ -139,10 +140,13 @@
             class="font-sans font-black leading-heading uppercase text-black max-w-[676px] lg:min-h-[144px] min-h-[252px]"
           >
             I'm paulo Trajano, <br />A
-            <span class="text-primary-500">{{ displayedText }}</span>
+            <span :class="currentColor">{{ displayedText }}</span>
             <span
-              class="inline-block w-[1px] h-[0.9em] bg-primary-500 ml-[1px] align-middle relative -top-1"
-              :class="cursorVisible ? 'opacity-75' : 'opacity-0'"
+              class="inline-block w-[1px] h-[0.9em] ml-[1px] align-middle relative -top-1"
+              :class="[
+                currentColor.replace('text-', 'bg-'),
+                cursorVisible ? 'opacity-75' : 'opacity-0',
+              ]"
             />
           </Headline>
         </div>
@@ -170,7 +174,7 @@
   </section>
 
   <!-- Content -->
-  <Content class="relative z-20">
+  <Content class="relative z-20 -mt-16">
     <HomeCapabilities
       id="services"
       class="mt-[60px] lg:mt-[135px] scroll-mt-[240px]"
@@ -190,6 +194,11 @@
 <script setup lang="ts">
 definePageMeta({ layout: "default" });
 const words = ["Brand Designer", "UI UX Designer", "FE Developer"];
+const wordColors: Record<string, string> = {
+  "Brand Designer": "text-secondary-500",
+  "UI UX Designer": "text-primary-500",
+  "FE Developer": "text-green-500",
+};
 const typeSpeed = 80;
 const deleteSpeed = 50;
 const pauseDuration = 1000;
@@ -197,7 +206,11 @@ const pauseDuration = 1000;
 const displayedText = ref("");
 const cursorVisible = ref(true);
 
-let wordIndex = 0;
+const wordIndex = ref(0);
+const currentColor = computed(
+  () =>
+    wordColors[words[wordIndex.value % words.length]!] ?? "text-primary-500",
+);
 
 async function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -205,7 +218,7 @@ async function sleep(ms: number) {
 
 async function typewriter() {
   while (true) {
-    const word = words[wordIndex % words.length]!;
+    const word = words[wordIndex.value % words.length]!;
 
     // Type out
     for (let i = 0; i <= word.length; i++) {
@@ -223,7 +236,7 @@ async function typewriter() {
     }
 
     await sleep(200);
-    wordIndex++;
+    wordIndex.value++;
   }
 }
 

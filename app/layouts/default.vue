@@ -2,10 +2,12 @@
   <div class="bg-neutral-100">
     <!-- Navbar -->
     <template v-if="route.name !== 'projects'">
-      <Navigation
-        :scrolled="true"
-        class="max-w-[1360px] relative top-[12px] animate-slideDown"
-      />
+      <div class="absolute top-0 left-0 right-0">
+        <Navigation
+          :scrolled="true"
+          class="max-w-[1360px] relative top-[12px] animate-slideDown"
+        />
+      </div>
       <Navigation
         :scrolled="scrolled"
         class="fixed bg-white top-0 shadow-soft-y"
