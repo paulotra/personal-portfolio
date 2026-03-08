@@ -27,12 +27,12 @@
     <!-- Slider -->
     <div
       :class="visible ? 'animate-slideUp [animation-delay:80ms]' : 'opacity-0'"
-      class="relative w-full overflow-hidden slider-mask group"
+      class="relative w-full overflow-hidden slider-mask"
     >
       <div class="flex flex-col gap-10">
         <!-- Row 1: scroll left -->
         <div
-          class="flex gap-10 w-max marquee-left group-hover:[animation-play-state:paused]"
+          class="flex gap-10 w-max marquee-left "
         >
           <div
             v-for="(t, i) in row1"
@@ -83,7 +83,7 @@
 
         <!-- Row 2: scroll right -->
         <div
-          class="flex gap-10 w-max marquee-right group-hover:[animation-play-state:paused]"
+          class="flex gap-10 w-max marquee-right "
         >
           <div
             v-for="(t, i) in row2"
@@ -170,6 +170,13 @@ const testimonials = [
     name: "Jake Benzaquen",
     role: "Co-founder of ProphetX",
     avatar: "/images/people/jake.jpeg",
+  },
+  {
+    quote:
+      "He has an exceptional eye for vision and design. Over time I had to adjust to a new normal where every task he turned in exceeded my expectations.",
+    name: "Brianna O’Keefe",
+    role: "CEO of Songoda LLC",
+    avatar: "/images/people/bri.png",
   },
 ];
 
