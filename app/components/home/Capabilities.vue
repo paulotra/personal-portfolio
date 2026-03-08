@@ -25,7 +25,7 @@
           >
             CORE CAPABILITIES
           </h2>
-          <p class="text-xl text-neutral-700 leading-9">
+          <p class="text-xl text-neutral-700 leading-9 mt-4">
             Hi, I'm a Frontend Developer who blends
             <strong class="font-bold text-black">engineering</strong> with
             <strong class="font-bold text-black">design</strong>.
