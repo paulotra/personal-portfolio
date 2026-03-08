@@ -77,3 +77,76 @@ body,
 body {
   overflow-x: hidden;
 }
+
+/* Badge tracking line animation */
+.tracking-cover {
+  animation: tracking-reveal 0.9s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes tracking-reveal {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -158; }
+}
+
+.tracking-cover-brand {
+  animation: tracking-reveal-brand 0.6s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes tracking-reveal-brand {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -138; }
+}
+
+.tracking-badge-reveal-brand {
+  opacity: 0;
+  transform: translateX(-8px);
+  animation: tracking-badge-in-left 0.35s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes tracking-badge-in-left {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.tracking-cover-dev {
+  animation: tracking-reveal-dev 0.7s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes tracking-reveal-dev {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -152; }
+}
+
+.tracking-badge-reveal-dev {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: tracking-badge-in-up 0.35s ease-out forwards;
+  animation-delay: 1.0s;
+}
+
+@keyframes tracking-badge-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tracking-badge-reveal {
+  opacity: 0;
+  transform: translateX(8px);
+  animation: tracking-badge-in 0.35s ease-out forwards;
+  animation-delay: 1.3s;
+}
+
+@keyframes tracking-badge-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

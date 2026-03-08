@@ -1,8 +1,11 @@
 <template>
   <div class="bg-neutral-100">
     <!-- Navbar -->
-    <template v-if="route.path !== '/projects'">
-      <Navigation :scrolled="true" class="max-w-[1360px] relative top-[12px]" />
+    <template v-if="route.name !== 'projects'">
+      <Navigation
+        :scrolled="true"
+        class="max-w-[1360px] relative top-[12px] animate-slideDown"
+      />
       <Navigation
         :scrolled="scrolled"
         class="fixed bg-white top-0 shadow-soft-y"

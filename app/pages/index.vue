@@ -1,10 +1,127 @@
 <template>
   <!-- Hero Section -->
-  <section class="bg-neutral-100 z-10 relative lg:min-h-[800px] min-h-[520px]">
-    <div class="max-w-[1360px] mx-auto px-6">
+  <section
+    class="bg-neutral-100 z-10 relative lg:min-h-[800px] min-h-[520px] flex flex-col"
+  >
+    <div class="max-w-[1360px] mx-auto px-6 relative flex-1 w-full">
+      <div class="hidden lg:block">
+        <!-- Logo + Branding badge with animated tracking line (up then right) -->
+        <div
+          class="absolute right-[40px] top-[72px] hidden lg:flex flex-row items-start"
+        >
+          <svg
+            width="94"
+            height="44"
+            viewBox="0 0 94 44"
+            fill="none"
+            overflow="visible"
+          >
+            <!-- Dashed path: start bottom-left, go up, then right -->
+            <path
+              d="M0 44 V0 H94"
+              stroke="#9751fb"
+              stroke-width="1.5"
+              stroke-dasharray="5 4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <!-- Cover path that wipes away to reveal dashed line -->
+            <path
+              d="M0 44 V0 H94"
+              stroke="#f5f5f5"
+              stroke-width="4"
+              stroke-dasharray="138 138"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              class="tracking-cover-brand"
+            />
+          </svg>
+          <div class="tracking-badge-reveal-brand relative -top-[16px]">
+            <Badge variant="brand">Logo + Branding</Badge>
+          </div>
+        </div>
+
+        <!-- UI+UX badge with animated tracking line annotation -->
+        <div
+          class="absolute right-[48px] top-[200px] hidden lg:flex flex-col items-end"
+        >
+          <svg
+            width="120"
+            height="44"
+            viewBox="0 0 120 44"
+            fill="none"
+            overflow="visible"
+            class="mr-[14px]"
+          >
+            <!-- Dashed path (visual) -->
+            <path
+              d="M0 2 H116 V44"
+              stroke="#0c8ce9"
+              stroke-width="1.5"
+              stroke-dasharray="5 4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <!-- Cover path that wipes away to reveal dashed line -->
+            <path
+              d="M0 2 H116 V44"
+              stroke="#f5f5f5"
+              stroke-width="4"
+              stroke-dasharray="158 158"
+              stroke-linecap="butt"
+              class="tracking-cover"
+            />
+          </svg>
+          <div class="tracking-badge-reveal relative left-[20px]">
+            <Badge variant="ui">UI + UX</Badge>
+          </div>
+        </div>
+        <!-- FE Development badge with animated tracking line (right to left then down to up) -->
+        <div
+          class="absolute right-[430px] top-[260px] hidden lg:flex flex-col items-start"
+        >
+          <div class="tracking-badge-reveal-dev relative -left-[66px]">
+            <Badge variant="dev">FE Development</Badge>
+          </div>
+          <svg
+            width="116"
+            height="36"
+            viewBox="0 0 116 36"
+            fill="none"
+            overflow="visible"
+          >
+            <!-- Dashed path: start bottom-right, go left, then up -->
+            <path
+              d="M116 36 H0 V0"
+              stroke="#2a9f64"
+              stroke-width="1.5"
+              stroke-dasharray="5 4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <!-- Cover path that wipes away to reveal dashed line -->
+            <path
+              d="M116 36 H0 V0"
+              stroke="#f5f5f5"
+              stroke-width="4"
+              stroke-dasharray="152 152"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              class="tracking-cover-dev"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <img
+        src="/images/me.png"
+        class="absolute -bottom-[60px] -right-[420px] max-w-none hidden lg:block animate-slideUp"
+        width="1480px"
+        alt="Hero Image"
+      />
       <!-- Hero Content -->
       <div
-        class="flex flex-col gap-3 pt-[120px] lg:pt-[260px] lg:max-w-[662px]"
+        class="flex flex-col gap-3 pt-[160px] lg:pt-[200px] lg:max-w-[662px]"
       >
         <div
           class="flex flex-col gap-2 relative animate-slideRight [animation-delay:240ms]"
