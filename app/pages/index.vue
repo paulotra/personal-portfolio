@@ -7,7 +7,7 @@
       <div class="hidden lg:block">
         <!-- Logo + Branding badge with animated tracking line (up then right) -->
         <div
-          class="absolute right-[40px] top-[142px] hidden lg:flex flex-row items-start"
+          class="absolute right-[40px] top-[152px] hidden lg:flex flex-row items-start"
         >
           <svg
             width="94"
@@ -78,7 +78,7 @@
         </div>
         <!-- FE Development badge with animated tracking line (right to left then down to up) -->
         <div
-          class="absolute right-[394px] top-[300px] hidden lg:flex flex-col items-start"
+          class="absolute right-[372px] top-[300px] hidden lg:flex flex-col items-start"
         >
           <div class="tracking-badge-reveal-dev relative -left-[66px]">
             <Badge variant="dev">FE Development</Badge>
@@ -116,7 +116,7 @@
       <img
         src="/images/me.webp"
         class="absolute bottom-[0px] -right-[420px] max-w-none hidden lg:block animate-slideUp"
-        width="1460px"
+        width="1630px"
         alt="Hero Image"
       />
 
