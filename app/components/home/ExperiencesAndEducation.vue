@@ -360,7 +360,7 @@
         :class="
           visible ? 'animate-slideDown [animation-delay:960ms]' : 'opacity-0'
         "
-        class="absolute left-[100px] bottom-[-100px] -rotate-[15.86deg] pointer-events-none"
+        class="absolute left-[140px] bottom-[-100px] -rotate-[15.86deg] pointer-events-none"
       >
         <p
           class="font-['Gochi_Hand'] text-[30px] leading-normal text-primary-500 text-center whitespace-nowrap"
@@ -374,7 +374,7 @@
         :class="
           visible ? 'animate-slideDown [animation-delay:960ms]' : 'opacity-0'
         "
-        class="absolute -left-[290px] bottom-[-150px] rotate-[7.18deg] pointer-events-none"
+        class="absolute -left-[250px] bottom-[-150px] rotate-[7.18deg] pointer-events-none"
       >
         <img
           src="/images/experience/keyboard.webp"
