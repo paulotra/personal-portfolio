@@ -46,7 +46,12 @@
     </div>
 
     <div class="flex flex-col gap-9">
-      <Card class="bg-white w-full flex">
+      <Card
+        class="bg-white w-full flex"
+        :class="
+          visible ? 'animate-slideDown [animation-delay:160ms]' : 'opacity-0'
+        "
+      >
         <div
           class="flex flex-col gap-6 lg:h-[351.5px] px-6 py-8 items-center lg:items-start max-w-full"
         >
@@ -157,7 +162,7 @@
         <Card
           class="max-w-[600px] mx-auto lg:mx-0 w-full transition-none"
           :class="
-            visible ? 'animate-slideDown [animation-delay:160ms]' : 'opacity-0'
+            visible ? 'animate-slideDown [animation-delay:240ms]' : 'opacity-0'
           "
         >
           <div
@@ -202,7 +207,7 @@
         <Card
           class="max-w-[600px] mx-auto lg:mx-0 w-full"
           :class="
-            visible ? 'animate-slideDown [animation-delay:240ms]' : 'opacity-0'
+            visible ? 'animate-slideDown [animation-delay:320ms]' : 'opacity-0'
           "
         >
           <div
