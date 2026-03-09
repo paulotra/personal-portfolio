@@ -65,7 +65,7 @@
             </p>
           </div>
           <div
-            class="flex flex-col lg:flex-row items-center gap-10 w-full justify-between"
+            class="flex flex-col lg:flex-row items-center lg:items-start gap-10 w-full justify-between"
           >
             <div class="max-w-[414px] w-full">
               <Headline variant="h6" class="relative text-neutral-600 mb-6"
