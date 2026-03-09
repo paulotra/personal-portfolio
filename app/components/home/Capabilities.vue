@@ -45,110 +45,10 @@
       </p>
     </div>
 
-    <!-- Capability Cards -->
-    <div class="grid lg:grid-cols-3 gap-10">
-      <!-- Branding -->
-      <Card
-        class="max-w-[600px] mx-auto lg:mx-0 w-full transition-none"
-        :class="
-          visible ? 'animate-slideDown [animation-delay:160ms]' : 'opacity-0'
-        "
-      >
+    <div class="flex flex-col gap-[36px]">
+      <Card class="bg-white w-full flex">
         <div
-          class="flex flex-col gap-6 lg:h-[312px] px-6 py-8 items-center lg:items-start"
-        >
-          <div class="flex flex-col gap-4 text-center lg:text-left">
-            <h3
-              class="font-sans font-bold text-3xl leading-10 uppercase text-black"
-            >
-              Branding
-            </h3>
-            <p class="font-sans font-normal text-sm leading-6 text-neutral-700">
-              Building identities that communicate clearly and scale
-              confidently.
-            </p>
-          </div>
-          <div class="flex gap-5 items-center justify-center lg:justify-start">
-            <img
-              src="/images/capabilities/illustrator.webp"
-              alt="Adobe Illustrator"
-              class="size-8 rounded object-contain"
-            />
-            <img
-              src="/images/capabilities/photoshop.webp"
-              alt="Adobe Photoshop"
-              class="size-8 rounded object-contain"
-            />
-            <img
-              src="/images/capabilities/figma.webp"
-              alt="Figma"
-              class="size-8 object-contain"
-            />
-          </div>
-        </div>
-      </Card>
-
-      <!-- UI & UX Design -->
-      <Card
-        class="max-w-[600px] mx-auto lg:mx-0 w-full"
-        :class="
-          visible ? 'animate-slideDown [animation-delay:240ms]' : 'opacity-0'
-        "
-      >
-        <div
-          class="flex flex-col gap-6 lg:h-[312px] px-6 py-8 items-center lg:items-start"
-        >
-          <div class="flex flex-col gap-4 text-center lg:text-left">
-            <h3
-              class="font-sans font-bold text-3xl leading-10 uppercase text-black"
-            >
-              UI &amp; UX Design
-            </h3>
-            <p class="font-sans font-normal text-sm leading-6 text-neutral-700">
-              Designing intuitive experiences for web and<br />mobile.
-            </p>
-          </div>
-          <div
-            class="flex gap-5 items-center flex-wrap justify-center lg:justify-start"
-          >
-            <img
-              src="/images/capabilities/figma.webp"
-              alt="Figma"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/sketch.webp"
-              alt="Sketch"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/framer.webp"
-              alt="Framer"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/spline.webp"
-              alt="Spline"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/storybook.webp"
-              alt="Storybook"
-              class="size-8 object-contain"
-            />
-          </div>
-        </div>
-      </Card>
-
-      <!-- FE Development -->
-      <Card
-        class="max-w-[600px] mx-auto lg:mx-0 w-full"
-        :class="
-          visible ? 'animate-slideDown [animation-delay:320ms]' : 'opacity-0'
-        "
-      >
-        <div
-          class="flex flex-col gap-6 lg:h-[312px] px-6 py-8 items-center lg:items-start"
+          class="flex flex-col gap-5 lg:h-[351.5px] px-6 py-8 items-center lg:items-start"
         >
           <div class="flex flex-col gap-4 text-center lg:text-left">
             <h3
@@ -157,75 +57,197 @@
               FE Development
             </h3>
             <p class="font-sans font-normal text-sm leading-6 text-neutral-700">
-              Turning design into fast, scalable, production-ready applications.
+              I’m a Frontend Developer specializing in Vue.js and modern web
+              technologies, focused on building scalable, maintainable, and
+              performant web applications. I approach development with a strong
+              emphasis on clean architecture, component-driven design, and
+              thoughtful UI/UX to create intuitive user experiences.
             </p>
           </div>
-          <div
-            class="flex flex-wrap gap-5 items-center justify-center lg:justify-start"
-          >
-            <img
-              src="/images/capabilities/vscode.webp"
-              alt="VS Code"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/github.webp"
-              alt="GitHub"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/chatgpt.webp"
-              alt="ChatGPT"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/vue.webp"
-              alt="Vue"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/nuxt2.webp"
-              alt="Nuxt"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/html5.webp"
-              alt="HTML5"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/css3.webp"
-              alt="CSS3"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/javascript.webp"
-              alt="JavaScript"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/tailwind.webp"
-              alt="Tailwind CSS"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/nuxt.webp"
-              alt="Nuxt"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/sass.webp"
-              alt="Sass"
-              class="size-8 object-contain"
-            />
-            <img
-              src="/images/capabilities/cypress.webp"
-              alt="Cypress"
-              class="size-8 object-contain"
-            />
+          <div class="flex gap-10">
+            <div class="max-w-[414px]">
+              <Headline variant="h6" class="relative text-neutral-600 mb-6"
+                >TECH STACK</Headline
+              >
+              <div
+                class="flex flex-wrap gap-5 items-center justify-center lg:justify-start"
+              >
+                <img
+                  src="/images/capabilities/vscode.webp"
+                  alt="VS Code"
+                  class="size-8 object-contain"
+                />
+                <img
+                  src="/images/capabilities/github.webp"
+                  alt="GitHub"
+                  class="size-8 object-contain"
+                />
+                <img
+                  src="/images/capabilities/chatgpt.webp"
+                  alt="ChatGPT"
+                  class="size-8 object-contain"
+                />
+                <img
+                  src="/images/capabilities/vue.webp"
+                  alt="Vue"
+                  class="size-8 object-contain"
+                />
+                <img
+                  src="/images/capabilities/nuxt2.webp"
+                  alt="Nuxt"
+                  class="size-8 object-contain"
+                />
+                <img
+                  src="/images/capabilities/html5.webp"
+                  alt="HTML5"
+                  class="size-8 object-contain"
+                />
+                <img
+                  src="/images/capabilities/css3.webp"
+                  alt="CSS3"
+                  class="size-8 object-contain"
+                />
+                <img
+                  src="/images/capabilities/javascript.webp"
+                  alt="JavaScript"
+                  class="size-8 object-contain"
+                />
+                <img
+                  src="/images/capabilities/tailwind.webp"
+                  alt="Tailwind CSS"
+                  class="size-8 object-contain"
+                />
+                <img
+                  src="/images/capabilities/nuxt.webp"
+                  alt="Nuxt"
+                  class="size-8 object-contain"
+                />
+                <img
+                  src="/images/capabilities/sass.webp"
+                  alt="Sass"
+                  class="size-8 object-contain"
+                />
+                <img
+                  src="/images/capabilities/cypress.webp"
+                  alt="Cypress"
+                  class="size-8 object-contain"
+                />
+              </div>
+            </div>
+            <div class="flex-1">
+              <Headline variant="h6" class="relative text-neutral-600 mb-3"
+                >GITHUB CONTRIBUTIONS</Headline
+              >
+              <GitHubContributions
+                username="paulotra"
+                class="mx-auto lg:mx-0"
+              />
+            </div>
           </div>
         </div>
       </Card>
+
+      <!-- Capability Cards -->
+      <div class="grid lg:grid-cols-3 gap-10">
+        <!-- Branding -->
+        <Card
+          class="max-w-[600px] mx-auto lg:mx-0 w-full transition-none"
+          :class="
+            visible ? 'animate-slideDown [animation-delay:160ms]' : 'opacity-0'
+          "
+        >
+          <div
+            class="flex flex-col gap-6 lg:h-[235px] px-6 py-8 items-center lg:items-start"
+          >
+            <div class="flex flex-col gap-4 text-center lg:text-left">
+              <h3
+                class="font-sans font-bold text-3xl leading-10 uppercase text-black"
+              >
+                Branding
+              </h3>
+              <p
+                class="font-sans font-normal text-sm leading-6 text-neutral-700"
+              >
+                Building identities that communicate clearly and scale
+                confidently.
+              </p>
+            </div>
+            <div
+              class="flex gap-5 items-center justify-center lg:justify-start"
+            >
+              <img
+                src="/images/capabilities/illustrator.webp"
+                alt="Adobe Illustrator"
+                class="size-8 rounded object-contain"
+              />
+              <img
+                src="/images/capabilities/photoshop.webp"
+                alt="Adobe Photoshop"
+                class="size-8 rounded object-contain"
+              />
+              <img
+                src="/images/capabilities/figma.webp"
+                alt="Figma"
+                class="size-8 object-contain"
+              />
+            </div>
+          </div>
+        </Card>
+
+        <!-- UI & UX Design -->
+        <Card
+          class="max-w-[600px] mx-auto lg:mx-0 w-full"
+          :class="
+            visible ? 'animate-slideDown [animation-delay:240ms]' : 'opacity-0'
+          "
+        >
+          <div
+            class="flex flex-col gap-6 lg:h-[235px] px-6 py-8 items-center lg:items-start"
+          >
+            <div class="flex flex-col gap-4 text-center lg:text-left">
+              <h3
+                class="font-sans font-bold text-3xl leading-10 uppercase text-black"
+              >
+                UI &amp; UX Design
+              </h3>
+              <p
+                class="font-sans font-normal text-sm leading-6 text-neutral-700"
+              >
+                Designing intuitive experiences for web and<br />mobile.
+              </p>
+            </div>
+            <div
+              class="flex gap-5 items-center flex-wrap justify-center lg:justify-start"
+            >
+              <img
+                src="/images/capabilities/figma.webp"
+                alt="Figma"
+                class="size-8 object-contain"
+              />
+              <img
+                src="/images/capabilities/sketch.webp"
+                alt="Sketch"
+                class="size-8 object-contain"
+              />
+              <img
+                src="/images/capabilities/framer.webp"
+                alt="Framer"
+                class="size-8 object-contain"
+              />
+              <img
+                src="/images/capabilities/spline.webp"
+                alt="Spline"
+                class="size-8 object-contain"
+              />
+              <img
+                src="/images/capabilities/storybook.webp"
+                alt="Storybook"
+                class="size-8 object-contain"
+              />
+            </div>
+          </div>
+        </Card>
+      </div>
     </div>
 
     <!-- Decorative: Camera (top-right) -->
@@ -248,7 +270,7 @@
       :class="
         visible ? 'animate-slideRight [animation-delay:960ms]' : 'opacity-0'
       "
-      class="absolute top-[1114px] lg:top-[394px] -left-[109px] rotate-[14.21deg] pointer-events-none"
+      class="absolute bottom-[-40px] lg:bottom-[-160px] -left-[109px] rotate-[14.21deg] pointer-events-none"
     >
       <img
         src="/images/capabilities/sneaker.webp"
@@ -262,6 +284,7 @@
 
 <script setup>
 import { useInView } from "~/composables/useInView";
+import Card from "../Card.vue";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { sectionRef, visible } = useInView(0.9);
