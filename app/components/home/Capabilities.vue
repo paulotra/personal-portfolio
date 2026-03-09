@@ -48,11 +48,11 @@
     <div class="flex flex-col gap-[36px]">
       <Card class="bg-white w-full flex">
         <div
-          class="flex flex-col gap-5 lg:h-[351.5px] px-6 py-8 items-center lg:items-start"
+          class="flex flex-col gap-6 lg:h-[351.5px] px-6 py-8 items-center lg:items-start"
         >
-          <div class="flex flex-col gap-4 text-center lg:text-left">
+          <div class="flex flex-col gap-3 text-center lg:text-left">
             <h3
-              class="font-sans font-bold text-3xl leading-10 uppercase text-black"
+              class="font-sans font-bold -mt-2 text-3xl leading-10 uppercase text-black"
             >
               FE Development
             </h3>
@@ -64,7 +64,7 @@
               thoughtful UI/UX to create intuitive user experiences.
             </p>
           </div>
-          <div class="flex gap-10">
+          <div class="flex gap-10 w-full justify-between">
             <div class="max-w-[414px]">
               <Headline variant="h6" class="relative text-neutral-600 mb-6"
                 >TECH STACK</Headline
@@ -134,7 +134,7 @@
                 />
               </div>
             </div>
-            <div class="flex-1">
+            <div class="pr-4">
               <Headline variant="h6" class="relative text-neutral-600 mb-3"
                 >GITHUB CONTRIBUTIONS</Headline
               >
