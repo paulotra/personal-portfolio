@@ -192,6 +192,19 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: "Paulo Trajano — Frontend Developer & Designer",
+  description:
+    "Personal portfolio of Paulo, a frontend developer building modern web experiences.",
+  ogTitle: "Paulo — Frontend Developer",
+  ogDescription:
+    "Personal portfolio of Paulo, a frontend developer building modern web experiences.",
+  ogImage: "https://paulotrajano.me/images/og-image.png",
+  ogUrl: "https://paulotrajano.me",
+  twitterCard: "summary_large_image",
+  twitterImage: "https://paulotrajano.me/images/og-image.png",
+});
+
 definePageMeta({ layout: "default" });
 const words = ["Brand Designer", "UI UX Designer", "FE Developer"];
 const wordColors: Record<string, string> = {
