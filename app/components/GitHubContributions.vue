@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full overflow-visible font-sans relative">
+  <div class="w-full overflow-scroll lg:overflow-visible font-sans relative">
     <!-- Loading -->
     <div
       v-if="loading"
