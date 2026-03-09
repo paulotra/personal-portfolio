@@ -45,7 +45,7 @@
       </p>
     </div>
 
-    <div class="flex flex-col gap-[36px]">
+    <div class="flex flex-col gap-9">
       <Card class="bg-white w-full flex">
         <div
           class="flex flex-col gap-6 lg:h-[351.5px] px-6 py-8 items-center lg:items-start max-w-full"
@@ -136,7 +136,7 @@
                 />
               </div>
             </div>
-            <div class="pr-4 max-w-full overflow-hidden">
+            <div class="pr-4 max-w-full overflow-hidden lg:overflow-visible">
               <Headline variant="h6" class="relative text-neutral-600 mb-3"
                 >GITHUB CONTRIBUTIONS</Headline
               >

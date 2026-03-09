@@ -3,7 +3,7 @@
     <!-- Loading -->
     <div
       v-if="loading"
-      class="flex items-center justify-center h-[80px] text-xs text-neutral-600"
+      class="flex items-center justify-center h-20 text-xs text-neutral-600"
     >
       Loading contributions...
     </div>
@@ -17,7 +17,7 @@
     <div v-else class="relative w-full overflow-visible">
       <div class="flex min-w-0">
         <!-- Day labels (y-axis) -->
-        <div class="flex flex-col gap-[3px] mr-3 mt-[16px] shrink-0">
+        <div class="flex flex-col gap-[3px] mr-3 mt-4 shrink-0">
           <div
             v-for="(label, i) in [
               'Sun',
@@ -29,7 +29,7 @@
               'Sat',
             ]"
             :key="i"
-            class="h-[12px] flex items-center justify-end text-[9px] text-neutral-600 leading-none text-right font-mono uppercase"
+            class="h-3 flex items-center justify-end text-[9px] text-neutral-600 leading-none text-right font-mono uppercase"
           >
             {{ label }}
           </div>
@@ -38,11 +38,11 @@
         <!-- Month labels + week grid -->
         <div class="flex flex-col min-w-0">
           <!-- Month labels (x-axis) -->
-          <div class="relative h-[8px] mb-2">
+          <div class="relative h-2 mb-2">
             <span
               v-for="m in monthLabels"
               :key="m.index"
-              class="absolute text-[9px] text-neutral-600 leading-none font-mono uppercase"
+              class="absolute text-2xs text-neutral-600 leading-none font-mono uppercase"
               :style="{ left: m.index * 15 + 'px' }"
               >{{ m.label }}</span
             >
@@ -58,12 +58,12 @@
               <div
                 v-for="day in week"
                 :key="day.date"
-                class="w-[12px] h-[12px] rounded-[2px] cursor-default relative group/day"
+                class="w-3 h-3 rounded-xs cursor-default relative group/day"
                 :style="{ backgroundColor: levelColor(day.level) }"
               >
                 <!-- Tooltip -->
                 <div
-                  class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-neutral-900 text-white text-[10px] leading-tight rounded whitespace-nowrap opacity-0 group-hover/day:opacity-100 pointer-events-none z-20 transition-opacity duration-100"
+                  class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-neutral-900 text-white text-2xs leading-tight rounded whitespace-nowrap opacity-0 group-hover/day:opacity-100 pointer-events-none z-20 transition-opacity duration-100"
                 >
                   <span class="font-semibold"
                     >{{ day.count }} contribution{{
@@ -86,14 +86,14 @@
 
       <!-- Legend -->
       <div class="flex items-center gap-1 mt-2 justify-end">
-        <span class="text-[10px] text-neutral-600 mr-1">Less</span>
+        <span class="text-2xs text-neutral-600 mr-1">Less</span>
         <div
           v-for="l in [0, 1, 2, 3, 4]"
           :key="l"
-          class="w-[12px] h-[12px] rounded-[2px]"
+          class="w-3 h-3 rounded-xs"
           :style="{ backgroundColor: levelColor(l) }"
         />
-        <span class="text-[10px] text-neutral-600 ml-1">More</span>
+        <span class="text-2xs text-neutral-600 ml-1">More</span>
       </div>
     </div>
   </div>
@@ -153,7 +153,6 @@ const monthLabels = computed(() => {
 });
 
 function buildWeeks(contributions) {
-  // Fill the last 52 weeks from today
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -162,7 +161,6 @@ function buildWeeks(contributions) {
     map[c.date] = c;
   }
 
-  // Start from the Sunday 52 weeks ago
   const start = new Date(today);
   start.setDate(start.getDate() - start.getDay() - 52 * 7);
 
