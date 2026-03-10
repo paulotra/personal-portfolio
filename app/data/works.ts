@@ -104,6 +104,24 @@ export const works = [
     ],
     siteUrl: "https://www.prophetx.co/",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "The Approach",
+        body: "Joining as Employee #0 required building the platform's entire visual and technical foundation from the ground up. The approach involved rapid prototyping and strong design thinking to turn early product concepts into usable engineering builds. The focus was on moving quickly during the early startup stages while establishing a robust, scalable architecture that could grow with the business.",
+      },
+      {
+        heading: "Brand Conception",
+        body: "Conceptualized and designed the ProphetX logo and overall brand identity, establishing the visual language for the company from day one.",
+      },
+      {
+        heading: "Product Design (UI/UX)",
+        body: "Translated abstract product concepts into wireframes, high-fidelity prototypes, and cohesive user experiences that bridged the gap between ideation and execution.",
+      },
+      {
+        heading: "Technical Leadership & FE Dev",
+        body: "Built the web infrastructure from scratch, managing the technical heavy lifting so leadership could focus on business growth. Led the frontend engineering efforts, ensuring code quality, seamless component structure, and feature delivery.",
+      },
+    ],
   },
   {
     slug: "coach-talk",
@@ -116,6 +134,16 @@ export const works = [
     ],
     siteUrl: "https://cloudmazing.coach-talk.nl/login",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand & Logo Conception",
+        body: "Designed a smart, relevant logo that cleverly integrates a microphone and a chat icon, perfectly capturing the essence of the platform. I collaborated closely with the client to fine-tune the color palette, ensuring the final visual identity matched their exact vision and resonated with their target audience.",
+      },
+      {
+        heading: "UI/UX & Design System",
+        body: "Architected the complete user flow from the ground up, specifically mapping out the journeys for coaching clients, training modules, and consultation bookings. I built responsive, high-fidelity designs for both web and mobile interfaces. To maintain visual consistency and speed up future development, I also created and applied a comprehensive design system with standardized components and clear interactive flows.",
+      },
+    ],
   },
   {
     slug: "vloer-offerte",
@@ -128,6 +156,16 @@ export const works = [
     ],
     siteUrl: "https://vloer-offerte.nl/",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand Identity & Logo",
+        body: 'Crafted a smart, minimalist logo centered around the letter "V". By styling the initial to resemble tiling and presenting it at a specific isometric angle, the mark cleverly doubles as a visual representation of a floor platform, instantly tying the brand identity to the service it provides.',
+      },
+      {
+        heading: "UI/UX & Platform Design",
+        body: "Architected the end-to-end user experience, starting from an engaging landing page all the way through a robust internal application. I designed highly functional flows that allow users to calculate floor areas, generate precise project quotations, issue receipts, and track ongoing projects seamlessly. I delivered cohesive, responsive interfaces for both web and mobile, completely underpinned by a strict design system to ensure long-term consistency and scalability.",
+      },
+    ],
   },
   {
     slug: "cloudmazing",
@@ -141,6 +179,20 @@ export const works = [
     ],
     siteUrl: null,
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand Identity & Logo",
+        body: "Designed a dynamic logo combining a cloud and a lightning bolt to symbolize modern tech and fast performance. Beyond just the logo, I developed a comprehensive branding package, including custom patterns and varied mockups, giving the client a versatile toolkit to use across their other marketing canvases and materials.",
+      },
+      {
+        heading: "UI/UX Design",
+        body: "Focused exclusively on crafting a high-converting, visually engaging landing page. The design prioritized clear messaging, strong visual hierarchy, and a layout that naturally guides the user's eye down the page.",
+      },
+      {
+        heading: "Frontend Development",
+        body: "Brought the landing page to life by writing the markup entirely from scratch using raw HTML, CSS, and vanilla JavaScript. I engineered custom, fluid animations without relying on heavy libraries, ensuring the page was not only interactive and polished but also incredibly fast and performant.",
+      },
+    ],
   },
   {
     slug: "123declaratie",

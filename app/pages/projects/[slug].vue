@@ -12,20 +12,19 @@
           : 'md:-translate-x-full opacity-0'
       "
     >
-      <div class="flex gap-4">
-        <NuxtLink to="/projects">
-          <Button variant="outline" size="default" :show-icon="false">
-            <Icon name="arrow-left" class="size-4 mr-1" />
-            Go Back
-          </Button>
-        </NuxtLink>
-      </div>
-
       <div class="flex flex-col gap-4">
         <div class="flex flex-col gap-3">
-          <h1 class="font-sans font-bold text-[28px] leading-10 text-black">
-            {{ work.title }}
-          </h1>
+          <div class="flex items-center gap-4">
+            <NuxtLink
+              to="/projects"
+              class="flex hover:text-primary-500 text-base font-normal text-neutral-600 items-center gap-2"
+            >
+              <Icon name="arrow-left" class="size-5 mr-1 relative" />
+            </NuxtLink>
+            <h1 class="font-sans font-bold text-[28px] leading-10 text-black">
+              {{ work.title }}
+            </h1>
+          </div>
           <div class="flex gap-2 flex-wrap">
             <Badge
               v-for="badge in work.badges"
@@ -52,8 +51,9 @@
           :href="work.siteUrl"
           target="_blank"
           rel="noopener noreferrer"
+          class="w-full"
         >
-          <Button variant="primary" size="default">
+          <Button variant="primary" size="default" class="w-full">
             Visit Site
             <template #icon>
               <Icon name="arrow-diagonal" class="size-3.5" />
