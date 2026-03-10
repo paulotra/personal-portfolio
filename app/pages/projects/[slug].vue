@@ -65,7 +65,10 @@
 
     <!-- Right panel -->
     <main class="flex-1 md:h-screen md:overflow-y-auto">
-      <ProjectsRocketFlow :cards-visible="cardsVisible" />
+      <ProjectsRocketFlow
+        v-if="route.params.slug === 'rocket-flow'"
+        :cards-visible="cardsVisible"
+      />
     </main>
   </div>
 </template>
