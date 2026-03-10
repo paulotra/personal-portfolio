@@ -279,7 +279,7 @@
       :class="
         visible ? 'animate-slideRight [animation-delay:960ms]' : 'opacity-0'
       "
-      class="absolute bottom-[-40px] lg:bottom-[-160px] -left-[109px] rotate-[14.21deg] pointer-events-none"
+      class="absolute bottom-[-160px] -left-[109px] rotate-[14.21deg] pointer-events-none"
     >
       <img
         src="/images/capabilities/sneaker.webp"

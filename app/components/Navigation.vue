@@ -62,33 +62,33 @@
     <!-- Mobile menu -->
     <div
       v-show="menuOpen"
-      class="md:hidden flex flex-col gap-5 px-6 pb-6 border-t border-neutral-200"
+      class="md:hidden flex flex-col gap-5 px-6 pb-6 pt-6 border-t border-neutral-200 items-center"
     >
       <LinkButton
         href="#services"
-        class="text-base text-neutral-800"
+        class="text-base text-neutral-800 w-full"
         @click="menuOpen = false"
         >Services</LinkButton
       >
       <LinkButton
         href="#works"
-        class="text-base text-neutral-800"
+        class="text-base text-neutral-800 w-full"
         @click="menuOpen = false"
         >Recent Works</LinkButton
       >
       <LinkButton
         href="#experience"
-        class="text-base text-neutral-800"
+        class="text-base text-neutral-800 w-full"
         @click="menuOpen = false"
         >Experience</LinkButton
       >
       <LinkButton
         href="#testimonials"
-        class="text-base text-neutral-800"
+        class="text-base text-neutral-800 w-full"
         @click="menuOpen = false"
         >Testimonials</LinkButton
       >
-      <div class="flex flex-col gap-3 pt-2">
+      <div class="flex flex-col gap-3 pt-2 w-full">
         <NuxtLink to="/projects">
           <Button variant="secondary" :show-icon="false" class="w-full"
             >See All Projects</Button
