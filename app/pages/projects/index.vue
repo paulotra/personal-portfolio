@@ -1,9 +1,6 @@
 <template>
   <Content class="relative z-20 rounded-t-none !pt-0">
-    <div
-      ref="sectionRef"
-      class="relative flex flex-col gap-[54px] text-center lg:text-left"
-    >
+    <div class="relative flex flex-col gap-[54px] text-center lg:text-left">
       <!-- Visit all projects -->
       <NuxtLink
         to="/"
@@ -17,7 +14,7 @@
           class="h-[27px] w-[53px] object-cover scale-x-[-1]"
         />
         <span class="font-['Gochi_Hand'] text-3xl leading-10 whitespace-nowrap"
-          >Visit all projects</span
+          >back to home</span
         >
       </NuxtLink>
       <!-- Header -->
@@ -62,9 +59,13 @@
 </template>
 
 <script setup lang="ts">
-import { useInView } from "~/composables/useInView";
 import { works } from "~/data/works";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const { sectionRef, visible } = useInView(0.3);
+const visible = ref(false);
+
+onMounted(() => {
+  requestAnimationFrame(() => {
+    visible.value = true;
+  });
+});
 </script>

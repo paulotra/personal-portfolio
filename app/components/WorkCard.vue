@@ -1,5 +1,5 @@
 <template>
-  <Card>
+  <Card class="cursor-pointer" @click="router.push(`/projects/${slug}`)">
     <div class="flex flex-col gap-5 pb-[45.5px]">
       <div
         class="border-b border-neutral-300 h-[391px] w-full flex items-center justify-center"
@@ -30,7 +30,10 @@
             <a
               v-if="siteUrl"
               :href="siteUrl"
+              target="_blank"
+              rel="noopener noreferrer"
               class="flex items-center gap-2 leading text-neutral-600 hover:text-primary-500"
+              @click.stop
             >
               <Headline variant="h6" class="relative top-[1px]"
                 >VISIT SITE</Headline
@@ -38,19 +41,19 @@
               <Icon name="arrow-diagonal" size="sm" class="text-primary-500" />
             </a>
             <div
-              v-if="siteUrl && projectUrl"
+              v-if="siteUrl"
               class="w-px h-[19px] bg-neutral-400"
             />
-            <a
-              v-if="projectUrl"
-              :href="projectUrl"
+            <NuxtLink
+              :to="`/projects/${slug}`"
               class="flex items-center gap-2 leading text-neutral-600 hover:text-primary-500"
+              @click.stop
             >
               <Headline variant="h6" class="relative top-[1px]"
                 >VIEW PROJECT</Headline
               >
               <Icon name="arrow-right" size="md" class="text-primary-500" />
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -59,9 +62,10 @@
 </template>
 
 <script setup lang="ts">
-import LinkButton from "./LinkButton.vue";
+const router = useRouter();
 
 defineProps<{
+  slug: string;
   image: string;
   title: string;
   badges: { variant: string; label: string }[];

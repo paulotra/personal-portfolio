@@ -57,6 +57,7 @@ export default {
       boxShadow: {
         "soft-y":
           "0 -16px 32px rgba(165,165,165,0.10), 0 16px 32px rgba(165,165,165,0.10)",
+        "card": "0 4px 24px rgba(12,140,233,0.12)",
       },
       borderRadius: {
         xs: "0.125rem", // 2px
