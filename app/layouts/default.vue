@@ -10,7 +10,7 @@
       </div>
       <Navigation
         :scrolled="scrolled"
-        class="fixed bg-white top-0 shadow-soft-y"
+        class="fixed top-0 bg-white/20 backdrop-blur-sm shadow-soft-y"
       />
     </template>
     <slot />
