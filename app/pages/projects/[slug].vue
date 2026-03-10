@@ -63,9 +63,9 @@
       <div class="max-w-[960px] mx-auto px-6 md:px-10 py-10">
         <template v-if="galleryLeft.length || galleryRight.length">
           <!-- Two columns -->
-          <div class="flex gap-6">
+          <div class="flex gap-8">
             <!-- Left column -->
-            <div class="flex-1 grid grid-cols-2 gap-6 content-start">
+            <div class="flex-1 grid grid-cols-2 gap-8 content-start">
               <div
                 v-for="(item, i) in galleryLeft"
                 :key="i"
@@ -90,7 +90,7 @@
             </div>
 
             <!-- Right column -->
-            <div class="flex-1 grid grid-cols-2 gap-6 content-start">
+            <div class="flex-1 grid grid-cols-2 gap-8 content-start">
               <div
                 v-for="(item, i) in galleryRight"
                 :key="i"
@@ -116,7 +116,7 @@
           </div>
 
           <!-- Mockups — full width -->
-          <div v-if="galleryMockups.length" class="mt-6 flex flex-col gap-6">
+          <div v-if="galleryMockups.length" class="mt-8 flex flex-col gap-8">
             <div
               v-for="(item, i) in galleryMockups"
               :key="i"

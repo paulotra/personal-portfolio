@@ -31,9 +31,7 @@
     >
       <div class="flex flex-col gap-10">
         <!-- Row 1: scroll left -->
-        <div
-          class="flex gap-10 w-max marquee-left "
-        >
+        <div class="flex gap-10 w-max marquee-left">
           <div
             v-for="(t, i) in row1"
             :key="`r1-${i}`"
@@ -82,9 +80,7 @@
         </div>
 
         <!-- Row 2: scroll right -->
-        <div
-          class="flex gap-10 w-max marquee-right "
-        >
+        <div class="flex gap-10 w-max marquee-right">
           <div
             v-for="(t, i) in row2"
             :key="`r2-${i}`"
@@ -177,6 +173,13 @@ const testimonials = [
     name: "Brianna O’Keefe",
     role: "CEO of Songoda LLC",
     avatar: "/images/people/bri.webp",
+  },
+  {
+    quote:
+      "Working with Paulo was an absolute pleasure. He brought fresh ideas, a great eye for design, and wrote clean, well-structured code. His creativity and attention to detail really elevated the entire project. I’d be happy to collaborate with him again anytime.",
+    name: "Dirk Aldekamp",
+    role: "Aconi GmbH",
+    avatar: null,
   },
 ];
 
