@@ -12,6 +12,15 @@
           : 'md:-translate-x-full opacity-0'
       "
     >
+      <div class="flex gap-4">
+        <NuxtLink to="/projects">
+          <Button variant="outline" size="default" :show-icon="false">
+            <Icon name="arrow-left" class="size-4 mr-1" />
+            Go Back
+          </Button>
+        </NuxtLink>
+      </div>
+
       <div class="flex flex-col gap-4">
         <div class="flex flex-col gap-3">
           <h1 class="font-sans font-bold text-[28px] leading-10 text-black">
@@ -35,15 +44,11 @@
         </div>
       </div>
 
-      <div class="flex gap-4 justify-end">
-        <NuxtLink to="/projects">
-          <Button variant="outline" size="default" :show-icon="false">
-            <Icon name="arrow-left" class="size-4 mr-1" />
-            Go Back
-          </Button>
-        </NuxtLink>
+      <div
+        v-if="work.siteUrl && work.siteUrl !== '#'"
+        class="flex gap-4 justify-end"
+      >
         <a
-          v-if="work.siteUrl && work.siteUrl !== '#'"
           :href="work.siteUrl"
           target="_blank"
           rel="noopener noreferrer"
@@ -60,7 +65,7 @@
 
     <!-- Right panel -->
     <main class="flex-1 md:h-screen md:overflow-y-auto">
-      <ProjectsRocketFlow />
+      <ProjectsRocketFlow :cards-visible="cardsVisible" />
     </main>
   </div>
 </template>
