@@ -1,6 +1,6 @@
 <template>
-  <div class="max-w-[960px] mx-auto px-6 py-10 flex flex-col gap-6">
-    <div class="flex flex-col md:flex-row gap-6">
+  <div class="max-w-[960px] mx-auto py-10 flex flex-col gap-5">
+    <div class="flex flex-col md:flex-row gap-5">
       <div class="md:flex-1">
         <img
           src="/images/projects/rocket-flow/1.webp"
@@ -8,7 +8,7 @@
           class="w-full img-shadow"
         />
       </div>
-      <div class="flex flex-col gap-6 md:flex-1 w-full">
+      <div class="flex flex-col gap-5 md:flex-1 w-full">
         <img
           src="/images/projects/rocket-flow/2.webp"
           v-bind="anim(1)"
@@ -28,7 +28,7 @@
         />
       </div>
     </div>
-    <div class="flex flex-col md:flex-row gap-6">
+    <div class="flex flex-col md:flex-row gap-5">
       <div class="md:flex-1">
         <img
           src="/images/projects/rocket-flow/5.webp"
@@ -36,7 +36,7 @@
           class="w-full img-shadow"
         />
       </div>
-      <div class="flex flex-col gap-6 md:flex-1">
+      <div class="flex flex-col gap-5 md:flex-1">
         <img
           src="/images/projects/rocket-flow/6.webp"
           v-bind="anim(5)"
@@ -49,7 +49,7 @@
         />
       </div>
     </div>
-    <div class="flex gap-6 flex-col">
+    <div class="flex gap-5 flex-col">
       <img
         src="/images/projects/rocket-flow/8.webp"
         v-bind="anim(7)"
