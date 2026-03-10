@@ -178,7 +178,7 @@ const testimonials = [
     quote:
       "Working with Paulo was an absolute pleasure. He brought fresh ideas, a great eye for design, and wrote clean, well-structured code. His creativity and attention to detail really elevated the entire project. I’d be happy to collaborate with him again anytime.",
     name: "Dirk Aldekamp",
-    role: "Aconi GmbH",
+    role: "CEO of Aconi",
     avatar: null,
   },
 ];
