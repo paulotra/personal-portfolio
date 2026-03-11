@@ -28,7 +28,7 @@
           </div>
           <div class="flex items-center gap-6">
             <a
-              v-if="siteUrl"
+              v-if="siteUrl && siteUrl !== '#'"
               :href="siteUrl"
               target="_blank"
               rel="noopener noreferrer"
@@ -41,7 +41,7 @@
               <Icon name="arrow-diagonal" size="sm" class="text-primary-500" />
             </a>
             <div
-              v-if="siteUrl"
+              v-if="siteUrl && siteUrl !== '#'"
               class="w-px h-[19px] bg-neutral-400"
             />
             <NuxtLink

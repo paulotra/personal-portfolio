@@ -235,7 +235,7 @@ export const works = [
       },
       {
         heading: "The Home",
-        body: "Symbolizes the core concept of digital \"tenancy,\" representing the isolated, secure space or environment assigned to each user or tenant.",
+        body: 'Symbolizes the core concept of digital "tenancy," representing the isolated, secure space or environment assigned to each user or tenant.',
       },
       {
         heading: "The Letter 'T'",
@@ -391,6 +391,12 @@ export const works = [
     ],
     siteUrl: "#",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand Concept & Symbolism",
+        body: 'Designed a bespoke logo directly inspired by the anatomy of a flower. I carefully abstracted its organic shapes into a clean, scalable mark that retains its natural, welcoming feel while remaining highly professional. Expanded the central floral motif into a complete branding package. This involved establishing a cohesive color palette and design system that allows the brand to naturally "bloom" across various digital and physical touchpoints, ensuring a consistent and memorable brand experience.',
+      },
+    ],
   },
   {
     slug: "camp-diego-garcia",
@@ -400,6 +406,12 @@ export const works = [
     badges: [{ variant: "brand", label: "Logo" }],
     siteUrl: "#",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand Conception & Symbolism",
+        body: 'As a personal family project, the creative direction was highly collaborative and passion-driven. The final emblem perfectly encapsulates the warmth and energy of a family-run surf camp. Crafted a meaningful, multifaceted logo that cleverly weaves together the core elements of the camp\'s experience. I integrated the "DG" initials with the fluid, dynamic motion of a wave and the grounded, welcoming shape of a tent.',
+      },
+    ],
   },
   {
     slug: "extiverse",
@@ -412,6 +424,12 @@ export const works = [
     ],
     siteUrl: "#",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand Identity & Logo Design",
+        body: 'Engineered a clever, astronomy-inspired logo built from the letter "e". By abstracting the letterform, I transformed it into a planet orbited by a shooting star, creating a mark that is both a strong typographic anchor and a vivid visual metaphor for the Extiverse name - a universe of extensions.',
+      },
+    ],
   },
   {
     slug: "hyn-portfolio",
@@ -424,6 +442,12 @@ export const works = [
     ],
     siteUrl: "https://hyn.me",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand & Portfolio Design",
+        body: "Designed the complete visual identity and portfolio website for a long-time client in web development. The goal was to create a personal brand that authentically represented their years of experience and career journey, presenting their technical background and projects in a compelling, professional digital space.",
+      },
+    ],
   },
   {
     slug: "lms",
@@ -436,6 +460,12 @@ export const works = [
     ],
     siteUrl: "#",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Landing Page Design",
+        body: "Designed and built a polished, conversion-focused landing page for an e-learning school. The layout was crafted to clearly communicate the school's offerings, build trust with prospective students, and guide visitors toward enrollment.",
+      },
+    ],
   },
   {
     slug: "naks-choice",
@@ -445,6 +475,12 @@ export const works = [
     badges: [{ variant: "brand", label: "Logo" }],
     siteUrl: "#",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand Identity & Logo Design",
+        body: "Designed a logo for a friend's online grocery business that launched during the pandemic in the Philippines. The mark cleverly merges the \"N\" and \"C\" initials with the shape of a shopping cart, creating a symbol that's instantly recognizable and directly communicates the nature of the business.",
+      },
+    ],
   },
   {
     slug: "threat-note",
@@ -454,6 +490,12 @@ export const works = [
     badges: [{ variant: "brand", label: "Logo" }],
     siteUrl: "#",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand Concept & Symbolism",
+        body: "Engineered a clever, dual-meaning logo that flawlessly integrates the robust silhouette of a security shield with the sharp tip of a pencil. This combined mark perfectly and instantly communicates the platform's core value proposition of secure data logging and threat analysis.",
+      },
+    ],
   },
   {
     slug: "tickets",
@@ -467,6 +509,20 @@ export const works = [
     ],
     siteUrl: "#",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand Concept & Logo",
+        body: "Designed a clever, dynamic logo by using the shape of curved tickets to form the letter \"t\". This custom monogram instantly communicates the platform's core service while serving as a strong, memorable anchor for the brand identity.",
+      },
+      {
+        heading: "UI/UX & Transaction Architecture",
+        body: "Architected the complete end-to-end user experience for event management and ticket purchasing. I mapped out intuitive, high-conversion transaction flows that allow users to easily browse events, secure their spots, and seamlessly generate their digital tickets without any friction.",
+      },
+      {
+        heading: "Frontend Engineering",
+        body: "Built and deployed the platform's frontend using Vue.js. The development focused heavily on creating a snappy, reactive application capable of handling complex state management during the checkout process, ensuring a secure and smooth experience for every user.",
+      },
+    ],
   },
   {
     slug: "well-played",
@@ -479,5 +535,11 @@ export const works = [
     ],
     siteUrl: "#",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Concept & Research",
+        body: "A concept and research project exploring the design space for an esports betting platform. The visual direction drew heavy inspiration from 90s retro aesthetics — bold typography, vivid colors, and nostalgic UI patterns — reimagined for a modern, competitive gaming audience.",
+      },
+    ],
   },
 ];
