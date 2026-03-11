@@ -81,6 +81,10 @@
         v-if="route.params.slug === 'vloer-offerte'"
         :cards-visible="cardsVisible"
       />
+      <ProjectsCloudmazing
+        v-if="route.params.slug === 'cloudmazing'"
+        :cards-visible="cardsVisible"
+      />
     </main>
   </div>
 </template>
