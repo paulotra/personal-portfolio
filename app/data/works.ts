@@ -205,6 +205,16 @@ export const works = [
     ],
     siteUrl: "https://123declaratie.nl/",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand Identity & Logo",
+        body: 'Designed a clean, straightforward logo featuring the text "123" cleverly integrated with a path that resembles a road. This visual metaphor directly communicates both the concept of business travel and the clear, step-by-step simplicity of the platform itself.',
+      },
+      {
+        heading: "UI/UX & Platform Architecture",
+        body: "Architected the complete user journey for tracking and computing business travel expenses, including specific flows for logging food and accommodation. The standout feature I designed was a seamless Google Calendar integration, allowing users to automatically extract their meeting schedules and directly input associated costs. A comprehensive, high-fidelity designs for both web and mobile platforms, ensuring a consistent experience on the go. This included building out a robust design system to standardize all UI components, as well as designing an engaging landing page to drive conversions.",
+      },
+    ],
   },
   {
     slug: "tenancy",
@@ -214,6 +224,28 @@ export const works = [
     badges: [{ variant: "brand", label: "Logo" }],
     siteUrl: "https://tenancy.dev/",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "The Approach",
+        body: "This project holds a special place in my portfolio as my first major design engagement back in 2017. The objective was to execute a meaningful rebrand, starting from a raw, hand-drawn concept provided directly by the client. The approach was highly collaborative, taking their initial vision and applying structural balance, geometric precision, and professional polish to create a mark that visually captured the team's core mission.",
+      },
+      {
+        heading: "Brand Refinement & Symbolism",
+        body: "Evolved a client's initial sketch into a clean, well-proportioned logo that thoughtfully merges three key visual elements into a single, cohesive mark:",
+      },
+      {
+        heading: "The Home",
+        body: "Symbolizes the core concept of digital \"tenancy,\" representing the isolated, secure space or environment assigned to each user or tenant.",
+      },
+      {
+        heading: "The Letter 'T'",
+        body: "Serves as a strong typographic anchor, instantly tying the visual identity to the brand name.",
+      },
+      {
+        heading: "The Upward Arrow",
+        body: "Integrates a subtle directional cue within the negative space to represent continuous growth, forward progress, and scaling upward.",
+      },
+    ],
   },
   {
     slug: "elated",
