@@ -5,7 +5,7 @@
   >
     <!-- Sidebar — slides from left on desktop, fades on mobile -->
     <aside
-      class="w-full md:w-[474px] md:shrink-0 md:h-screen md:overflow-y-auto bg-white px-8 md:px-10 py-10 flex flex-col gap-8 transition-[transform,opacity] duration-500 ease-out"
+      class="w-full md:w-[458px] md:shrink-0 md:h-screen md:overflow-y-auto bg-white px-8 py-10 flex flex-col gap-8 transition-[transform,opacity] duration-500 ease-out"
       :class="
         asideVisible
           ? 'md:translate-x-0 opacity-100'
@@ -15,12 +15,12 @@
       <div class="flex flex-col gap-4">
         <div class="flex flex-col gap-3">
           <div class="flex items-center gap-4">
-            <NuxtLink
-              to="/projects"
+            <button
               class="flex hover:text-primary-500 text-base font-normal text-neutral-600 items-center gap-2"
+              @click="router.back()"
             >
               <Icon name="arrow-left" class="size-5 mr-1 relative" />
-            </NuxtLink>
+            </button>
             <h1 class="font-sans font-bold text-[28px] leading-10 text-black">
               {{ work.title }}
             </h1>
@@ -79,6 +79,7 @@ import { works, type ProjectGallery } from "~/data/works";
 definePageMeta({ layout: "blank" });
 
 const route = useRoute();
+const router = useRouter();
 const work = works.find((w) => w.slug === route.params.slug);
 
 if (!work) {

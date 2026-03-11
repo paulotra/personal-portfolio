@@ -255,6 +255,28 @@ export const works = [
     badges: [{ variant: "brand", label: "Logo" }],
     siteUrl: null,
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand Identity & Logo Design",
+        body: "Engineered a clever, multi-layered logo designed to evoke the fun side of programming. The mark seamlessly merges three distinct concepts:",
+      },
+      {
+        heading: 'The Letter "e"',
+        body: "A clear, typographic nod to the Elated name.",
+      },
+      {
+        heading: "A Happy Emoji",
+        body: "Forms the overall shape of the mark, instantly communicating the community's core mission of happiness, support, and motivation.",
+      },
+      {
+        heading: "A Terminal Icon",
+        body: "A classic, familiar symbol that instantly connects with the developer target audience.",
+      },
+      {
+        heading: "Comprehensive Visual System",
+        body: "Expanded the core logo into a full branding package to ensure a consistent community experience. This included designing custom branded patterns, defining clear rules for icon usage, and creating a series of realistic mockups to visualize how the brand lives across different touchpoints.",
+      },
+    ],
   },
   {
     slug: "lff-industrial",
@@ -268,6 +290,20 @@ export const works = [
     ],
     siteUrl: "https://lffindustrial.com/",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand & Logo Refinement",
+        body: "Conducted a precise audit of their existing logo, carefully adjusting the stroke weights and spatial balance to ensure it looked sharp, proportional, and highly legible across all digital and print mediums.",
+      },
+      {
+        heading: "UI/UX Design",
+        body: "Translated the client's specific design inspirations into a clean, cohesive user interface. The focus was on creating a seamless, professional layout that builds trust and clearly communicates their industrial offerings.",
+      },
+      {
+        heading: "Development & CMS Handoff",
+        body: "Built and deployed the fully responsive website on Squarespace. A major focus of the development phase was structuring the backend to be exceptionally client-friendly, ensuring their team could easily maintain the site, update content quickly, and manage their online presence without needing ongoing technical support.",
+      },
+    ],
   },
   {
     slug: "int-dashboard",
@@ -280,6 +316,24 @@ export const works = [
     ],
     siteUrl: null,
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand Conception & Symbolism",
+        body: "Designed a cohesive, multi-layered logo that visually translates the company's technical expertise and mission to streamline operations. The mark merges three distinct concepts:",
+      },
+      {
+        heading: "Dashboard Icon / 4 Squares",
+        body: "Represents the core product—custom dashboards—while symbolizing control, management, and organized data solutions for B2B clients.",
+      },
+      {
+        heading: 'The "ID" Initials',
+        body: "Seamlessly integrated the letters into the geometric structure to personalize the mark and reinforce strong brand recognition.",
+      },
+      {
+        heading: "3D Blocks & Tech Nod",
+        body: "Utilized 3D building blocks to convey stability, structure, and reliability. As a smart, subtle nod to their engineering stack, the isometric design draws inspiration from the Laravel logo, aligning their visual identity perfectly with the robust framework powering their applications.",
+      },
+    ],
   },
   {
     slug: "ocam",
@@ -293,6 +347,16 @@ export const works = [
     ],
     siteUrl: null,
     projectUrl: "#",
+    sections: [
+      {
+        heading: "UI/UX Modernization & Handoff",
+        body: "Led the redesign of the legacy interface, giving it a clean, modern aesthetic. I migrated and structured the entire design system within Figma, establishing a single source of truth. This meticulous organization made it incredibly convenient for the development team to extract assets, understand component states, and implement the designs accurately.",
+      },
+      {
+        heading: "Frontend Engineering",
+        body: "Actively contributed to the Vue.js codebase. My development efforts were heavily focused on building out new, robust features and conducting deep-dive bug fixes to ensure the application was not only visually refreshed but also highly stable and performant.",
+      },
+    ],
   },
   {
     slug: "arlon-antonius-portfolio",
@@ -305,6 +369,16 @@ export const works = [
     ],
     siteUrl: "#",
     projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand Identity & Logo Design",
+        body: "Created a bespoke logo specifically tailored to anchor the portfolio's visual identity. This mark served as the foundational design system, directly informing the typography, spacing, and structural elements of the entire UI.",
+      },
+      {
+        heading: "UI/UX & Visual Design",
+        body: "Architected the complete user interface, presenting the client with fully realized variations for both dark and light modes. To elevate the user experience and create a sense of depth and interactivity, I strategically integrated floating 3D elements throughout the layout, giving the portfolio a dynamic, cutting-edge aesthetic.",
+      },
+    ],
   },
   {
     slug: "blomstra",
