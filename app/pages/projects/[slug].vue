@@ -69,6 +69,10 @@
         v-if="route.params.slug === 'rocket-flow'"
         :cards-visible="cardsVisible"
       />
+      <ProjectsProphetX
+        v-if="route.params.slug === 'prophetx'"
+        :cards-visible="cardsVisible"
+      />
     </main>
   </div>
 </template>
