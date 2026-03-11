@@ -73,6 +73,10 @@
         v-if="route.params.slug === 'prophetx'"
         :cards-visible="cardsVisible"
       />
+      <ProjectsCoachTalk
+        v-if="route.params.slug === 'coach-talk'"
+        :cards-visible="cardsVisible"
+      />
     </main>
   </div>
 </template>
