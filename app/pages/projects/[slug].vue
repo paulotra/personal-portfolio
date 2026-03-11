@@ -93,6 +93,10 @@
         v-if="route.params.slug === 'tenancy'"
         :cards-visible="cardsVisible"
       />
+      <ProjectsElated
+        v-if="route.params.slug === 'elated'"
+        :cards-visible="cardsVisible"
+      />
     </main>
   </div>
 </template>
