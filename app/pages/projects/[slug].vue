@@ -85,6 +85,14 @@
         v-if="route.params.slug === 'cloudmazing'"
         :cards-visible="cardsVisible"
       />
+      <ProjectsDeclaratie
+        v-if="route.params.slug === '123declaratie'"
+        :cards-visible="cardsVisible"
+      />
+      <ProjectsTenancy
+        v-if="route.params.slug === 'tenancy'"
+        :cards-visible="cardsVisible"
+      />
     </main>
   </div>
 </template>
