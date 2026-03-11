@@ -70,31 +70,31 @@
         :cards-visible="cardsVisible"
       />
       <ProjectsProphetX
-        v-if="route.params.slug === 'prophetx'"
+        v-else-if="route.params.slug === 'prophetx'"
         :cards-visible="cardsVisible"
       />
       <ProjectsCoachTalk
-        v-if="route.params.slug === 'coach-talk'"
+        v-else-if="route.params.slug === 'coach-talk'"
         :cards-visible="cardsVisible"
       />
       <ProjectsVloer
-        v-if="route.params.slug === 'vloer-offerte'"
+        v-else-if="route.params.slug === 'vloer-offerte'"
         :cards-visible="cardsVisible"
       />
       <ProjectsCloudmazing
-        v-if="route.params.slug === 'cloudmazing'"
+        v-else-if="route.params.slug === 'cloudmazing'"
         :cards-visible="cardsVisible"
       />
       <ProjectsDeclaratie
-        v-if="route.params.slug === '123declaratie'"
+        v-else-if="route.params.slug === '123declaratie'"
         :cards-visible="cardsVisible"
       />
       <ProjectsTenancy
-        v-if="route.params.slug === 'tenancy'"
+        v-else-if="route.params.slug === 'tenancy'"
         :cards-visible="cardsVisible"
       />
       <ProjectsElated
-        v-if="route.params.slug === 'elated'"
+        v-else-if="route.params.slug === 'elated'"
         :cards-visible="cardsVisible"
       />
       <div v-else class="flex items-center justify-center flex-col h-full">
