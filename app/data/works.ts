@@ -4,6 +4,7 @@ export type GalleryColumnItem = {
   width: "100%" | "50%";
   height?: string;
 };
+
 export type GalleryMockupItem = { src: string; width: "100%" };
 export type ProjectGallery = {
   left: GalleryColumnItem[];
@@ -15,6 +16,7 @@ export const works = [
   {
     slug: "rocket-flow",
     title: "Rocket Flow",
+    tech: ["nuxt2", "vue", "tailwind", "figma"],
     image: "/images/projects/rocketflow.svg",
     imageClass: "max-h-16",
     badges: [
@@ -95,6 +97,15 @@ export const works = [
   {
     slug: "prophetx",
     title: "ProphetX",
+    tech: [
+      "nuxt2",
+      "vue",
+      "tailwind",
+      "figma",
+      "photoshop",
+      "illustrator",
+      "sketch",
+    ],
     image: "/images/projects/prophetx.svg",
     imageClass: "max-h-16",
     badges: [
@@ -126,6 +137,7 @@ export const works = [
   {
     slug: "coach-talk",
     title: "Coach Talk",
+    tech: ["figma", "photoshop", "illustrator"],
     image: "/images/projects/coachtalk.svg",
     imageClass: "max-h-[140px]",
     badges: [
@@ -148,6 +160,7 @@ export const works = [
   {
     slug: "vloer-offerte",
     title: "Vloer Offerte",
+    tech: ["figma", "photoshop", "illustrator"],
     image: "/images/projects/vloer.svg",
     imageClass: "max-h-16",
     badges: [
@@ -170,6 +183,7 @@ export const works = [
   {
     slug: "cloudmazing",
     title: "Cloudmazing",
+    tech: ["nuxt2", "vue", "tailwind", "figma", "photoshop", "illustrator"],
     image: "/images/projects/cloudmazing.svg",
     imageClass: "max-h-[140px]",
     badges: [
@@ -197,6 +211,7 @@ export const works = [
   {
     slug: "123declaratie",
     title: "123declaratie",
+    tech: ["figma", "photoshop", "illustrator"],
     image: "/images/projects/123.svg",
     imageClass: "max-h-16",
     badges: [
@@ -219,6 +234,15 @@ export const works = [
   {
     slug: "tenancy",
     title: "Tenancy",
+    tech: [
+      "nuxt2",
+      "vue",
+      "tailwind",
+      "figma",
+      "photoshop",
+      "illustrator",
+      "sketch",
+    ],
     image: "/images/projects/tenancy.svg",
     imageClass: "max-h-16",
     badges: [{ variant: "brand", label: "Logo" }],
@@ -250,6 +274,7 @@ export const works = [
   {
     slug: "elated",
     title: "Elated",
+    tech: ["figma", "photoshop", "illustrator"],
     image: "/images/projects/elated.svg",
     imageClass: "max-h-16",
     badges: [{ variant: "brand", label: "Logo" }],
@@ -281,6 +306,7 @@ export const works = [
   {
     slug: "int-dashboard",
     title: "Int Dashboard",
+    tech: ["figma", "photoshop", "illustrator"],
     image: "/images/projects/int-dashboard.svg",
     imageClass: "max-h-[80px]",
     badges: [
@@ -311,6 +337,7 @@ export const works = [
   {
     slug: "lff-industrial",
     title: "LFF Industrial",
+    tech: ["nuxt2", "vue", "tailwind", "figma", "photoshop", "illustrator"],
     image: "/images/projects/anchor-capital.svg",
     imageClass: "max-h-[100px]",
     badges: [
@@ -338,6 +365,7 @@ export const works = [
   {
     slug: "ocam",
     title: "Ocam",
+    tech: ["vue", "tailwind", "photoshop", "illustrator", "sketch"],
     image: "/images/projects/ocam.svg",
     imageClass: "max-h-[90px]",
     badges: [
@@ -361,6 +389,7 @@ export const works = [
   {
     slug: "arlon-antonius-portfolio",
     title: "Arlon Antonius Portfolio",
+    tech: ["photoshop", "illustrator", "sketch"],
     image: "/images/projects/arlon.svg",
     imageClass: "max-h-[130px]",
     badges: [
@@ -383,6 +412,7 @@ export const works = [
   {
     slug: "blomstra",
     title: "Blomstra",
+    tech: ["photoshop", "illustrator", "sketch"],
     image: "/images/projects/blomstra.svg",
     imageClass: "max-h-[150px]",
     badges: [
@@ -401,6 +431,7 @@ export const works = [
   {
     slug: "camp-diego-garcia",
     title: "Camp Diego Garcia",
+    tech: ["photoshop", "illustrator"],
     image: "/images/projects/cdg.svg",
     imageClass: "max-h-[160px]",
     badges: [{ variant: "brand", label: "Logo" }],
@@ -416,6 +447,7 @@ export const works = [
   {
     slug: "extiverse",
     title: "Extiverse",
+    tech: ["photoshop", "illustrator", "sketch"],
     image: "/images/projects/extiverse.svg",
     imageClass: "max-h-[70px]",
     badges: [
@@ -434,6 +466,7 @@ export const works = [
   {
     slug: "hyn-portfolio",
     title: "Hyn (Portfolio)",
+    tech: ["nuxt2", "vue", "tailwind", "photoshop", "illustrator", "sketch"],
     image: "/images/projects/hyn.svg",
     imageClass: "max-h-[120px]",
     badges: [
@@ -452,6 +485,7 @@ export const works = [
   {
     slug: "lms",
     title: "LMS",
+    tech: ["photoshop", "illustrator", "sketch"],
     image: "/images/projects/lms.svg",
     imageClass: "max-h-[120px]",
     badges: [
@@ -470,6 +504,7 @@ export const works = [
   {
     slug: "naks-choice",
     title: "Nak's Choice",
+    tech: ["illustrator"],
     image: "/images/projects/naks.svg",
     imageClass: "max-h-[70px]",
     badges: [{ variant: "brand", label: "Logo" }],
@@ -485,6 +520,7 @@ export const works = [
   {
     slug: "threat-note",
     title: "Threat Note",
+    tech: ["illustrator"],
     image: "/images/projects/threat-note.svg",
     imageClass: "max-h-[70px]",
     badges: [{ variant: "brand", label: "Logo" }],
@@ -500,6 +536,7 @@ export const works = [
   {
     slug: "tickets",
     title: "Tickets",
+    tech: ["nuxt2", "vue", "tailwind", "photoshop", "illustrator", "sketch"],
     image: "/images/projects/tickets.svg",
     imageClass: "max-h-[90px]",
     badges: [
@@ -527,6 +564,7 @@ export const works = [
   {
     slug: "well-played",
     title: "Well Played",
+    tech: ["photoshop", "illustrator", "sketch"],
     image: "/images/projects/wellplayed.svg",
     imageClass: "h-[80px]",
     badges: [

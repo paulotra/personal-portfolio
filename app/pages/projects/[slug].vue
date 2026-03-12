@@ -35,6 +35,18 @@
           </div>
         </div>
 
+        <p class="font-bold text-black">Tech & Tools</p>
+        <div
+          class="flex flex-wrap gap-5 items-center justify-center lg:justify-start"
+        >
+          <img
+            v-for="tech in work.tech"
+            :src="`/images/capabilities/${tech}.webp`"
+            alt="VS Code"
+            class="size-8 object-contain"
+          />
+        </div>
+
         <div v-if="work.sections" class="flex flex-col text-base leading-8">
           <template v-for="section in work.sections" :key="section.heading">
             <p class="font-bold text-black">{{ section.heading }}</p>

@@ -74,7 +74,7 @@
           >
             <div class="max-w-[414px] w-full">
               <Headline variant="h6" class="relative text-neutral-600 mb-6"
-                >TECH STACK</Headline
+                >TECHNOLOGIES</Headline
               >
               <div
                 class="flex flex-wrap gap-5 items-center justify-center lg:justify-start"
