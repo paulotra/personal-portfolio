@@ -105,6 +105,14 @@
         v-else-if="route.params.slug === 'int-dashboard'"
         :cards-visible="cardsVisible"
       />
+      <ProjectsOcam
+        v-else-if="route.params.slug === 'ocam'"
+        :cards-visible="cardsVisible"
+      />
+      <ProjectsArlon
+        v-else-if="route.params.slug === 'arlon-antonius-portfolio'"
+        :cards-visible="cardsVisible"
+      />
       <div v-else class="flex items-center justify-center flex-col h-full p-8">
         <img src="/images/coding.webp" width="400px" alt="" />
         <Headline variant="h4" class="font-bold mb-2 mt-6"
