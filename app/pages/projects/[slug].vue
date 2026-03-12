@@ -97,7 +97,15 @@
         v-else-if="route.params.slug === 'elated'"
         :cards-visible="cardsVisible"
       />
-      <div v-else class="flex items-center justify-center flex-col h-full">
+      <ProjectsLFF
+        v-else-if="route.params.slug === 'lff-industrial'"
+        :cards-visible="cardsVisible"
+      />
+      <ProjectsID
+        v-else-if="route.params.slug === 'int-dashboard'"
+        :cards-visible="cardsVisible"
+      />
+      <div v-else class="flex items-center justify-center flex-col h-full p-8">
         <img src="/images/coding.webp" width="400px" alt="" />
         <Headline variant="h4" class="font-bold mb-2 mt-6"
           >Dusting off the archives...</Headline

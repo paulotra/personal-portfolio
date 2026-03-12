@@ -279,33 +279,6 @@ export const works = [
     ],
   },
   {
-    slug: "lff-industrial",
-    title: "LFF Industrial",
-    image: "/images/projects/anchor-capital.svg",
-    imageClass: "max-h-[100px]",
-    badges: [
-      { variant: "brand", label: "Logo" },
-      { variant: "ui", label: "UI + UX" },
-      { variant: "dev", label: "FE Development" },
-    ],
-    siteUrl: "https://lffindustrial.com/",
-    projectUrl: "#",
-    sections: [
-      {
-        heading: "Brand & Logo Refinement",
-        body: "Conducted a precise audit of their existing logo, carefully adjusting the stroke weights and spatial balance to ensure it looked sharp, proportional, and highly legible across all digital and print mediums.",
-      },
-      {
-        heading: "UI/UX Design",
-        body: "Translated the client's specific design inspirations into a clean, cohesive user interface. The focus was on creating a seamless, professional layout that builds trust and clearly communicates their industrial offerings.",
-      },
-      {
-        heading: "Development & CMS Handoff",
-        body: "Built and deployed the fully responsive website on Squarespace. A major focus of the development phase was structuring the backend to be exceptionally client-friendly, ensuring their team could easily maintain the site, update content quickly, and manage their online presence without needing ongoing technical support.",
-      },
-    ],
-  },
-  {
     slug: "int-dashboard",
     title: "Int Dashboard",
     image: "/images/projects/int-dashboard.svg",
@@ -332,6 +305,33 @@ export const works = [
       {
         heading: "3D Blocks & Tech Nod",
         body: "Utilized 3D building blocks to convey stability, structure, and reliability. As a smart, subtle nod to their engineering stack, the isometric design draws inspiration from the Laravel logo, aligning their visual identity perfectly with the robust framework powering their applications.",
+      },
+    ],
+  },
+  {
+    slug: "lff-industrial",
+    title: "LFF Industrial",
+    image: "/images/projects/anchor-capital.svg",
+    imageClass: "max-h-[100px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    siteUrl: "https://lffindustrial.com/",
+    projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand & Logo Refinement",
+        body: "Conducted a precise audit of their existing logo, carefully adjusting the stroke weights and spatial balance to ensure it looked sharp, proportional, and highly legible across all digital and print mediums.",
+      },
+      {
+        heading: "UI/UX Design",
+        body: "Translated the client's specific design inspirations into a clean, cohesive user interface. The focus was on creating a seamless, professional layout that builds trust and clearly communicates their industrial offerings.",
+      },
+      {
+        heading: "Development & CMS Handoff",
+        body: "Built and deployed the fully responsive website on Squarespace. A major focus of the development phase was structuring the backend to be exceptionally client-friendly, ensuring their team could easily maintain the site, update content quickly, and manage their online presence without needing ongoing technical support.",
       },
     ],
   },
@@ -478,7 +478,7 @@ export const works = [
     sections: [
       {
         heading: "Brand Identity & Logo Design",
-        body: "Designed a logo for a friend's online grocery business that launched during the pandemic in the Philippines. The mark cleverly merges the \"N\" and \"C\" initials with the shape of a shopping cart, creating a symbol that's instantly recognizable and directly communicates the nature of the business.",
+        body: 'Designed a logo for a friend\'s online grocery business that launched during the pandemic in the Philippines. The mark cleverly merges the "N" and "C" initials with the shape of a shopping cart, creating a symbol that\'s instantly recognizable and directly communicates the nature of the business.',
       },
     ],
   },
@@ -512,7 +512,7 @@ export const works = [
     sections: [
       {
         heading: "Brand Concept & Logo",
-        body: "Designed a clever, dynamic logo by using the shape of curved tickets to form the letter \"t\". This custom monogram instantly communicates the platform's core service while serving as a strong, memorable anchor for the brand identity.",
+        body: 'Designed a clever, dynamic logo by using the shape of curved tickets to form the letter "t". This custom monogram instantly communicates the platform\'s core service while serving as a strong, memorable anchor for the brand identity.',
       },
       {
         heading: "UI/UX & Transaction Architecture",
