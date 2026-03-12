@@ -122,7 +122,7 @@
 
       <!-- Hero Content -->
       <div
-        class="flex flex-col gap-3 pt-[160px] lg:pt-[260px] lg:max-w-[662px]"
+        class="flex flex-col gap-3 pt-[160px] lg:pt-[260px] lg:max-w-[662px] text-center md:text-left"
       >
         <div
           class="flex flex-col gap-2 relative animate-slideRight [animation-delay:240ms]"
@@ -160,9 +160,9 @@
 
       <!-- Location -->
       <div
-        class="flex flex-col gap-3 lg:absolute py-12 lg:bottom-[60px] animate-slideRight [animation-delay:720ms]"
+        class="flex flex-col gap-3 lg:absolute py-12 lg:bottom-[60px] animate-slideRight [animation-delay:720ms] text-center md:text-left"
       >
-        <div class="bg-neutral-400 h-[2px] w-[166px]" />
+        <div class="bg-neutral-400 h-[2px] w-[166px] mx-auto md:mx-0" />
         <p
           class="text-xs font-medium text-neutral-600 tracking-[1.2px] uppercase leading-7"
         >

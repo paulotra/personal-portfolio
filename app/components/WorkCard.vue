@@ -13,7 +13,7 @@
       </div>
       <div class="flex flex-col gap-2 px-6">
         <p
-          class="font-sans font-semibold text-2xl leading-10 capitalize text-black"
+          class="font-sans font-semibold text-2xl leading-10 capitalize text-black text-left"
         >
           {{ title }}
         </p>

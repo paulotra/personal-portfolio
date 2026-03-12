@@ -36,9 +36,7 @@
         </div>
 
         <p class="font-bold text-black">Tech & Tools</p>
-        <div
-          class="flex flex-wrap gap-5 items-center justify-center lg:justify-start"
-        >
+        <div class="flex flex-wrap gap-5 items-center justify-start">
           <img
             v-for="tech in work.tech"
             :src="`/images/capabilities/${tech}.webp`"
@@ -76,7 +74,7 @@
     </aside>
 
     <!-- Right panel -->
-    <main class="flex-1 md:h-screen md:overflow-y-auto">
+    <main class="flex-1 md:h-screen md:overflow-y-auto px-8 md:p-0">
       <ProjectsRocketFlow
         v-if="route.params.slug === 'rocket-flow'"
         :cards-visible="cardsVisible"
