@@ -2,9 +2,7 @@
   <div ref="sectionRef" class="relative flex flex-col items-center gap-[61px]">
     <!-- Decorative: skateboard (top-right) -->
     <div
-      :class="
-        visible ? 'animate-slideLeft [animation-delay:880ms]' : 'opacity-0'
-      "
+      ref="skateboardRef"
       class="absolute -top-[340px] lg:-top-[260px] right-[30px] lg:right-[-50px] rotate-[7.9deg] pointer-events-none"
     >
       <img
@@ -17,21 +15,19 @@
 
     <!-- Decorative: "what i've been through" (top-right) -->
     <div
-      :class="
-        visible ? 'animate-slideLeft [animation-delay:800ms]' : 'opacity-0'
-      "
+      ref="whatIveRef"
       class="absolute top-[-130px] lg:top-[0] right-[-32px] lg:right-[-72px] rotate-[20.2deg] pointer-events-none"
     >
-      <p
-        class="font-['Gochi_Hand'] text-[34px] leading-normal text-primary-500 text-center whitespace-nowrap"
-      >
-        what i've<br />been through
-      </p>
+      <HandwrittenText
+        :text="'what i\'ve\nbeen through'"
+        class="font-['Gochi_Hand'] text-[34px] leading-normal text-primary-500 text-center"
+        :stagger="0.045"
+      />
     </div>
 
     <!-- Tab Switcher -->
     <div
-      :class="visible ? 'animate-slideDown' : 'opacity-0'"
+      ref="tabSwitcherRef"
       class="relative bg-white border border-neutral-400 flex gap-5 items-start p-6 rounded-2xl z-10 shadow-[inset_3px_3px_7px_0px_rgba(136,150,163,0.12),inset_-3px_-3px_7px_0px_white]"
     >
       <button
@@ -56,9 +52,7 @@
     >
       <!-- Background glow -->
       <div
-        :class="
-          visible ? 'animate-slideDown [animation-delay:80ms]' : 'opacity-0'
-        "
+        ref="glowRef"
         class="absolute left-1/2 -translate-x-1/2 -top-10 w-[804px] h-[750px] pointer-events-none"
       >
         <img
@@ -74,9 +68,7 @@
         src="/images/experience/timeline-lines.svg"
         alt=""
         aria-hidden="true"
-        :class="
-          visible ? 'animate-slideDown [animation-delay:80ms]' : 'opacity-0'
-        "
+        ref="timelineLinesRef"
         class="hidden [@media(min-width:1420px)]:block absolute left-[450px] top-[21px] w-[639px] h-[666px] pointer-events-none z-0"
       />
 
@@ -356,24 +348,17 @@
       </div>
 
       <!-- Decorative: "don't just learn, experience!" (bottom-left) -->
-      <div
-        :class="
-          visible ? 'animate-slideDown [animation-delay:960ms]' : 'opacity-0'
-        "
-        class="absolute left-[140px] bottom-[-100px] -rotate-[15.86deg] pointer-events-none"
-      >
-        <p
-          class="font-['Gochi_Hand'] text-[30px] leading-normal text-primary-500 text-center whitespace-nowrap"
-        >
-          don't just learn,<br />experience!
-        </p>
+      <div class="absolute left-[140px] bottom-[-100px] -rotate-[15.86deg] pointer-events-none">
+        <HandwrittenText
+          :text="'don\'t just learn,\nexperience!'"
+          class="font-['Gochi_Hand'] text-[30px] leading-normal text-primary-500 text-center"
+          :stagger="0.04"
+        />
       </div>
 
       <!-- Decorative: keyboard (bottom-left) -->
       <div
-        :class="
-          visible ? 'animate-slideDown [animation-delay:960ms]' : 'opacity-0'
-        "
+        ref="keyboardRef"
         class="absolute -left-[250px] bottom-[-150px] rotate-[7.18deg] pointer-events-none"
       >
         <img
@@ -386,13 +371,19 @@
     </div>
   </div>
 </template>
-=
 
 <script setup lang="ts">
+import { gsap } from "gsap";
 import { useInView } from "~/composables/useInView";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { sectionRef, visible } = useInView(0.44);
+
+const skateboardRef = ref<HTMLElement | null>(null);
+const whatIveRef = ref<HTMLElement | null>(null);
+const tabSwitcherRef = ref<HTMLElement | null>(null);
+const glowRef = ref<HTMLElement | null>(null);
+const timelineLinesRef = ref<HTMLElement | null>(null);
+const keyboardRef = ref<HTMLElement | null>(null);
 
 const tabs = ["Experiences", "Education"] as const;
 const activeTab = ref<"Experiences" | "Education">("Experiences");
@@ -406,10 +397,9 @@ const activeYearCount = ref(0);
 const GREY_LINE_HEIGHT = 698;
 
 function isYearReached(yearIndex: number, offset = 0) {
-  void blueLineHeight.value; // reactive trigger — re-evaluates on every scroll
+  void blueLineHeight.value;
   const el = yearItemRefs[yearIndex];
   if (!el) return false;
-  // Trigger when the year dot's center scrolls to 75% down the viewport
   const rect = el.getBoundingClientRect();
   return rect.top + rect.height / 2 <= window.innerHeight * 0.75 + offset;
 }
@@ -422,15 +412,12 @@ function updateProgress() {
   if (!timelineBodyRef.value) return;
   const rect = timelineBodyRef.value.getBoundingClientRect();
   const wh = window.innerHeight;
-
-  // Progress: 0 when section top enters at 85% of viewport, 1 when fully consumed
   const progress = Math.max(
     0,
     Math.min(1, (wh * 0.6 - rect.top) / rect.height),
   );
   blueLineHeight.value = progress * GREY_LINE_HEIGHT;
 
-  // Count years whose center is covered by the blue line
   if (blueLineHeight.value >= GREY_LINE_HEIGHT) {
     activeYearCount.value = years.length;
   } else {
@@ -441,13 +428,94 @@ function updateProgress() {
   }
 }
 
+let gsapCtx: gsap.Context | null = null;
+
 onMounted(() => {
   window.addEventListener("scroll", updateProgress, { passive: true });
   updateProgress();
+
+  gsapCtx = gsap.context(() => {
+    const trigger = sectionRef.value as Element;
+
+    // Tab switcher entrance
+    gsap.from(tabSwitcherRef.value, {
+      y: 30,
+      opacity: 0,
+      duration: 0.7,
+      ease: "power3.out",
+      scrollTrigger: { trigger, start: "top 85%" },
+    });
+
+    // Timeline lines entrance
+    gsap.from(timelineLinesRef.value, {
+      opacity: 0,
+      duration: 0.8,
+      delay: 0.2,
+      scrollTrigger: { trigger, start: "top 80%" },
+    });
+
+    // Glow pulse tied to scroll
+    if (glowRef.value) {
+      gsap.to(glowRef.value, {
+        scale: 1.15,
+        ease: "none",
+        scrollTrigger: {
+          trigger: timelineBodyRef.value ?? trigger,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 2,
+        },
+      });
+    }
+
+    // Skateboard parallax
+    if (skateboardRef.value) {
+      gsap.to(skateboardRef.value, {
+        yPercent: -20,
+        rotation: 12,
+        ease: "none",
+        scrollTrigger: {
+          trigger,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5,
+        },
+      });
+    }
+
+    // "what i've been through" wrapper parallax
+    if (whatIveRef.value) {
+      gsap.to(whatIveRef.value, {
+        yPercent: -10,
+        ease: "none",
+        scrollTrigger: {
+          trigger,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5,
+        },
+      });
+    }
+
+    // Keyboard parallax
+    if (keyboardRef.value) {
+      gsap.to(keyboardRef.value, {
+        yPercent: 10,
+        ease: "none",
+        scrollTrigger: {
+          trigger,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5,
+        },
+      });
+    }
+  }, sectionRef.value as Element);
 });
 
 onUnmounted(() => {
   window.removeEventListener("scroll", updateProgress);
+  gsapCtx?.revert();
 });
 </script>
 

@@ -3,22 +3,20 @@
     ref="sectionRef"
     class="relative flex flex-col gap-12 items-center lg:-mx-20"
   >
-    <!-- Title -->
+    <!-- "Built on Trust" decorative label -->
     <div
-      :class="
-        visible ? 'animate-slideDown [animation-delay:400ms]' : 'opacity-0'
-      "
       class="absolute lg:right-[200px] right-[-40px] lg:top-[-80px] top-[-90px] w-[246px] h-[230px] rotate-[23.35deg] pointer-events-none"
     >
-      <p
-        class="font-['Gochi_Hand'] text-[30px] leading-normal text-primary-500 text-center whitespace-nowrap relative z-10"
-      >
-        Built on Trust<br />Backed by Results
-      </p>
+      <HandwrittenText
+        :text="'Built on Trust\nBacked by Results'"
+        class="font-['Gochi_Hand'] text-[30px] leading-normal text-primary-500 text-center relative z-10"
+        :delay="0.2"
+        :stagger="0.04"
+      />
     </div>
 
     <h2
-      :class="visible ? 'animate-slideDown' : 'opacity-0'"
+      ref="headingRef"
       class="font-sans font-black text-4xl leading-normal uppercase text-black text-center lg:text-left"
     >
       What My Clients Say
@@ -26,7 +24,7 @@
 
     <!-- Slider -->
     <div
-      :class="visible ? 'animate-slideUp [animation-delay:80ms]' : 'opacity-0'"
+      ref="sliderRef"
       class="relative w-full overflow-hidden slider-mask"
     >
       <div class="flex flex-col gap-10">
@@ -133,10 +131,40 @@
 </template>
 
 <script setup lang="ts">
-import { useInView } from "~/composables/useInView";
+import { gsap } from "gsap";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const { sectionRef, visible } = useInView();
+const sectionRef = ref<HTMLElement | null>(null);
+const headingRef = ref<HTMLElement | null>(null);
+const sliderRef = ref<HTMLElement | null>(null);
+
+let ctx: gsap.Context | null = null;
+
+onMounted(() => {
+  ctx = gsap.context(() => {
+    const trigger = sectionRef.value!;
+
+    gsap.from(headingRef.value, {
+      y: 40,
+      opacity: 0,
+      duration: 0.7,
+      ease: "power3.out",
+      scrollTrigger: { trigger, start: "top 85%" },
+    });
+
+    gsap.from(sliderRef.value, {
+      y: 40,
+      opacity: 0,
+      duration: 0.7,
+      ease: "power3.out",
+      delay: 0.1,
+      scrollTrigger: { trigger, start: "top 85%" },
+    });
+  }, sectionRef.value!);
+});
+
+onUnmounted(() => {
+  ctx?.revert();
+});
 
 const testimonials = [
   {
@@ -155,7 +183,7 @@ const testimonials = [
   },
   {
     quote:
-      "Paulo doesn’t make things pretty. He makes them work. Our clients open our apps and immediately know what to do. That’s not a coincidence.",
+      "Paulo doesn't make things pretty. He makes them work. Our clients open our apps and immediately know what to do. That's not a coincidence.",
     name: "Job Wiegant",
     role: "CEO of RocketFlow",
     avatar: "/images/people/job.webp",
@@ -170,13 +198,13 @@ const testimonials = [
   {
     quote:
       "He has an exceptional eye for vision and design. Over time I had to adjust to a new normal where every task he turned in exceeded my expectations.",
-    name: "Brianna O’Keefe",
+    name: "Brianna O'Keefe",
     role: "CEO of Songoda LLC",
     avatar: "/images/people/bri.webp",
   },
   {
     quote:
-      "Working with Paulo was an absolute pleasure. He brought fresh ideas, a great eye for design, and wrote clean, well-structured code. His creativity and attention to detail really elevated the entire project. I’d be happy to collaborate with him again anytime.",
+      "Working with Paulo was an absolute pleasure. He brought fresh ideas, a great eye for design, and wrote clean, well-structured code. His creativity and attention to detail really elevated the entire project. I'd be happy to collaborate with him again anytime.",
     name: "Dirk Aldekamp",
     role: "CEO of Aconi",
     avatar: null,

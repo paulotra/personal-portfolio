@@ -1,10 +1,16 @@
 <template>
-  <Card class="cursor-pointer" @click="router.push(`/projects/${slug}`)">
+  <Card
+    class="cursor-pointer"
+    @click="router.push(`/projects/${slug}`)"
+    @mouseenter="onEnter"
+    @mouseleave="onLeave"
+  >
     <div class="flex flex-col gap-5 pb-[45.5px]">
       <div
         class="border-b border-neutral-300 h-[391px] w-full flex items-center justify-center"
       >
         <img
+          ref="imgRef"
           :src="image"
           :alt="title"
           :class="imageClass"
@@ -62,7 +68,10 @@
 </template>
 
 <script setup lang="ts">
+import { gsap } from "gsap";
+
 const router = useRouter();
+const imgRef = ref<HTMLImageElement | null>(null);
 
 defineProps<{
   slug: string;
@@ -73,6 +82,28 @@ defineProps<{
   projectUrl: string;
   imageClass?: string;
 }>();
+
+function onEnter() {
+  if (!imgRef.value) return;
+  gsap.to(imgRef.value, {
+    scale: 1,
+    filter: "grayscale(0)",
+    opacity: 1,
+    duration: 0.4,
+    ease: "power2.out",
+  });
+}
+
+function onLeave() {
+  if (!imgRef.value) return;
+  gsap.to(imgRef.value, {
+    scale: 0.9,
+    filter: "grayscale(1)",
+    opacity: 0.6,
+    duration: 0.4,
+    ease: "power2.in",
+  });
+}
 </script>
 
 <style scoped>
@@ -80,15 +111,5 @@ defineProps<{
   transform: scale(0.9);
   filter: grayscale(1);
   opacity: 0.6;
-  transition:
-    transform 0.4s ease,
-    filter 0.4s ease,
-    opacity 0.4s ease;
-}
-
-.group:hover .project-img {
-  transform: scale(1);
-  filter: grayscale(0);
-  opacity: 1;
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
   <!-- Hero Section -->
   <section
+    ref="heroSectionRef"
     class="bg-neutral-100 z-10 relative lg:min-h-[900px] min-h-[680px] flex flex-col overflow-hidden"
   >
     <div class="max-w-[1360px] mx-auto px-6 relative flex-1 w-full">
@@ -114,8 +115,9 @@
       </div>
 
       <img
+        ref="heroImageRef"
         src="/images/me.webp"
-        class="absolute bottom-[0px] -right-[420px] max-w-none hidden lg:block animate-slideUp"
+        class="absolute bottom-[-30px] -right-[420px] max-w-none hidden lg:block"
         width="1630px"
         alt="Hero Image"
       />
@@ -124,19 +126,20 @@
       <div
         class="flex flex-col gap-3 pt-[160px] lg:pt-[260px] lg:max-w-[662px] text-center md:text-left"
       >
-        <div
-          class="flex flex-col gap-2 relative animate-slideRight [animation-delay:240ms]"
-        >
+        <div class="flex flex-col gap-2 relative">
           <!-- Hi Guys! -->
           <div class="-rotate-6 inline-block absolute -top-10 left-0">
-            <span
+            <HandwrittenText
+              text="Hi Guys!"
               class="font-['Gochi_Hand'] text-[50px] leading-10 text-neutral-700 whitespace-nowrap"
-            >
-              Hi Guys!
-            </span>
+              :scroll-trigger="false"
+              :delay="0.6"
+              :stagger="0.06"
+            />
           </div>
           <!-- Headline -->
           <Headline
+            ref="headlineRef"
             class="font-sans font-black leading-heading uppercase text-black max-w-[676px] lg:min-h-[144px] min-h-[252px]"
           >
             I'm paulo Trajano, <br />A
@@ -152,7 +155,8 @@
         </div>
         <!-- Subtitle -->
         <p
-          class="text-xl text-black font-normal leading-[34px] animate-slideRight [animation-delay:480ms]"
+          ref="subtitleRef"
+          class="text-xl text-black font-normal leading-[34px]"
         >
           Specialized in web design, branding, and frontend development.
         </p>
@@ -160,7 +164,8 @@
 
       <!-- Location -->
       <div
-        class="flex flex-col gap-3 lg:absolute py-12 lg:bottom-[60px] animate-slideRight [animation-delay:720ms] text-center md:text-left"
+        ref="locationRef"
+        class="flex flex-col gap-3 lg:absolute py-12 lg:bottom-[60px] text-center md:text-left"
       >
         <div class="bg-neutral-400 h-[2px] w-[166px] mx-auto md:mx-0" />
         <p
@@ -192,6 +197,9 @@
 </template>
 
 <script setup lang="ts">
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 useSeoMeta({
   title: "Paulo Trajano — Frontend Developer & Designer",
   description:
@@ -206,6 +214,15 @@ useSeoMeta({
 });
 
 definePageMeta({ layout: "default" });
+
+// Refs for GSAP targets
+const heroSectionRef = ref<HTMLElement | null>(null);
+const heroImageRef = ref<HTMLElement | null>(null);
+const headlineRef = ref<HTMLElement | null>(null);
+const subtitleRef = ref<HTMLElement | null>(null);
+const locationRef = ref<HTMLElement | null>(null);
+
+// Typewriter
 const words = ["Brand Designer", "UI UX Designer", "FE Developer"];
 const wordColors: Record<string, string> = {
   "Brand Designer": "text-secondary-500",
@@ -232,35 +249,56 @@ async function sleep(ms: number) {
 async function typewriter() {
   while (true) {
     const word = words[wordIndex.value % words.length]!;
-
-    // Type out
     for (let i = 0; i <= word.length; i++) {
       displayedText.value = word.slice(0, i);
       await sleep(typeSpeed);
     }
-
-    // Pause
     await sleep(pauseDuration);
-
-    // Delete
     for (let i = word.length; i >= 0; i--) {
       displayedText.value = word.slice(0, i);
       await sleep(deleteSpeed);
     }
-
     await sleep(200);
     wordIndex.value++;
   }
 }
 
-// Blinking cursor
 let cursorInterval: ReturnType<typeof setInterval>;
+let gsapCtx: gsap.Context | null = null;
 
 onMounted(() => {
   cursorInterval = setInterval(() => {
     cursorVisible.value = !cursorVisible.value;
   }, 530);
   typewriter();
+
+  gsapCtx = gsap.context(() => {
+    // Hero entrance timeline
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+    tl.from(headlineRef.value, { y: 60, opacity: 0, duration: 0.8 })
+      .from(subtitleRef.value, { y: 30, opacity: 0, duration: 0.6 }, "-=0.4")
+      .from(locationRef.value, { y: 20, opacity: 0, duration: 0.5 }, "-=0.3");
+
+    // Hero image parallax on scroll
+    if (heroImageRef.value && heroSectionRef.value) {
+      gsap.to(heroImageRef.value, {
+        yPercent: -10,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroSectionRef.value,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1.5,
+        },
+      });
+    }
+  });
 });
-onUnmounted(() => clearInterval(cursorInterval));
+
+onUnmounted(() => {
+  clearInterval(cursorInterval);
+  gsapCtx?.revert();
+  ScrollTrigger.getAll().forEach((t) => t.kill());
+});
 </script>

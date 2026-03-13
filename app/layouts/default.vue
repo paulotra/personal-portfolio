@@ -16,7 +16,7 @@
     <slot />
 
     <!-- Footer CTA Section -->
-    <section class="relative bg-white">
+    <section ref="footerRef" class="relative bg-white">
       <div class="bg-neutral-100 relative">
         <div
           class="absolute -top-10 left-0 w-full h-[84px] bg-neutral-100 rounded-[80px]"
@@ -26,18 +26,25 @@
           <div class="lg:flex gap-10 items-start px-8 lg:px-0">
             <!-- Left: CTA + Contacts -->
             <div class="flex flex-col gap-6 flex-1 mb-10 lg:mb-0">
-              <div class="flex flex-col gap-1">
+              <div ref="ctaHeadingRef" class="flex flex-col gap-1">
                 <h2
                   class="font-sans font-black text-[60px] leading-heading uppercase text-black"
                 >
-                  Let's build something great
-                  <span class="text-primary-500">together</span>
+                  <span
+                    v-for="(word, i) in ctaWords"
+                    :key="i"
+                    class="footer-word inline-block mr-[0.25em]"
+                    >{{ word }}</span
+                  >
+                  <span class="footer-word inline-block text-primary-500"
+                    >together</span
+                  >
                 </h2>
-                <p class="text-2xl text-neutral-800 font-normal leading-10">
+                <p ref="ctaSubRef" class="text-2xl text-neutral-800 font-normal leading-10">
                   Open to full-time, part-time roles and product collaborations.
                 </p>
               </div>
-              <div class="flex gap-10">
+              <div ref="ctaContactsRef" class="flex gap-10">
                 <div class="flex flex-col gap-1 flex-1">
                   <p
                     class="text-sm font-bold text-neutral-800 tracking-[0.84px] uppercase leading-7"
@@ -77,7 +84,7 @@
             </div>
 
             <!-- Right: Links -->
-            <div class="flex lg:flex-col gap-10 lg:w-1/3">
+            <div ref="ctaLinksRef" class="flex lg:flex-col gap-10 lg:w-1/3">
               <!-- Portfolios -->
               <div class="flex-1 flex flex-col gap-3">
                 <p
@@ -151,8 +158,20 @@
 </template>
 
 <script setup lang="ts">
+import { gsap } from "gsap";
+
 const route = useRoute();
 const scrolled = ref(false);
+
+const footerRef = ref<HTMLElement | null>(null);
+const ctaHeadingRef = ref<HTMLElement | null>(null);
+const ctaSubRef = ref<HTMLElement | null>(null);
+const ctaContactsRef = ref<HTMLElement | null>(null);
+const ctaLinksRef = ref<HTMLElement | null>(null);
+
+const ctaWords = "Let's build something great".split(" ");
+
+let gsapCtx: gsap.Context | null = null;
 
 onMounted(() => {
   const onScroll = () => {
@@ -160,5 +179,53 @@ onMounted(() => {
   };
   window.addEventListener("scroll", onScroll, { passive: true });
   onUnmounted(() => window.removeEventListener("scroll", onScroll));
+
+  gsapCtx = gsap.context(() => {
+    const trigger = footerRef.value!;
+
+    // Word-by-word reveal on CTA heading
+    gsap.from(".footer-word", {
+      y: 40,
+      opacity: 0,
+      duration: 0.5,
+      ease: "power3.out",
+      stagger: 0.07,
+      scrollTrigger: { trigger, start: "top 85%" },
+    });
+
+    // Subtitle fade up
+    gsap.from(ctaSubRef.value, {
+      y: 20,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power3.out",
+      delay: 0.4,
+      scrollTrigger: { trigger, start: "top 85%" },
+    });
+
+    // Contacts fade up
+    gsap.from(ctaContactsRef.value, {
+      y: 20,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power3.out",
+      delay: 0.5,
+      scrollTrigger: { trigger, start: "top 85%" },
+    });
+
+    // Right links column
+    gsap.from(ctaLinksRef.value, {
+      x: 20,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power3.out",
+      delay: 0.3,
+      scrollTrigger: { trigger, start: "top 85%" },
+    });
+  }, footerRef.value!);
+});
+
+onUnmounted(() => {
+  gsapCtx?.revert();
 });
 </script>

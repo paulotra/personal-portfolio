@@ -13,9 +13,12 @@
           aria-hidden="true"
           class="h-[27px] w-[53px] object-cover scale-x-[-1]"
         />
-        <span class="font-['Gochi_Hand'] text-3xl leading-10 whitespace-nowrap"
-          >back to home</span
-        >
+        <HandwrittenText
+          text="back to home"
+          class="font-['Gochi_Hand'] text-3xl leading-10 whitespace-nowrap"
+          :scroll-trigger="false"
+          :delay="0.3"
+        />
       </NuxtLink>
       <!-- Header -->
       <div class="flex items-end justify-center lg:justify-between relative">
@@ -27,19 +30,14 @@
         </h2>
 
         <!-- "design & development" decorative label -->
-        <div
-          :class="
-            visible ? 'animate-slideDown [animation-delay:800ms]' : 'opacity-0'
-          "
-          class="hidden lg:block absolute right-[20px] -top-[92px] rotate-[15deg] pointer-events-none"
-        >
-          <p
-            class="font-['Gochi_Hand'] text-[34px] leading-normal text-primary-500 text-center whitespace-pre"
-          >
-            design <br />
-            & <br />
-            development
-          </p>
+        <div class="hidden lg:block absolute right-[20px] -top-[92px] rotate-[15deg] pointer-events-none">
+          <HandwrittenText
+            :text="'design\n&\ndevelopment'"
+            class="font-['Gochi_Hand'] text-[34px] leading-normal text-primary-500 text-center"
+            :scroll-trigger="false"
+            :delay="0.5"
+            :stagger="0.05"
+          />
         </div>
       </div>
 

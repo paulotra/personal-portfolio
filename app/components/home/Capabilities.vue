@@ -1,25 +1,18 @@
 <template>
-  <div
-    ref="sectionRef"
-    class="relative flex flex-col gap-[60px] text-center lg:text-left"
-  >
+  <div ref="sectionRef" class="relative flex flex-col gap-[60px] text-center lg:text-left">
     <!-- Header -->
     <div class="flex gap-10 flex-col lg:flex-row lg:items-start">
       <!-- Left: Title + subtitle -->
       <div class="relative flex flex-col gap-4 flex-1">
         <!-- Craft & Code label -->
-        <div
-          :class="
-            visible ? 'animate-slideDown [animation-delay:800ms]' : 'opacity-0'
-          "
-          class="absolute -top-8 lg:left-[360px] rotate-[4.62deg] pointer-events-none"
-        >
-          <span
+        <div class="absolute -top-8 lg:left-[360px] rotate-[4.62deg] pointer-events-none">
+          <HandwrittenText
+            text="Craft & Code"
             class="font-['Gochi_Hand'] text-[36px] leading-10 text-primary-500 whitespace-nowrap"
-            >Craft &amp; Code</span
-          >
+            scroll-start="top 90%"
+          />
         </div>
-        <div :class="visible ? 'animate-slideDown' : 'opacity-0'">
+        <div ref="headingRef">
           <h2
             class="font-sans font-black text-4xl uppercase text-black leading-[1.4]"
           >
@@ -33,12 +26,7 @@
         </div>
       </div>
       <!-- Right: Description -->
-      <p
-        :class="
-          visible ? 'animate-slideDown [animation-delay:80ms]' : 'opacity-0'
-        "
-        class="flex-1 text-xl text-neutral-700 leading-10"
-      >
+      <p ref="descRef" class="flex-1 text-xl text-neutral-700 leading-10">
         I build fast, scalable Vue.js applications with clean architecture and
         thoughtful UI. I care about more than just making things work. From
         component structure to visual hierarchy, every detail is intentional.
@@ -46,12 +34,7 @@
     </div>
 
     <div class="flex flex-col gap-9">
-      <Card
-        class="bg-white w-full flex"
-        :class="
-          visible ? 'animate-slideDown [animation-delay:160ms]' : 'opacity-0'
-        "
-      >
+      <Card ref="feCardRef" class="bg-white w-full flex">
         <div
           class="flex flex-col gap-6 lg:h-[351.5px] px-6 py-8 items-center lg:items-start max-w-full"
         >
@@ -62,7 +45,7 @@
               FE Development
             </h3>
             <p class="font-sans font-normal text-sm leading-6 text-neutral-700">
-              I’m a Frontend Developer specializing in Vue.js and modern web
+              I'm a Frontend Developer specializing in Vue.js and modern web
               technologies, focused on building scalable, maintainable, and
               performant web applications. I approach development with a strong
               emphasis on clean architecture, component-driven design, and
@@ -77,68 +60,21 @@
                 >TECHNOLOGIES</Headline
               >
               <div
+                ref="iconsRef"
                 class="flex flex-wrap gap-5 items-center justify-center lg:justify-start"
               >
-                <img
-                  src="/images/capabilities/vscode.webp"
-                  alt="VS Code"
-                  class="size-8 object-contain"
-                />
-                <img
-                  src="/images/capabilities/github.webp"
-                  alt="GitHub"
-                  class="size-8 object-contain"
-                />
-                <img
-                  src="/images/capabilities/chatgpt.webp"
-                  alt="ChatGPT"
-                  class="size-8 object-contain"
-                />
-                <img
-                  src="/images/capabilities/vue.webp"
-                  alt="Vue"
-                  class="size-8 object-contain"
-                />
-                <img
-                  src="/images/capabilities/nuxt2.webp"
-                  alt="Nuxt"
-                  class="size-8 object-contain"
-                />
-                <img
-                  src="/images/capabilities/html5.webp"
-                  alt="HTML5"
-                  class="size-8 object-contain"
-                />
-                <img
-                  src="/images/capabilities/css3.webp"
-                  alt="CSS3"
-                  class="size-8 object-contain"
-                />
-                <img
-                  src="/images/capabilities/javascript.webp"
-                  alt="JavaScript"
-                  class="size-8 object-contain"
-                />
-                <img
-                  src="/images/capabilities/tailwind.webp"
-                  alt="Tailwind CSS"
-                  class="size-8 object-contain"
-                />
-                <img
-                  src="/images/capabilities/nuxt.webp"
-                  alt="Nuxt"
-                  class="size-8 object-contain"
-                />
-                <img
-                  src="/images/capabilities/sass.webp"
-                  alt="Sass"
-                  class="size-8 object-contain"
-                />
-                <img
-                  src="/images/capabilities/cypress.webp"
-                  alt="Cypress"
-                  class="size-8 object-contain"
-                />
+                <img src="/images/capabilities/vscode.webp" alt="VS Code" class="size-8 object-contain" />
+                <img src="/images/capabilities/github.webp" alt="GitHub" class="size-8 object-contain" />
+                <img src="/images/capabilities/chatgpt.webp" alt="ChatGPT" class="size-8 object-contain" />
+                <img src="/images/capabilities/vue.webp" alt="Vue" class="size-8 object-contain" />
+                <img src="/images/capabilities/nuxt2.webp" alt="Nuxt" class="size-8 object-contain" />
+                <img src="/images/capabilities/html5.webp" alt="HTML5" class="size-8 object-contain" />
+                <img src="/images/capabilities/css3.webp" alt="CSS3" class="size-8 object-contain" />
+                <img src="/images/capabilities/javascript.webp" alt="JavaScript" class="size-8 object-contain" />
+                <img src="/images/capabilities/tailwind.webp" alt="Tailwind CSS" class="size-8 object-contain" />
+                <img src="/images/capabilities/nuxt.webp" alt="Nuxt" class="size-8 object-contain" />
+                <img src="/images/capabilities/sass.webp" alt="Sass" class="size-8 object-contain" />
+                <img src="/images/capabilities/cypress.webp" alt="Cypress" class="size-8 object-contain" />
               </div>
             </div>
             <div class="pr-4 max-w-full overflow-hidden lg:overflow-visible">
@@ -157,14 +93,9 @@
       </Card>
 
       <!-- Capability Cards -->
-      <div class="grid lg:grid-cols-3 gap-10">
+      <div ref="capCardsRef" class="grid lg:grid-cols-3 gap-10">
         <!-- Branding -->
-        <Card
-          class="max-w-[600px] mx-auto lg:mx-0 w-full transition-none"
-          :class="
-            visible ? 'animate-slideDown [animation-delay:240ms]' : 'opacity-0'
-          "
-        >
+        <Card class="max-w-[600px] mx-auto lg:mx-0 w-full transition-none">
           <div
             class="flex flex-col gap-6 lg:h-[235px] px-6 py-8 items-center lg:items-start"
           >
@@ -184,32 +115,15 @@
             <div
               class="flex gap-5 items-center justify-center lg:justify-start"
             >
-              <img
-                src="/images/capabilities/illustrator.webp"
-                alt="Adobe Illustrator"
-                class="size-8 rounded object-contain"
-              />
-              <img
-                src="/images/capabilities/photoshop.webp"
-                alt="Adobe Photoshop"
-                class="size-8 rounded object-contain"
-              />
-              <img
-                src="/images/capabilities/figma.webp"
-                alt="Figma"
-                class="size-8 object-contain"
-              />
+              <img src="/images/capabilities/illustrator.webp" alt="Adobe Illustrator" class="size-8 rounded object-contain" />
+              <img src="/images/capabilities/photoshop.webp" alt="Adobe Photoshop" class="size-8 rounded object-contain" />
+              <img src="/images/capabilities/figma.webp" alt="Figma" class="size-8 object-contain" />
             </div>
           </div>
         </Card>
 
         <!-- UI & UX Design -->
-        <Card
-          class="max-w-[600px] mx-auto lg:mx-0 w-full"
-          :class="
-            visible ? 'animate-slideDown [animation-delay:320ms]' : 'opacity-0'
-          "
-        >
+        <Card class="max-w-[600px] mx-auto lg:mx-0 w-full">
           <div
             class="flex flex-col gap-6 lg:h-[235px] px-6 py-8 items-center lg:items-start"
           >
@@ -228,31 +142,11 @@
             <div
               class="flex gap-5 items-center flex-wrap justify-center lg:justify-start"
             >
-              <img
-                src="/images/capabilities/figma.webp"
-                alt="Figma"
-                class="size-8 object-contain"
-              />
-              <img
-                src="/images/capabilities/sketch.webp"
-                alt="Sketch"
-                class="size-8 object-contain"
-              />
-              <img
-                src="/images/capabilities/framer.webp"
-                alt="Framer"
-                class="size-8 object-contain"
-              />
-              <img
-                src="/images/capabilities/spline.webp"
-                alt="Spline"
-                class="size-8 object-contain"
-              />
-              <img
-                src="/images/capabilities/storybook.webp"
-                alt="Storybook"
-                class="size-8 object-contain"
-              />
+              <img src="/images/capabilities/figma.webp" alt="Figma" class="size-8 object-contain" />
+              <img src="/images/capabilities/sketch.webp" alt="Sketch" class="size-8 object-contain" />
+              <img src="/images/capabilities/framer.webp" alt="Framer" class="size-8 object-contain" />
+              <img src="/images/capabilities/spline.webp" alt="Spline" class="size-8 object-contain" />
+              <img src="/images/capabilities/storybook.webp" alt="Storybook" class="size-8 object-contain" />
             </div>
           </div>
         </Card>
@@ -261,9 +155,7 @@
 
     <!-- Decorative: Camera (top-right) -->
     <div
-      :class="
-        visible ? 'animate-slideLeft [animation-delay:880ms]' : 'opacity-0'
-      "
+      ref="cameraRef"
       class="absolute -top-[159px] right-0 lg:right-[-60px] rotate-[15.01deg] pointer-events-none"
     >
       <img
@@ -276,9 +168,7 @@
 
     <!-- Decorative: Sneaker (bottom-left) -->
     <div
-      :class="
-        visible ? 'animate-slideRight [animation-delay:960ms]' : 'opacity-0'
-      "
+      ref="sneakerRef"
       class="absolute bottom-[-160px] -left-[109px] rotate-[14.21deg] pointer-events-none"
     >
       <img
@@ -292,9 +182,109 @@
 </template>
 
 <script setup>
-import { useInView } from "~/composables/useInView";
+import { gsap } from "gsap";
 import Card from "../Card.vue";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const { sectionRef, visible } = useInView(0.9);
+const sectionRef = ref(null);
+const headingRef = ref(null);
+const descRef = ref(null);
+const feCardRef = ref(null);
+const iconsRef = ref(null);
+const capCardsRef = ref(null);
+const cameraRef = ref(null);
+const sneakerRef = ref(null);
+
+let ctx = null;
+
+onMounted(() => {
+  ctx = gsap.context(() => {
+    const trigger = sectionRef.value;
+
+    // Heading block
+    gsap.from(headingRef.value, {
+      y: 40,
+      opacity: 0,
+      duration: 0.7,
+      ease: "power3.out",
+      scrollTrigger: { trigger, start: "top 85%" },
+    });
+
+    // Right description
+    gsap.from(descRef.value, {
+      y: 40,
+      opacity: 0,
+      duration: 0.7,
+      ease: "power3.out",
+      delay: 0.1,
+      scrollTrigger: { trigger, start: "top 85%" },
+    });
+
+    // FE Development card
+    gsap.from(feCardRef.value?.$el ?? feCardRef.value, {
+      y: 60,
+      opacity: 0,
+      duration: 0.7,
+      ease: "power3.out",
+      scrollTrigger: { trigger: feCardRef.value?.$el ?? feCardRef.value, start: "top 85%" },
+    });
+
+    // Tech icons stagger
+    if (iconsRef.value) {
+      gsap.from(iconsRef.value.children, {
+        scale: 0.5,
+        opacity: 0,
+        duration: 0.4,
+        ease: "back.out(1.7)",
+        stagger: 0.04,
+        scrollTrigger: { trigger: iconsRef.value, start: "top 85%" },
+      });
+    }
+
+    // Branding + UI/UX cards stagger
+    if (capCardsRef.value) {
+      gsap.from(capCardsRef.value.children, {
+        y: 50,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power3.out",
+        stagger: 0.12,
+        scrollTrigger: { trigger: capCardsRef.value, start: "top 85%" },
+      });
+    }
+
+    // Camera parallax
+    if (cameraRef.value) {
+      gsap.to(cameraRef.value, {
+        yPercent: -25,
+        rotation: 20,
+        ease: "none",
+        scrollTrigger: {
+          trigger,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5,
+        },
+      });
+    }
+
+    // Sneaker parallax
+    if (sneakerRef.value) {
+      gsap.to(sneakerRef.value, {
+        yPercent: 15,
+        rotation: 18,
+        ease: "none",
+        scrollTrigger: {
+          trigger,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5,
+        },
+      });
+    }
+  }, sectionRef.value);
+});
+
+onUnmounted(() => {
+  ctx?.revert();
+});
 </script>
