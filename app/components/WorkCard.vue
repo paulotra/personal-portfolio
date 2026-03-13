@@ -69,7 +69,7 @@ defineProps<{
   image: string;
   title: string;
   badges: { variant: string; label: string }[];
-  siteUrl: string;
+  siteUrl?: string;
   projectUrl: string;
   imageClass?: string;
 }>();

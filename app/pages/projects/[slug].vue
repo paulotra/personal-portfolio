@@ -127,6 +127,14 @@
         v-else-if="route.params.slug === 'blomstra'"
         :cards-visible="cardsVisible"
       />
+      <ProjectsJazzInc
+        v-else-if="route.params.slug === 'jazz-inc-diorama'"
+        :cards-visible="cardsVisible"
+      />
+      <ProjectsCDG
+        v-else-if="route.params.slug === 'camp-diego-garcia'"
+        :cards-visible="cardsVisible"
+      />
       <div v-else class="flex items-center justify-center flex-col h-full p-8">
         <img src="/images/coding.webp" width="400px" alt="" />
         <Headline variant="h4" class="font-bold mb-2 mt-6"
@@ -142,7 +150,7 @@
 </template>
 
 <script setup lang="ts">
-import { works, type ProjectGallery } from "~/data/works";
+import { works } from "~/data/works";
 
 definePageMeta({ layout: "blank" });
 
@@ -153,11 +161,6 @@ const work = works.find((w) => w.slug === route.params.slug);
 if (!work) {
   throw createError({ statusCode: 404, statusMessage: "Project not found" });
 }
-
-const gallery = ((work as any).gallery as ProjectGallery) ?? null;
-const galleryLeft = gallery?.left ?? [];
-const galleryRight = gallery?.right ?? [];
-const galleryMockups = gallery?.mockups ?? [];
 
 const mounted = ref(false);
 const asideVisible = ref(false);

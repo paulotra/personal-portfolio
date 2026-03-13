@@ -1,18 +1,23 @@
-export type GalleryColumnItem = {
-  type: string;
-  src: string;
-  width: "100%" | "50%";
-  height?: string;
-};
-
-export type GalleryMockupItem = { src: string; width: "100%" };
-export type ProjectGallery = {
-  left: GalleryColumnItem[];
-  right: GalleryColumnItem[];
-  mockups: GalleryMockupItem[];
-};
-
 export const works = [
+  {
+    slug: "jazz-inc-diorama",
+    title: "Jazz Inc Diorama",
+    tech: ["figma"],
+    image: "/images/projects/jazzinc.webp",
+    imageClass: "max-h-[200px]",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    projectUrl: "#",
+    sections: [
+      {
+        heading: "UI/UX & Frontend Polish",
+        body: "Redesigning a platform for detailed toys and dioramas presents a unique balancing act, especially when leaning into a dark-themed direction. The strategy was to take the client's visual inspirations and craft an interface that feels premium and collector-focused, while ensuring the underlying experience remains inherently fun. The goal was to use the dark UI as a dramatic, cinematic backdrop, allowing the highly detailed dioramas to serve as the absolute focal points.",
+      },
+    ],
+  },
   {
     slug: "rocket-flow",
     title: "Rocket Flow",
@@ -36,63 +41,6 @@ export const works = [
         body: "The initial iteration of the Rocket Flow website was built using Claude Code. While functional, it was highly generic and entirely disconnected from the brand's identity. I led a comprehensive overhaul of the UI and frontend, polishing the codebase and redesigning the interface from the ground up. I replaced the templated look with a bespoke, original design language that visually sets them apart while maintaining strict usability standards.",
       },
     ],
-    gallery: {
-      left: [
-        {
-          type: "image",
-          src: "/images/projects/rocket-flow/1.png",
-          width: "100%",
-          height: "479px",
-        },
-        {
-          type: "image",
-          src: "/images/projects/rocket-flow/2.png",
-          width: "50%",
-        },
-        {
-          type: "image",
-          src: "/images/projects/rocket-flow/3.png",
-          width: "50%",
-        },
-        {
-          type: "image",
-          src: "/images/projects/rocket-flow/4.png",
-          width: "50%",
-        },
-        {
-          type: "image",
-          src: "/images/projects/rocket-flow/5.png",
-          width: "50%",
-        },
-      ],
-      right: [
-        {
-          type: "image",
-          src: "/images/projects/rocket-flow/6.png",
-          width: "100%",
-        },
-        {
-          type: "image",
-          src: "/images/projects/rocket-flow/7.png",
-          width: "100%",
-        },
-        {
-          type: "image",
-          src: "/images/projects/rocket-flow/8.png",
-          width: "100%",
-        },
-      ],
-      mockups: [
-        {
-          src: "/images/projects/rocket-flow/9.png",
-          width: "100%",
-        },
-        {
-          src: "/images/projects/rocket-flow/10.png",
-          width: "100%",
-        },
-      ],
-    },
   },
   {
     slug: "prophetx",

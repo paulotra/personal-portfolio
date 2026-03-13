@@ -6,7 +6,7 @@
         :class="visible ? 'animate-slideDown' : 'opacity-0'"
         class="font-sans font-black text-4xl leading-[1.4] uppercase text-black"
       >
-        RECENT WORKS
+        FEATURED WORKS
       </h2>
 
       <!-- "design & development" decorative label -->
@@ -46,7 +46,7 @@
     <!-- Cards Grid -->
     <div class="grid lg:grid-cols-3 gap-x-10 gap-y-[2.26rem]">
       <WorkCard
-        v-for="(work, i) in works.slice(0, 3)"
+        v-for="(work, i) in displayedWorks"
         :key="work.title"
         v-bind="work"
         class="max-w-[600px] mx-auto lg:mx-0 w-full"
@@ -59,9 +59,18 @@
 
 <script setup lang="ts">
 import { useInView } from "~/composables/useInView";
+import { works } from "~/data/works";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { sectionRef, visible } = useInView(0.3);
 
-import { works } from "~/data/works";
+const props = withDefaults(defineProps<{ slugs?: string[] }>(), {
+  slugs: undefined,
+});
+
+const displayedWorks = computed(() =>
+  props.slugs
+    ? props.slugs.flatMap((s) => works.filter((w) => w.slug === s))
+    : works.slice(0, 3),
+);
 </script>
