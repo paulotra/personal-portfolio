@@ -135,6 +135,10 @@
         v-else-if="route.params.slug === 'camp-diego-garcia'"
         :cards-visible="cardsVisible"
       />
+      <ProjectsHyn
+        v-else-if="route.params.slug === 'hyn-portfolio'"
+        :cards-visible="cardsVisible"
+      />
       <div v-else class="flex items-center justify-center flex-col h-full p-8">
         <img src="/images/coding.webp" width="400px" alt="" />
         <Headline variant="h4" class="font-bold mb-2 mt-6"
