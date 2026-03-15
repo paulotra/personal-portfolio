@@ -196,14 +196,36 @@
 useSeoMeta({
   title: "Paulo Trajano — Frontend Developer & Designer",
   description:
-    "Personal portfolio of Paulo, a frontend developer building modern web experiences.",
-  ogTitle: "Paulo — Frontend Developer",
+    "Paulo Trajano — Frontend Developer & Designer from the Philippines. Specialized in UI/UX, branding, and Vue/Nuxt web development.",
+  ogTitle: "Paulo Trajano — Frontend Developer & Designer",
   ogDescription:
-    "Personal portfolio of Paulo, a frontend developer building modern web experiences.",
+    "Paulo Trajano — Frontend Developer & Designer from the Philippines. Specialized in UI/UX, branding, and Vue/Nuxt web development.",
   ogImage: "https://paulotrajano.me/images/og-image.png",
   ogUrl: "https://paulotrajano.me",
   twitterCard: "summary_large_image",
   twitterImage: "https://paulotrajano.me/images/og-image.png",
+});
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Paulo Trajano",
+        url: "https://paulotrajano.me",
+        jobTitle: "Frontend Developer & Designer",
+        description:
+          "Frontend Developer & Designer from the Philippines. Specialized in UI/UX, branding, and Vue/Nuxt web development.",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Butuan City",
+          addressCountry: "PH",
+        },
+      }),
+    },
+  ],
 });
 
 definePageMeta({ layout: "default" });

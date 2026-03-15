@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap'],
+  site: { url: 'https://paulotrajano.me' },
   app: {
     head: {
       title: 'Paulo Trajano | FE Developer & Designer',
