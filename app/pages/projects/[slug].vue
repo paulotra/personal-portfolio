@@ -139,6 +139,14 @@
         v-else-if="route.params.slug === 'hyn-portfolio'"
         :cards-visible="cardsVisible"
       />
+      <ProjectsLMS
+        v-else-if="route.params.slug === 'lms'"
+        :cards-visible="cardsVisible"
+      />
+      <ProjectsNaks
+        v-else-if="route.params.slug === 'naks-choice'"
+        :cards-visible="cardsVisible"
+      />
       <div v-else class="flex items-center justify-center flex-col h-full p-8">
         <img src="/images/coding.webp" width="400px" alt="" />
         <Headline variant="h4" class="font-bold mb-2 mt-6"
