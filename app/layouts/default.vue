@@ -38,7 +38,7 @@
                 </p>
               </div>
               <div class="flex gap-10">
-                <div class="flex flex-col gap-1 flex-1">
+                <!-- <div class="flex flex-col gap-1 flex-1">
                   <p
                     class="text-sm font-bold text-neutral-800 tracking-[0.84px] uppercase leading-7"
                   >
@@ -72,7 +72,7 @@
                       LinkedIn Profile
                     </LinkButton>
                   </p>
-                </div>
+                </div> -->
               </div>
             </div>
 
@@ -104,7 +104,7 @@
                 </div>
               </div>
               <!-- Socials -->
-              <div class="flex-1 flex flex-col gap-3">
+              <!-- <div class="flex-1 flex flex-col gap-3">
                 <p
                   class="text-sm font-bold text-neutral-800 tracking-[0.84px] uppercase leading-7"
                 >
@@ -127,7 +127,7 @@
                     Facebook
                   </LinkButton>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

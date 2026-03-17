@@ -40,9 +40,9 @@
               >See All Projects</Button
             >
           </NuxtLink>
-          <a href="mailto:trajanopaulo@gmail.com">
+          <!-- <a href="mailto:trajanopaulo@gmail.com">
             <Button variant="primary" :show-icon="false">Work With Me</Button>
-          </a>
+          </a> -->
         </div>
       </div>
     </nav>
