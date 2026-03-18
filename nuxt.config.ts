@@ -8,6 +8,16 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Paulo Trajano | FE Developer & Designer',
+      meta: [
+        { name: 'description', content: 'Frontend Developer & Designer crafting clean, modern web experiences.' },
+        { property: 'og:title', content: 'Paulo Trajano | FE Developer & Designer' },
+        { property: 'og:description', content: 'Frontend Developer & Designer crafting clean, modern web experiences.' },
+        { property: 'og:image', content: 'https://paulotrajano.me/og-image.png' },
+        { property: 'og:url', content: 'https://paulotrajano.me' },
+        { property: 'og:type', content: 'website' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: 'https://paulotrajano.me/og-image.png' },
+      ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/favicon-192.png' },
