@@ -44,9 +44,22 @@
                 aria-hidden="true"
                 class="w-[35px] h-[40px]"
               />
-              <p class="font-sans font-normal text-base leading-6 text-black">
-                {{ t.quote }}
-              </p>
+              <div class="flex flex-col">
+                <p
+                  :ref="(el) => setRef1(el as HTMLElement, i)"
+                  :class="expanded1.has(i) ? '' : 'line-clamp-2'"
+                  class="font-sans font-normal text-base leading-6 text-black whitespace-pre-line"
+                >
+                  {{ t.quote }}
+                </p>
+                <button
+                  v-if="overflowing1.has(i) && !expanded1.has(i)"
+                  class="font-sans underline text-base mt-2 text-primary-500 text-left"
+                  @click.stop="expanded1 = new Set(expanded1.add(i))"
+                >
+                  Read more
+                </button>
+              </div>
             </div>
             <div class="flex gap-5 items-center w-full">
               <img
@@ -93,9 +106,22 @@
                 aria-hidden="true"
                 class="w-[35px] h-[40px]"
               />
-              <p class="font-sans font-normal text-base leading-6 text-black">
-                {{ t.quote }}
-              </p>
+              <div class="flex flex-col">
+                <p
+                  :ref="(el) => setRef2(el as HTMLElement, i)"
+                  :class="expanded2.has(i) ? '' : 'line-clamp-2'"
+                  class="font-sans font-normal text-base leading-6 text-black whitespace-pre-line"
+                >
+                  {{ t.quote }}
+                </p>
+                <button
+                  v-if="overflowing2.has(i) && !expanded2.has(i)"
+                  class="font-sans underline text-base mt-2 text-primary-500 text-left"
+                  @click.stop="expanded2 = new Set(expanded2.add(i))"
+                >
+                  Read more
+                </button>
+              </div>
             </div>
             <div class="flex gap-5 items-center w-full">
               <img
@@ -133,12 +159,19 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, nextTick } from "vue";
 import { useInView } from "~/composables/useInView";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { sectionRef, visible } = useInView();
 
 const testimonials = [
+  {
+    quote: `I’ve worked with Paulo for more than a decade across multiple companies, and he’s one of those engineers you want on every team you build.\n\nHis frontend work, especially with Vue, is excellent, but what really stands out is his attention to detail and care for the user experience. He sweats the small stuff in a way that most people don’t, and it shows in the quality of what he ships.\n\nPaulo is also a genuinely great person to work with, collaborative, dependable, and always contributing positively to the team. I’ve trusted him across multiple companies for a reason.`,
+    name: "Andrew Duck",
+    role: "CEO of GuardRails",
+    avatar: "/images/people/andrew.jpeg",
+  },
   {
     quote:
       "Patient, understanding to work with, Paulo is able to translate ideation into excellent design and perfect execution.",
@@ -187,6 +220,34 @@ function initials(name: string) {
   const parts = name.trim().split(/\s+/);
   return ((parts[0]?.[0] ?? "") + (parts[1]?.[0] ?? "")).toUpperCase();
 }
+
+const expanded1 = ref(new Set<number>());
+const expanded2 = ref(new Set<number>());
+const overflowing1 = ref(new Set<number>());
+const overflowing2 = ref(new Set<number>());
+
+const paraRefs1: (HTMLElement | null)[] = [];
+const paraRefs2: (HTMLElement | null)[] = [];
+
+function setRef1(el: HTMLElement | null, i: number) {
+  paraRefs1[i] = el;
+}
+function setRef2(el: HTMLElement | null, i: number) {
+  paraRefs2[i] = el;
+}
+
+onMounted(() => {
+  nextTick(() => {
+    paraRefs1.forEach((el, i) => {
+      if (el && el.scrollHeight > el.clientHeight) overflowing1.value.add(i);
+    });
+    overflowing1.value = new Set(overflowing1.value);
+    paraRefs2.forEach((el, i) => {
+      if (el && el.scrollHeight > el.clientHeight) overflowing2.value.add(i);
+    });
+    overflowing2.value = new Set(overflowing2.value);
+  });
+});
 
 const valid = testimonials.filter((t) => t.name && t.quote);
 const odd = valid.filter((_, i) => i % 2 === 0);
