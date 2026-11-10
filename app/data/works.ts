@@ -1,5 +1,25 @@
 export const works = [
   {
+    slug: "123declaratie-revamp",
+    title: "123declaratie Revamp",
+    tech: ["figma"],
+    image: "/images/projects/123declaratie.webp",
+    imageClass: "w-full h-full !scale-100",
+    badges: [{ variant: "ui", label: "UI + UX" }],
+    siteUrl: "https://123declaratie.nl/",
+    projectUrl: "#",
+    sections: [
+      {
+        heading: "Landing Page Redesign",
+        body: "Redesigned the 123declaratie landing page to improve professionalism, trust, and conversion performance. Simplified the user experience, refined the visual design system, strengthened value propositions, and created a cleaner SaaS-focused interface that better communicates the platform's automated mileage tracking and tax-saving benefits.",
+      },
+      {
+        heading: "App Revamp",
+        body: "Alongside the landing page, I also revamped the 123declaratie app, bringing the same refined visual design system and cleaner SaaS-focused experience to the product itself.",
+      },
+    ],
+  },
+  {
     slug: "twenste-horren",
     title: "Twenste Horren",
     tech: ["figma", "illustrator"],
