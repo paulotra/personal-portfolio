@@ -182,7 +182,7 @@
     <HomeRecentWorks
       id="works"
       class="mt-[240px] lg:mt-[344.5px] scroll-mt-[120px]"
-      :slugs="['prophetx', 'coach-talk', 'vloer-offerte']"
+      :slugs="['prophetx', 'coach-talk-2', 'floor-ordering-2']"
     />
     <HomeExperiencesAndEducation
       id="experience"
