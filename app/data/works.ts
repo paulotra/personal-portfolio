@@ -2,7 +2,7 @@ export const works = [
   {
     slug: "floor-ordering-2",
     title: "Floor Ordering 2.0",
-    tech: ["figma"],
+    tech: ["react", "figma"],
     image: "/images/projects/floor-ordering-2.webp",
     imageClass: "w-full h-full !scale-100",
     badges: [
@@ -14,7 +14,7 @@ export const works = [
     sections: [
       {
         heading: "SaaS Website & Web App Redesign",
-        body: "Revamped the Vloer Offerte website and web application, bringing a more modern, polished, and cohesive experience to the platform.",
+        body: "Revamped the Vloer Offerte website and web application, bringing a more modern, polished, and cohesive experience to the platform. Designed in Figma and built with React.",
       },
       {
         heading: "The Platform",
@@ -25,7 +25,7 @@ export const works = [
   {
     slug: "coach-talk-2",
     title: "Coach Talk 2.0",
-    tech: ["figma"],
+    tech: ["react", "figma"],
     image: "/images/projects/coach-talk-2.webp",
     imageClass: "w-full h-full !scale-100",
     badges: [
@@ -41,7 +41,7 @@ export const works = [
       },
       {
         heading: "Design to Development",
-        body: "From initial design exploration and UI/UX improvements in Figma to frontend development and implementation, I handled the end-to-end redesign process.",
+        body: "From initial design exploration and UI/UX improvements in Figma to frontend development and implementation in React, I handled the end-to-end redesign process.",
       },
     ],
   },
