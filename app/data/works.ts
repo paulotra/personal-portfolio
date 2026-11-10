@@ -92,7 +92,7 @@ export const works = [
       { variant: "brand", label: "Logo" },
       { variant: "ui", label: "UI + UX" },
     ],
-    siteUrl: "https://cloudmazing.coach-talk.nl/login",
+    siteUrl: "https://coach-talk.nl/",
     projectUrl: "#",
     sections: [
       {

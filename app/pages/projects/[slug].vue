@@ -5,6 +5,7 @@
   >
     <!-- Sidebar — slides from left on desktop, fades on mobile -->
     <aside
+      data-lenis-prevent
       class="w-full md:w-[458px] md:shrink-0 md:h-screen md:overflow-y-auto bg-white px-8 py-10 flex flex-col gap-8 transition-[transform,opacity] duration-500 ease-out"
       :class="
         asideVisible
@@ -74,7 +75,10 @@
     </aside>
 
     <!-- Right panel -->
-    <main class="flex-1 md:h-screen md:overflow-y-auto px-8 md:p-0">
+    <main
+      data-lenis-prevent
+      class="flex-1 md:h-screen md:overflow-y-auto px-8 md:p-0"
+    >
       <ProjectsRocketFlow
         v-if="route.params.slug === 'rocket-flow'"
         :cards-visible="cardsVisible"
