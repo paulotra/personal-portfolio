@@ -1,5 +1,51 @@
 export const works = [
   {
+    slug: "coach-talk-2",
+    title: "Coach Talk 2.0",
+    tech: ["figma"],
+    image: "/images/projects/coach-talk-2.webp",
+    imageClass: "w-full h-full !scale-100",
+    badges: [
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    siteUrl: "https://coach-talk.nl/",
+    projectUrl: "#",
+    sections: [
+      {
+        heading: "Website & Web App Redesign",
+        body: "Led the redesign of Coach Talk's website and web application, transforming an outdated interface into a more modern, cohesive, and user-friendly digital experience. The project covered both the marketing website and the application itself, ensuring a consistent visual language and improved user experience across the entire platform.",
+      },
+      {
+        heading: "Design to Development",
+        body: "From initial design exploration and UI/UX improvements in Figma to frontend development and implementation, I handled the end-to-end redesign process.",
+      },
+    ],
+  },
+  {
+    slug: "agentic-coder",
+    title: "Agentic Coder",
+    tech: ["figma"],
+    image: "/images/projects/agentic-coder.svg",
+    imageClass: "w-4/5 h-auto",
+    badges: [
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    siteUrl: "https://agentic-coder.ai",
+    projectUrl: "#",
+    sections: [
+      {
+        heading: "The Product",
+        body: "Agentic Coder is a desktop AI coding agent that turns GitHub issues into reviewed pull requests. Developers simply label an issue for the agent, and it handles the rest: classifying the task, creating an implementation plan, making the code changes, running checks, and opening a pull request for review.",
+      },
+      {
+        heading: "UI/UX & Frontend Development",
+        body: "Designed and built the marketing site around an existing GitHub workflow. The product keeps developers in control: it never auto-merges, runs locally on the developer's machine, and uses their existing Claude CLI setup without per-token API costs. GSAP powers the animations.",
+      },
+    ],
+  },
+  {
     slug: "123declaratie-revamp",
     title: "123declaratie Revamp",
     tech: ["figma"],
