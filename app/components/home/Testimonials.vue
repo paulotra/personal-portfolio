@@ -30,11 +30,16 @@
       class="relative w-full overflow-hidden slider-mask"
     >
       <div class="flex flex-col gap-10">
-        <!-- Row 1: scroll left -->
-        <div class="flex gap-10 w-max marquee-left">
+        <!-- Rows alternate: scroll left, right, left -->
+        <div
+          v-for="(row, r) in rows"
+          :key="r"
+          :class="r % 2 === 0 ? 'marquee-left' : 'marquee-right'"
+          class="flex gap-10 w-max"
+        >
           <div
-            v-for="(t, i) in row1"
-            :key="`r1-${i}`"
+            v-for="(t, i) in row"
+            :key="`r${r}-${i}`"
             class="bg-white border border-neutral-400 flex flex-col gap-5 items-start px-10 py-8 w-[400px] lg:w-[546px] shrink-0"
           >
             <div class="flex flex-col gap-4 w-full">
@@ -46,78 +51,16 @@
               />
               <div class="flex flex-col">
                 <p
-                  :ref="(el) => setRef1(el as HTMLElement, i)"
-                  :class="expanded1.has(i) ? '' : 'line-clamp-2'"
+                  :ref="(el) => setRef(el as HTMLElement, `${r}-${i}`)"
+                  :class="expanded.has(`${r}-${i}`) ? '' : 'line-clamp-2'"
                   class="font-sans font-normal text-base leading-6 text-black whitespace-pre-line"
                 >
                   {{ t.quote }}
                 </p>
                 <button
-                  v-if="overflowing1.has(i) && !expanded1.has(i)"
+                  v-if="overflowing.has(`${r}-${i}`) && !expanded.has(`${r}-${i}`)"
                   class="font-sans underline text-base mt-2 text-primary-500 text-left"
-                  @click.stop="expanded1 = new Set(expanded1.add(i))"
-                >
-                  Read more
-                </button>
-              </div>
-            </div>
-            <div class="flex gap-5 items-center w-full">
-              <img
-                v-if="t.avatar"
-                :src="t.avatar"
-                :alt="t.name"
-                class="size-[60px] rounded-full object-cover shrink-0"
-              />
-              <div
-                v-else
-                class="size-[60px] rounded-full bg-primary-500 shrink-0 flex items-center justify-center"
-              >
-                <span class="font-sans font-bold text-sm text-white">{{
-                  initials(t.name)
-                }}</span>
-              </div>
-              <div class="flex flex-col gap-0.5">
-                <p
-                  class="font-sans font-medium text-lg leading-6 text-black whitespace-nowrap"
-                >
-                  {{ t.name }}
-                </p>
-                <p
-                  class="font-sans font-normal text-base leading-6 text-neutral-700 whitespace-nowrap"
-                >
-                  {{ t.role }}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Row 2: scroll right -->
-        <div class="flex gap-10 w-max marquee-right">
-          <div
-            v-for="(t, i) in row2"
-            :key="`r2-${i}`"
-            class="bg-white border border-neutral-400 flex flex-col gap-5 items-start px-10 py-8 w-[400px] lg:w-[546px] shrink-0"
-          >
-            <div class="flex flex-col gap-4 w-full">
-              <img
-                src="/images/testimonials/quote-left.svg"
-                alt=""
-                aria-hidden="true"
-                class="w-[35px] h-[40px]"
-              />
-              <div class="flex flex-col">
-                <p
-                  :ref="(el) => setRef2(el as HTMLElement, i)"
-                  :class="expanded2.has(i) ? '' : 'line-clamp-2'"
-                  class="font-sans font-normal text-base leading-6 text-black whitespace-pre-line"
-                >
-                  {{ t.quote }}
-                </p>
-                <button
-                  v-if="overflowing2.has(i) && !expanded2.has(i)"
-                  class="font-sans underline text-base mt-2 text-primary-500 text-left"
-                  @click.stop="expanded2 = new Set(expanded2.add(i))"
+                  @click.stop="expanded = new Set(expanded.add(`${r}-${i}`))"
                 >
                   Read more
                 </button>
@@ -241,40 +184,32 @@ function initials(name: string) {
   return ((parts[0]?.[0] ?? "") + (parts[1]?.[0] ?? "")).toUpperCase();
 }
 
-const expanded1 = ref(new Set<number>());
-const expanded2 = ref(new Set<number>());
-const overflowing1 = ref(new Set<number>());
-const overflowing2 = ref(new Set<number>());
+const expanded = ref(new Set<string>());
+const overflowing = ref(new Set<string>());
 
-const paraRefs1: (HTMLElement | null)[] = [];
-const paraRefs2: (HTMLElement | null)[] = [];
+const paraRefs = new Map<string, HTMLElement | null>();
 
-function setRef1(el: HTMLElement | null, i: number) {
-  paraRefs1[i] = el;
-}
-function setRef2(el: HTMLElement | null, i: number) {
-  paraRefs2[i] = el;
+function setRef(el: HTMLElement | null, key: string) {
+  paraRefs.set(key, el);
 }
 
 onMounted(() => {
   nextTick(() => {
-    paraRefs1.forEach((el, i) => {
-      if (el && el.scrollHeight > el.clientHeight) overflowing1.value.add(i);
+    paraRefs.forEach((el, key) => {
+      if (el && el.scrollHeight > el.clientHeight) overflowing.value.add(key);
     });
-    overflowing1.value = new Set(overflowing1.value);
-    paraRefs2.forEach((el, i) => {
-      if (el && el.scrollHeight > el.clientHeight) overflowing2.value.add(i);
-    });
-    overflowing2.value = new Set(overflowing2.value);
+    overflowing.value = new Set(overflowing.value);
   });
 });
 
+const ROW_COUNT = 3;
 const valid = testimonials.filter((t) => t.name && t.quote);
-const odd = valid.filter((_, i) => i % 2 === 0);
-const even = valid.filter((_, i) => i % 2 === 1);
 
-const row1 = [...odd, ...odd];
-const row2 = [...even, ...even];
+// Spread reviews across the rows, then repeat each row once for a seamless loop
+const rows = Array.from({ length: ROW_COUNT }, (_, r) => {
+  const row = valid.filter((_, i) => i % ROW_COUNT === r);
+  return [...row, ...row];
+});
 </script>
 
 <style scoped>
