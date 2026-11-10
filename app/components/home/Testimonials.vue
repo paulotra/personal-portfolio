@@ -214,6 +214,26 @@ const testimonials = [
     role: "CEO of Aconi",
     avatar: null,
   },
+  {
+    quote:
+      `Paulo was fantastic to work with from start to finish. He took my original vision and elevated it far beyond what I expected while still respecting the direction, structure, and feel I wanted for the project. He was incredibly responsive, collaborative, and fast. I would send feedback, ideas, or random “what about this?” messages, and he would turn around thoughtful updates almost immediately.\n\nOur time difference honestly worked in our favor because progress seemed to happen overnight. What stood out most was how much effort he put into understanding the product, the tone, and how the landing page needed to feel, not just how it needed to look. He approached the project like a true creative partner, not someone simply completing tasks.\n\nThe final landing page feels polished, premium, clean, and intentional. The turnaround time was impressive, communication was easy throughout the project, and the entire process felt collaborative and smooth. I would absolutely work with Paulo again and highly recommend him to anyone looking for a strong designer/developer hybrid who cares deeply about execution and quality.`,
+    name: "Monica Peverini",
+    role: "Absovex Client",
+    avatar: "/images/people/monica.webp",
+  },
+  {
+    quote:
+      "Great to work with – he meets your every need and really understands your needs and is able to adapt to changes fast.",
+    name: "Lucas Crossland",
+    role: "Nudge Client",
+    avatar: "/images/people/lucas.webp",
+  },
+  {
+    quote: `I worked with Paulo for three years across a range of projects — from an HR platform to a blockchain verification system. What sets him apart is his rare combination of design and frontend development skills. He’s deeply knowledgeable in Vue.js and has a strong command of HTML and CSS.\n\nIf you’re a company looking for someone who can handle both design and frontend development, you’d be lucky to have him — and you’ll save a lot by not needing to hire two separate roles. I genuinely enjoyed working with him and I’m always open to collaborating again on future projects.`,
+    name: "Harlequin Doyon",
+    role: "Colleague at RallyHR & ProphetX",
+    avatar: "/images/people/harlequin.webp",
+  },
 ];
 
 function initials(name: string) {

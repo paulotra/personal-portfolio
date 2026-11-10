@@ -1,5 +1,28 @@
 export const works = [
   {
+    slug: "floor-ordering-2",
+    title: "Floor Ordering 2.0",
+    tech: ["figma"],
+    image: "/images/projects/floor-ordering-2.webp",
+    imageClass: "w-full h-full !scale-100",
+    badges: [
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    siteUrl: "https://vloer-offerte.nl/",
+    projectUrl: "#",
+    sections: [
+      {
+        heading: "SaaS Website & Web App Redesign",
+        body: "Revamped the Vloer Offerte website and web application, bringing a more modern, polished, and cohesive experience to the platform.",
+      },
+      {
+        heading: "The Platform",
+        body: "Vloer Offerte is a SaaS platform designed for flooring contractors, helping them manage their business workflows, create professional quotations, collect digital signatures, document projects, and generate invoices.",
+      },
+    ],
+  },
+  {
     slug: "coach-talk-2",
     title: "Coach Talk 2.0",
     tech: ["figma"],

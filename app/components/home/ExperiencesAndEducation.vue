@@ -34,19 +34,11 @@
       :class="visible ? 'animate-slideDown' : 'opacity-0'"
       class="relative bg-white border border-neutral-400 flex gap-5 items-start p-6 rounded-2xl z-10 shadow-[inset_3px_3px_7px_0px_rgba(136,150,163,0.12),inset_-3px_-3px_7px_0px_white]"
     >
-      <button
-        v-for="tab in tabs"
-        :key="tab"
-        @click="activeTab = tab"
-        :class="[
-          'px-8 py-5 rounded lg:w-[200px] font-sans font-medium text-xl leading-5 whitespace-nowrap transition-colors',
-          activeTab === tab
-            ? 'bg-primary-100 border border-primary-300 text-primary-500'
-            : 'bg-neutral-200 border border-neutral-400 text-neutral-600',
-        ]"
+      <p
+        class="px-8 py-5 rounded lg:w-[200px] text-center font-sans font-medium text-xl leading-5 whitespace-nowrap bg-primary-100 border border-primary-300 text-primary-500"
       >
-        {{ tab }}
-      </button>
+        Experiences
+      </p>
     </div>
 
     <!-- Timeline body -->
@@ -394,8 +386,6 @@ import { useInView } from "~/composables/useInView";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { sectionRef, visible } = useInView(0.44);
 
-const tabs = ["Experiences", "Education"] as const;
-const activeTab = ref<"Experiences" | "Education">("Experiences");
 const years = ["2015", "2016", "2017", "2018", "2026", "NOW"];
 
 const timelineBodyRef = ref<HTMLElement | null>(null);
