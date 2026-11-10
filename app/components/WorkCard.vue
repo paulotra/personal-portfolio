@@ -2,7 +2,7 @@
   <Card class="cursor-pointer" @click="router.push(`/projects/${slug}`)">
     <div class="flex flex-col gap-5 pb-[45.5px]">
       <div
-        class="border-b border-neutral-300 h-[391px] w-full flex items-center justify-center"
+        class="border-b border-neutral-300 aspect-[4/3] w-full flex items-center justify-center"
       >
         <img
           :src="image"

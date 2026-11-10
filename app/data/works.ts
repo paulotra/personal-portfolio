@@ -1,5 +1,52 @@
 export const works = [
   {
+    slug: "twenste-horren",
+    title: "Twenste Horren",
+    tech: ["figma", "illustrator"],
+    image: "/images/projects/twenste-horren.svg",
+    imageClass: "max-h-24",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    siteUrl: "https://twentsehorren.nl/",
+    projectUrl: "#",
+    sections: [
+      {
+        heading: "Brand Identity & Logo",
+        body: "Developed the visual branding for Twenste Horren, a Dutch window blinds and shutters brand. The mark is built from window panes, a mesh screen pattern, and a subtle wasp reference, and it was extended into a pattern and real-world brand mockups.",
+      },
+      {
+        heading: "UI/UX & Frontend Development",
+        body: "Crafted a clean, conversion-focused UI/UX design and built the frontend in Next.js, using GSAP for smooth, engaging animations. The result is a polished, fast, and on-brand digital presence that reflects the quality of their products.",
+      },
+    ],
+  },
+  {
+    slug: "absovex",
+    title: "Absovex",
+    tech: ["figma"],
+    image: "/images/projects/absovex.webp",
+    imageClass: "w-full h-full !scale-100",
+    badges: [
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    siteUrl: "https://absovex.com/",
+    projectUrl: "#",
+    sections: [
+      {
+        heading: "UI/UX Design",
+        body: "Led the full UI/UX process in Figma for Absovex, a health-tech web application that helps users identify medication, supplement, food, and timing conflicts. Designed a conversion-focused landing page that keeps a clean, trustworthy, and easy-to-scan experience.",
+      },
+      {
+        heading: "Frontend Development",
+        body: "Built the frontend in Next.js with a responsive, production-ready implementation. Added smooth GSAP animations to enhance storytelling, section transitions, and user engagement.",
+      },
+    ],
+  },
+  {
     slug: "nudge",
     title: "Nudge",
     tech: ["figma", "framer"],

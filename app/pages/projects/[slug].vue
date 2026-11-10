@@ -95,6 +95,14 @@
         v-else-if="route.params.slug === 'vloer-offerte'"
         :cards-visible="cardsVisible"
       />
+      <ProjectsTwensteHorren
+        v-else-if="route.params.slug === 'twenste-horren'"
+        :cards-visible="cardsVisible"
+      />
+      <ProjectsAbsovex
+        v-else-if="route.params.slug === 'absovex'"
+        :cards-visible="cardsVisible"
+      />
       <ProjectsNudge
         v-else-if="route.params.slug === 'nudge'"
         :cards-visible="cardsVisible"
