@@ -1,5 +1,29 @@
 export const works = [
   {
+    slug: "nudge",
+    title: "Nudge",
+    tech: ["figma", "framer"],
+    image: "/images/projects/nudge.svg",
+    imageClass: "max-h-16",
+    badges: [
+      { variant: "brand", label: "Logo" },
+      { variant: "ui", label: "UI + UX" },
+      { variant: "dev", label: "FE Development" },
+    ],
+    siteUrl: "https://trynudge.je/",
+    projectUrl: "#",
+    sections: [
+      {
+        heading: "Waitlist Landing Page",
+        body: "Designed and built a teaser waitlist landing page for Nudge, a platform connecting teens and employers for part-time opportunities. Created a clean, modern UI in Framer featuring mobile app previews and animated dual-role waitlist forms.",
+      },
+      {
+        heading: "Brand & Visual System",
+        body: "Built a cohesive visual system derived from the logo. Applied logo-inspired patterns and used the orange accent dot consistently across icons and interactions to strengthen the brand identity.",
+      },
+    ],
+  },
+  {
     slug: "jazz-inc-diorama",
     title: "Jazz Inc Diorama",
     tech: ["figma"],

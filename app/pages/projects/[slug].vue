@@ -95,6 +95,10 @@
         v-else-if="route.params.slug === 'vloer-offerte'"
         :cards-visible="cardsVisible"
       />
+      <ProjectsNudge
+        v-else-if="route.params.slug === 'nudge'"
+        :cards-visible="cardsVisible"
+      />
       <ProjectsCloudmazing
         v-else-if="route.params.slug === 'cloudmazing'"
         :cards-visible="cardsVisible"
